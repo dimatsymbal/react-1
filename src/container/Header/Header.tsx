@@ -6,6 +6,8 @@ import MenuIcon from '@mui/icons-material/Menu'
 import { Container } from '@mui/material'
 import './header.scss'
 import Logo from 'Components/Logo/Logo'
+import Menu from 'Components/Menu/Menu'
+
 
 type Props = {}
 const Header = (props: Props) => {
@@ -24,6 +26,8 @@ const Header = (props: Props) => {
                     </IconButton>
 
                     <Logo />
+                    <Menu />
+
                     <Button color="inherit">Login</Button>
                 </Toolbar>
             </Container>
