@@ -13,10 +13,19 @@ const ProductsList = (props: Props) => {
 
             <Grid container spacing={3}>
                 {productsArrey.map(
-                    ({ title, description, type, copacity, price }, i) => (
-                        <Grid item xs={12} sm={6} md={4} key={i}>
+                    ({
+                        id,
+                        title,
+                        description,
+                        type,
+                        copacity,
+                        price,
+                        images,
+                    }) => (
+                        <Grid item xs={12} sm={6} md={4} key={id}>
                             {' '}
                             <ProductsListItem
+                                images={images}
                                 title={title}
                                 description={description}
                                 type={type}

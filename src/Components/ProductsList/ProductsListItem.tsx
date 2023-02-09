@@ -7,13 +7,21 @@ type Props = {
     type: string
     copacity: string
     price: number
+    images: string
 }
 
 const ProductsListItem = (props: Props) => {
     return (
         <Card variant="outlined">
             <CardContent>
-                <div className="product_title">{props.title}</div>
+                <div className="product_image">
+                    <img
+                        className="product_image_content"
+                        src={props.images}
+                        alt="image card"
+                    />
+                </div>
+                <h6 className="product_title">{props.title}</h6>
                 <div className="product_desc">{props.description}</div>
                 <div className="product_features">{props.type}</div>
                 <div className="product_features">{props.copacity}</div>
