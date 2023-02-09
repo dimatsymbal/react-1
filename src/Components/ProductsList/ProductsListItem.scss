@@ -25,6 +25,22 @@
     margin-bottom: -10px;
 }
 
+.product_quantity {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+    input {
+        text-align: center;
+    }
+
+    .button_plus,
+    .button_minus {
+        max-width: 35px;
+    }
+}
+
 .flex_btn_in_card {
     display: flex;
     justify-content: flex-end;
