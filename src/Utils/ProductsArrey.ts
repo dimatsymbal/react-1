@@ -63,6 +63,24 @@ const productsArrey: Products[] = [
         price: 1200,
         images: '/images/iphone11-y.jpg',
     },
+    {
+        id: 7,
+        title: 'iPhone 8 pro',
+        description: 'bebebebeb',
+        type: 'phone',
+        copacity: '256 gb',
+        price: 600,
+        images: '/images/iphone11.jpg',
+    },
+    {
+        id: 8,
+        title: 'iPhone 10',
+        description: 'bebebebeb',
+        type: 'phone',
+        copacity: '128 gb',
+        price: 750,
+        images: '/images/iphone11-y.jpg',
+    },
 ]
 
 export default productsArrey

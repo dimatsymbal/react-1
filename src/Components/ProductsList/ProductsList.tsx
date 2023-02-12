@@ -14,7 +14,7 @@ const ProductsList = (props: Props) => {
                     marginBottom: '50px',
                 }}
             >
-                Products List
+                iPhones List
             </Typography>
 
             <Grid container spacing={3}>

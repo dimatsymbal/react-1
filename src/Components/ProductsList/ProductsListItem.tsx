@@ -10,6 +10,7 @@ import './ProductsListItem.scss'
 
 type State = {
     count: number
+    color: string
 }
 
 type Props = {
@@ -22,20 +23,55 @@ type Props = {
 }
 
 class ProductsListItem extends Component<Props, State> {
-    state = {
-        count: 1,
+    constructor(props: Props) {
+        super(props)
+        this.state = {
+            count: 1,
+            color: 'Green',
+        }
+        this.changeColor = this.changeColor.bind(this)
     }
 
-    onIncrementClick = () => {
-        this.setState((prevState: State) => ({
-            count: prevState.count + 1,
-        }))
+    changeColor = () => {
+        this.setState((prevState: State) => {
+            if (prevState.color === 'Green') {
+                return {
+                    color: 'Red',
+                }
+            } else {
+                return {
+                    color: 'Green',
+                }
+            }
+        })
     }
 
-    onDecrementClick = () => {
-        this.setState((nextState: State) => ({
-            count: nextState.count - 1,
-        }))
+    onIncrementClick = (num: number) => {
+        this.setState((prevState: State) => {
+            if (prevState.count >= 10) {
+                return {
+                    count: prevState.count + 0,
+                }
+            } else {
+                return {
+                    count: prevState.count + num,
+                }
+            }
+        })
+    }
+
+    onDecrementClick = (num: number) => {
+        this.setState((prevState: State) => {
+            if (prevState.count <= 1) {
+                return {
+                    count: prevState.count - 0,
+                }
+            } else {
+                return {
+                    count: prevState.count - num,
+                }
+            }
+        })
     }
 
     render() {
@@ -56,12 +92,28 @@ class ProductsListItem extends Component<Props, State> {
                     <div className="product_features">{copacity} GB</div>
                     {/* <div className="product_price">{price}$</div> */}
 
+                    <div className="color_block">
+                        <p>
+                            Color:{' '}
+                            <span className={this.state.color}>
+                                {this.state.color}
+                            </span>
+                        </p>
+                        <Button
+                            variant="outlined"
+                            size="small"
+                            onClick={this.changeColor}
+                        >
+                            Change color!
+                        </Button>
+                    </div>
+
                     <div className="product_quantity">
                         <Button
                             className="button_minus"
                             variant="outlined"
                             size="small"
-                            onClick={this.onDecrementClick}
+                            onClick={() => this.onDecrementClick(1)}
                         >
                             -
                         </Button>
@@ -73,7 +125,7 @@ class ProductsListItem extends Component<Props, State> {
                             className="button_plus"
                             variant="outlined"
                             size="small"
-                            onClick={this.onIncrementClick}
+                            onClick={() => this.onIncrementClick(1)}
                         >
                             +
                         </Button>
