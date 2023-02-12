@@ -22,22 +22,17 @@ type Props = {
 }
 
 class ProductsListItem extends Component<Props, State> {
-    constructor(props: Props) {
-        super(props)
-        this.state = {
-            count: 1,
-        }
-        this.onIncrementClick = this.onIncrementClick.bind(this)
-        this.onDecrementClick = this.onDecrementClick.bind(this)
+    state = {
+        count: 1,
     }
 
-    onIncrementClick() {
+    onIncrementClick = () => {
         this.setState((prevState: State) => ({
             count: prevState.count + 1,
         }))
     }
 
-    onDecrementClick() {
+    onDecrementClick = () => {
         this.setState((nextState: State) => ({
             count: nextState.count - 1,
         }))
@@ -59,7 +54,7 @@ class ProductsListItem extends Component<Props, State> {
                     <div className="product_desc">{description}</div>
                     <div className="product_features">{type}</div>
                     <div className="product_features">{copacity} GB</div>
-                    <div className="product_price">{price}$</div>
+                    {/* <div className="product_price">{price}$</div> */}
 
                     <div className="product_quantity">
                         <Button
@@ -86,6 +81,7 @@ class ProductsListItem extends Component<Props, State> {
                 </CardContent>
 
                 <CardActions className="flex_btn_in_card">
+                    <div className="product_price">{price}$</div>
                     <Button variant="contained">Add to cart!</Button>
                 </CardActions>
             </Card>
