@@ -8,6 +8,10 @@ import {
 import { Component } from 'react'
 import './ProductsListItem.scss'
 
+type State = {
+    count: number
+}
+
 type Props = {
     title: string
     description: string
@@ -17,7 +21,14 @@ type Props = {
     images: string
 }
 
-class ProductsListItem extends Component<Props> {
+class ProductsListItem extends Component<Props, State> {
+    constructor(props: Props) {
+        super(props)
+        this.state = {
+            count: 2,
+        }
+    }
+
     render() {
         const { title, description, type, copacity, price, images } = this.props
         return (
@@ -44,7 +55,10 @@ class ProductsListItem extends Component<Props> {
                         >
                             -
                         </Button>
-                        <TextField size="small" value="1"></TextField>
+                        <TextField
+                            size="small"
+                            value={this.state.count}
+                        ></TextField>
                         <Button
                             className="button_minus"
                             variant="outlined"
