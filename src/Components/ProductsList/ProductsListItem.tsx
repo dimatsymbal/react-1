@@ -28,12 +28,19 @@ class ProductsListItem extends Component<Props, State> {
             count: 1,
         }
         this.onIncrementClick = this.onIncrementClick.bind(this)
+        this.onDecrementClick = this.onDecrementClick.bind(this)
     }
 
     onIncrementClick() {
-        this.setState({
-            count: 2,
-        })
+        this.setState((prevState: State) => ({
+            count: prevState.count + 1,
+        }))
+    }
+
+    onDecrementClick() {
+        this.setState((nextState: State) => ({
+            count: nextState.count - 1,
+        }))
     }
 
     render() {
@@ -59,6 +66,7 @@ class ProductsListItem extends Component<Props, State> {
                             className="button_minus"
                             variant="outlined"
                             size="small"
+                            onClick={this.onDecrementClick}
                         >
                             -
                         </Button>
@@ -78,7 +86,7 @@ class ProductsListItem extends Component<Props, State> {
                 </CardContent>
 
                 <CardActions className="flex_btn_in_card">
-                    <Button variant="outlined">Add to cart!</Button>
+                    <Button variant="contained">Add to cart!</Button>
                 </CardActions>
             </Card>
         )
