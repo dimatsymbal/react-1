@@ -28,28 +28,12 @@ const ProductsListItem = ({
 }: Props) => {
     const [count, setCount] = useState<number>(1)
 
-    const onIncrement = (num: number) => {
-        if (count >= 10) {
-            return {
-                count: setCount(count + 0),
-            }
-        } else {
-            return {
-                count: setCount(count + num),
-            }
-        }
+    const onIncrement = () => {
+        setCount((prevState) => prevState + 1)
     }
 
-    const onDecrement = (num: number) => {
-        if (count <= 1) {
-            return {
-                count: setCount(count - 0),
-            }
-        } else {
-            return {
-                count: setCount(count - num),
-            }
-        }
+    const onDecrement = () => {
+        setCount((prevState) => prevState - 1)
     }
 
     const onAddToCart = () => {
@@ -95,7 +79,7 @@ const ProductsListItem = ({
                         className="button_minus"
                         variant="outlined"
                         size="small"
-                        onClick={() => onDecrement(1)}
+                        onClick={() => onDecrement()}
                         disabled={count <= 1}
                     >
                         -
@@ -105,7 +89,7 @@ const ProductsListItem = ({
                         className="button_plus"
                         variant="outlined"
                         size="small"
-                        onClick={() => onIncrement(1)}
+                        onClick={() => onIncrement()}
                         disabled={count >= 10}
                     >
                         +
