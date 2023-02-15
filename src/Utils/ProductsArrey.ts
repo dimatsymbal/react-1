@@ -24,7 +24,7 @@ const productsArrey: Products[] = [
         description: 'bebebebeb',
         type: 'phone',
         copacity: '128 gb',
-        price: 1299,
+        price: 1250,
         images: '/images/iphone13-pink.jpg',
     },
     {
@@ -51,7 +51,7 @@ const productsArrey: Products[] = [
         description: 'bebebebeb',
         type: 'phone',
         copacity: '256 gb',
-        price: 1200,
+        price: 1090,
         images: '/images/iphone11.jpg',
     },
     {
@@ -60,7 +60,7 @@ const productsArrey: Products[] = [
         description: 'bebebebeb',
         type: 'phone',
         copacity: '128 gb',
-        price: 1200,
+        price: 1300,
         images: '/images/iphone11-y.jpg',
     },
     {
@@ -79,6 +79,15 @@ const productsArrey: Products[] = [
         type: 'phone',
         copacity: '128 gb',
         price: 750,
+        images: '/images/iphone11-y.jpg',
+    },
+    {
+        id: 9,
+        title: 'iPhone 10 pro',
+        description: 'bebebebeb',
+        type: 'phone',
+        copacity: '64 gb',
+        price: 950,
         images: '/images/iphone11-y.jpg',
     },
 ]

@@ -3,17 +3,14 @@ import Home from 'Pages/Home/Home'
 import './Main.scss'
 
 type Props = {
-    cartData: {
-        totalCount: number
-        totalPrice: number
-    }
+    addProductToCart: (countFinal: number, priceFinal: number) => void
 }
-const Main = ({ cartData }: Props) => {
+const Main = ({ addProductToCart }: Props) => {
     return (
         <div>
             <div className="main_in_main">
                 <Container sx={{ padding: '60px' }}>
-                    <Home cartData={cartData} />
+                    <Home addProductToCart={addProductToCart} />
                 </Container>
             </div>
         </div>

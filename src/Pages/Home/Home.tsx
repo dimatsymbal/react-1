@@ -3,18 +3,13 @@ import ProductsListItem from 'Components/ProductsList/ProductsListItem'
 import './home.scss'
 
 type Props = {
-    cartData: {
-        totalCount: number
-        totalPrice: number
-    }
+    addProductToCart: (countFinal: number, priceFinal: number) => void
 }
 
-const Home = ({ cartData }: Props) => {
+const Home = ({ addProductToCart }: Props) => {
     return (
         <div className="main">
-            <ProductsList />
-            {/* <ProductsList cartData={{ cartData }} /> */}
-            {/* <ProductsListItem /> */}
+            <ProductsList addProductToCart={addProductToCart} />
         </div>
     )
 }

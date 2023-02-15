@@ -7,7 +7,10 @@ import {
 } from '@mui/material'
 import { Component, useState } from 'react'
 import './ProductsListItem.scss'
-// import CardHeader from 'Components/CardHeader/CardHeader'
+
+type Propss = {
+    addProductToCart: (countFinal: number, priceFinal: number) => void
+}
 
 type Props = {
     title: string
@@ -16,6 +19,8 @@ type Props = {
     copacity: string
     price: number
     images: string
+
+    addProductToCart: (countFinal: number, priceFinal: number) => void
 }
 
 const ProductsListItem = ({
@@ -25,6 +30,7 @@ const ProductsListItem = ({
     copacity,
     price,
     images,
+    addProductToCart,
 }: Props) => {
     const [count, setCount] = useState<number>(1)
 
@@ -34,12 +40,6 @@ const ProductsListItem = ({
 
     const onDecrement = () => {
         setCount((prevState) => prevState - 1)
-    }
-
-    const onAddToCart = () => {
-        return {
-            count: setCount(5),
-        }
     }
 
     return (
@@ -98,8 +98,11 @@ const ProductsListItem = ({
             </CardContent>
 
             <CardActions className="flex_btn_in_card">
-                <div className="product_price">{price}$</div>
-                <Button onClick={() => onAddToCart()} variant="contained">
+                <div className="product_price">{price * count}$</div>
+                <Button
+                    onClick={() => addProductToCart(count, count * price)}
+                    variant="contained"
+                >
                     Add to cart!
                 </Button>
             </CardActions>
