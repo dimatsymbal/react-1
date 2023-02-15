@@ -2,13 +2,18 @@ import { Container } from '@mui/material'
 import Home from 'Pages/Home/Home'
 import './Main.scss'
 
-type Props = {}
-const Main = (props: Props) => {
+type Props = {
+    cartData: {
+        totalCount: number
+        totalPrice: number
+    }
+}
+const Main = ({ cartData }: Props) => {
     return (
         <div>
             <div className="main_in_main">
                 <Container sx={{ padding: '60px' }}>
-                    <Home />
+                    <Home cartData={cartData} />
                 </Container>
             </div>
         </div>

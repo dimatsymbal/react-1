@@ -7,6 +7,7 @@ import {
 } from '@mui/material'
 import { Component, useState } from 'react'
 import './ProductsListItem.scss'
+// import CardHeader from 'Components/CardHeader/CardHeader'
 
 type Props = {
     title: string
@@ -28,8 +29,6 @@ const ProductsListItem = ({
     const [count, setCount] = useState<number>(1)
 
     const onIncrement = (num: number) => {
-        // setCount(count + 1)
-
         if (count >= 10) {
             return {
                 count: setCount(count + 0),
@@ -50,6 +49,12 @@ const ProductsListItem = ({
             return {
                 count: setCount(count - num),
             }
+        }
+    }
+
+    const onAddToCart = () => {
+        return {
+            count: setCount(5),
         }
     }
 
@@ -110,7 +115,9 @@ const ProductsListItem = ({
 
             <CardActions className="flex_btn_in_card">
                 <div className="product_price">{price}$</div>
-                <Button variant="contained">Add to cart!</Button>
+                <Button onClick={() => onAddToCart()} variant="contained">
+                    Add to cart!
+                </Button>
             </CardActions>
         </Card>
     )
