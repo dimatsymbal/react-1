@@ -2,13 +2,14 @@ import ProductsList from 'Components/ProductsList/ProductsList'
 import ProductsListItem from 'Components/ProductsList/ProductsListItem'
 import './home.scss'
 
-type Props = {}
+type Props = {
+    addProductToCart: (countFinal: number, priceFinal: number) => void
+}
 
-const Home = (props: Props) => {
+const Home = ({ addProductToCart }: Props) => {
     return (
         <div className="main">
-            <ProductsList />
-            {/* <ProductsListItem /> */}
+            <ProductsList addProductToCart={addProductToCart} />
         </div>
     )
 }
