@@ -1,4 +1,4 @@
-type Products = {
+export type Products = {
     id: number
     title: string
     description: string
@@ -14,7 +14,7 @@ const productsArrey: Products[] = [
         title: 'iPhone 14 pro Max',
         description: 'bebebebeb',
         type: 'phone',
-        copacity: '256 gb',
+        copacity: '256 GB',
         price: 1400,
         images: '/images/iphone13.jpg',
     },
@@ -23,7 +23,7 @@ const productsArrey: Products[] = [
         title: 'iPhone 14 pro',
         description: 'bebebebeb',
         type: 'phone',
-        copacity: '128 gb',
+        copacity: '128 GB',
         price: 1250,
         images: '/images/iphone13-pink.jpg',
     },
@@ -32,7 +32,7 @@ const productsArrey: Products[] = [
         title: 'iPhone 14',
         description: 'bebebebeb',
         type: 'phone',
-        copacity: '64 gb',
+        copacity: '64 GB',
         price: 1150,
         images: '/images/iphone12.jpg',
     },
@@ -41,7 +41,7 @@ const productsArrey: Products[] = [
         title: 'iPhone 13 pro Max',
         description: 'bebebebeb',
         type: 'phone',
-        copacity: '512 gb',
+        copacity: '512 GB',
         price: 1200,
         images: '/images/iphone12-pro.jpg',
     },
@@ -50,7 +50,7 @@ const productsArrey: Products[] = [
         title: 'iPhone 13 pro',
         description: 'bebebebeb',
         type: 'phone',
-        copacity: '256 gb',
+        copacity: '256 GB',
         price: 1090,
         images: '/images/iphone11.jpg',
     },
@@ -59,7 +59,7 @@ const productsArrey: Products[] = [
         title: 'iPhone 13',
         description: 'bebebebeb',
         type: 'phone',
-        copacity: '128 gb',
+        copacity: '128 GB',
         price: 1300,
         images: '/images/iphone11-y.jpg',
     },
@@ -68,7 +68,7 @@ const productsArrey: Products[] = [
         title: 'iPhone 8 pro',
         description: 'bebebebeb',
         type: 'phone',
-        copacity: '256 gb',
+        copacity: '256 GB',
         price: 600,
         images: '/images/iphone11.jpg',
     },
@@ -77,7 +77,7 @@ const productsArrey: Products[] = [
         title: 'iPhone 10',
         description: 'bebebebeb',
         type: 'phone',
-        copacity: '128 gb',
+        copacity: '128 GB',
         price: 750,
         images: '/images/iphone11-y.jpg',
     },
@@ -86,10 +86,19 @@ const productsArrey: Products[] = [
         title: 'iPhone 10 pro',
         description: 'bebebebeb',
         type: 'phone',
-        copacity: '64 gb',
+        copacity: '64 GB',
         price: 950,
         images: '/images/iphone11-y.jpg',
     },
 ]
+
+export const getProductsObject = (array: Products[]) =>
+    array.reduce(
+        (object, product) => ({
+            ...object,
+            [product.id]: product,
+        }),
+        {}
+    )
 
 export default productsArrey

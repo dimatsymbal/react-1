@@ -7,6 +7,9 @@ import {
 } from '@mui/material'
 import { useState } from 'react'
 import './ProductsListItem.scss'
+import AddShoppingCartSharpIcon from '@mui/icons-material/AddShoppingCartSharp'
+import AddIcon from '@mui/icons-material/Add'
+import RemoveIcon from '@mui/icons-material/Remove'
 
 type Props = {
     id: number
@@ -79,7 +82,7 @@ const ProductsListItem = ({
                         onClick={() => onDecrement()}
                         disabled={count <= 1}
                     >
-                        -
+                        <RemoveIcon />
                     </Button>
                     <TextField size="small" value={count}></TextField>
                     <Button
@@ -89,7 +92,7 @@ const ProductsListItem = ({
                         onClick={() => onIncrement()}
                         disabled={count >= 10}
                     >
-                        +
+                        <AddIcon />
                     </Button>
                 </div>
             </CardContent>
@@ -97,10 +100,12 @@ const ProductsListItem = ({
             <CardActions className="flex_btn_in_card">
                 <div className="product_price">{price * count}$</div>
                 <Button
+                    className="add_to_cart_btn"
                     onClick={() => addProductToCart(id, count)}
                     variant="contained"
                 >
                     Add to cart!
+                    <AddShoppingCartSharpIcon />
                 </Button>
             </CardActions>
         </Card>
