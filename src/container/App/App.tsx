@@ -15,11 +15,16 @@ type productsInCart = {
 
 const App = (props: Props) => {
     const [productsInCart, setProductsInCart] = useState<productsInCart>({
-        1: 5,
-        2: 3,
+        1: 0,
+        2: 0,
     })
 
-    const addProductToCart = (countFinal: number, priceFinal: number) => {}
+    const addProductToCart = (id: number, count: number) => {
+        setProductsInCart((prevState) => ({
+            ...prevState,
+            [id]: (prevState[id] || 0) + count,
+        }))
+    }
 
     return (
         <StyledEngineProvider injectFirst>
