@@ -5,12 +5,8 @@ import {
     CardContent,
     TextField,
 } from '@mui/material'
-import { Component, useState } from 'react'
+import { useState } from 'react'
 import './ProductsListItem.scss'
-
-type Propss = {
-    addProductToCart: (countFinal: number, priceFinal: number) => void
-}
 
 type Props = {
     title: string
@@ -56,7 +52,6 @@ const ProductsListItem = ({
                 <div className="product_desc">{description}</div>
                 <div className="product_features">{type}</div>
                 <div className="product_features">{copacity} GB</div>
-                {/* <div className="product_price">{price}$</div> */}
 
                 {/* <div className="color_block">
                     <p>
