@@ -5,7 +5,7 @@ type Props = {}
 const Logo = (props: Props) => {
     return (
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            <img src={logo} alt="fake shop" />
+            <img className="logo_header" src={logo} alt="fake shop" />
         </Typography>
     )
 }

@@ -45,7 +45,6 @@ const App = (props: Props) => {
                     />
                 </Routes>
             </Container>
-            {/* <Main addProductToCart={addProductToCart} /> */}
             <Footer />
         </StyledEngineProvider>
     )

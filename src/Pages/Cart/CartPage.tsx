@@ -13,7 +13,7 @@ const CartPage = ({ productsInCart }: Props) => {
                 variant="h4"
                 align="center"
                 sx={{
-                    marginBottom: '50px',
+                    marginTop: '100px',
                 }}
             >
                 Cart List
