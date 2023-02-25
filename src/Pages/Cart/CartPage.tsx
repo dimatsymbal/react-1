@@ -1,24 +1,36 @@
 import { Grid, Typography } from '@mui/material'
-import ProductsInCartPage from 'Components/ProductsInCartPage/ProductsInCartPage'
-
+import CartTotal from 'Components/CartTotal/CartTotal'
+import CartProductListItemExtended from 'Components/CartProductList/CardProductListItemExtended'
+import CartProductList from 'Components/CartProductList/CartProductList'
 type Props = {
     productsInCart: {
         [id: number]: number
     }
+
+    deleteProductFromCart: (countFinal: number, priceFinal: number) => void
 }
-const CartPage = ({ productsInCart }: Props) => {
+const CartPage = ({ productsInCart, deleteProductFromCart }: Props) => {
     return (
         <>
             <Typography
                 variant="h4"
                 align="center"
                 sx={{
+                    marginBottom: '50px',
                     marginTop: '100px',
                 }}
             >
                 Cart List
-                <ProductsInCartPage productsInCart={productsInCart} />
             </Typography>
+
+            <Grid container spacing={4}>
+                <CartProductList
+                    productsInCart={productsInCart}
+                    deleteProductFromCart={deleteProductFromCart}
+                    CartItem={CartProductListItemExtended}
+                />
+            </Grid>
+            <CartTotal productsInCart={productsInCart} />
         </>
     )
 }

@@ -1,5 +1,4 @@
 import productsArray, { getProductsObject, Products } from 'Utils/ProductsArrey'
-
 type Props = {
     productsInCart: {
         [id: number]: number
