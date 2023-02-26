@@ -1,15 +1,8 @@
-import {
-    Button,
-    Card,
-    CardActions,
-    CardContent,
-    TextField,
-} from '@mui/material'
+import { Button, Card, CardActions, CardContent } from '@mui/material'
 import { useState } from 'react'
 import './ProductsListItem.scss'
 import AddShoppingCartSharpIcon from '@mui/icons-material/AddShoppingCartSharp'
-import AddIcon from '@mui/icons-material/Add'
-import RemoveIcon from '@mui/icons-material/Remove'
+import Quantity from 'Components/Quantity/Quantity'
 
 type Props = {
     id: number
@@ -58,43 +51,11 @@ const ProductsListItem = ({
                 <div className="product_features">{type}</div>
                 <div className="product_features">{copacity} GB</div>
 
-                {/* <div className="color_block">
-                    <p>
-                        Color:{' '}
-                        <span className={this.state.color}>
-                            {this.state.color}
-                        </span>
-                    </p>
-                    <Button
-                        variant="outlined"
-                        size="small"
-                        onClick={this.changeColor}
-                    >
-                        Change color!
-                    </Button>
-                </div> */}
-
-                <div className="product_quantity">
-                    <Button
-                        className="button_minus"
-                        variant="outlined"
-                        size="small"
-                        onClick={() => onDecrement()}
-                        disabled={count <= 1}
-                    >
-                        <RemoveIcon />
-                    </Button>
-                    <TextField size="small" value={count}></TextField>
-                    <Button
-                        className="button_plus"
-                        variant="outlined"
-                        size="small"
-                        onClick={() => onIncrement()}
-                        disabled={count >= 10}
-                    >
-                        <AddIcon />
-                    </Button>
-                </div>
+                <Quantity
+                    onDecrement={onDecrement}
+                    onIncrement={onIncrement}
+                    count={count}
+                />
             </CardContent>
 
             <CardActions className="flex_btn_in_card">

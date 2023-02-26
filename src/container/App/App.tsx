@@ -20,6 +20,7 @@ const App = (props: Props) => {
         1: 1,
     })
 
+    // ФУНКЦІЯ ДОДАВАННЯ ТОВАРУ
     const addProductToCart = (id: number, count: number) => {
         setProductsInCart((prevState) => ({
             ...prevState,
@@ -30,6 +31,15 @@ const App = (props: Props) => {
     // ФУНКЦІЯ ВИДАЛЕННЯ ТОВАРУ
     const removeProductFromCart = (id: number) => {
         setProductsInCart((prevState) => omit(prevState, [id])) //викликаємо функцію оміт, на вхід передаємо обєект з якогo будемо видаляти данні і той ключ що будемо видаляти, а саме айді
+    }
+
+    // ФУНКЦІЯ ЗМІНИ КІЛЬКОСТІ НА КАРТОЧКАХ У КОРЗИНІ
+    const changeProductQuantity = (id: number, count: number) => {
+        setProductsInCart((prevState) => ({
+            //повертає setProductsInCart, бере попередній стейт
+            ...prevState, //змерджить попередній стейт
+            [id]: count,
+        }))
     }
 
     return (
@@ -49,6 +59,7 @@ const App = (props: Props) => {
                             <CartPage
                                 productsInCart={productsInCart}
                                 removeProductFromCart={removeProductFromCart}
+                                changeProductQuantity={changeProductQuantity}
                             />
                         }
                     />
