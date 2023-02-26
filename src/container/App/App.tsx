@@ -4,12 +4,11 @@ import CssBaseline from '@mui/material/CssBaseline'
 import { StyledEngineProvider } from '@mui/material/styles'
 import 'assets/font.css'
 import { useState } from 'react'
-import { count } from 'console'
 import { Route, Routes } from 'react-router-dom'
 import Home from 'Pages/Home/Home'
 import { Container } from '@mui/material'
 import CartPage from 'Pages/Cart/CartPage'
-
+import { omit } from 'lodash'
 type Props = {}
 
 type productsInCart = {
@@ -18,7 +17,7 @@ type productsInCart = {
 
 const App = (props: Props) => {
     const [productsInCart, setProductsInCart] = useState<productsInCart>({
-        1: 5,
+        1: 1,
     })
 
     const addProductToCart = (id: number, count: number) => {
@@ -28,19 +27,9 @@ const App = (props: Props) => {
         }))
     }
 
-    const deleteProductFromCart = (id: number, count: number) => {
-        setProductsInCart((prevState) => ({
-            ...prevState,
-            [id]: (prevState[id] || 0) - count,
-        }))
-    }
-
+    // ФУНКЦІЯ ВИДАЛЕННЯ ТОВАРУ
     const removeProductFromCart = (id: number) => {
-        setProductsInCart((prevState) => {
-            let prevProductsInCart = { ...prevState }
-            delete prevProductsInCart[id]
-            return prevProductsInCart
-        })
+        setProductsInCart((prevState) => omit(prevState, [id])) //викликаємо функцію оміт, на вхід передаємо обєект з якогo будемо видаляти данні і той ключ що будемо видаляти, а саме айді
     }
 
     return (
@@ -48,9 +37,6 @@ const App = (props: Props) => {
             <CssBaseline />
             <Header productsInCart={productsInCart} />
             <Container sx={{ padding: '60px 0' }}>
-                <button onClick={() => removeProductFromCart(1)}>
-                    Delete product!
-                </button>
                 <Routes>
                     <Route
                         path="/"
@@ -62,7 +48,7 @@ const App = (props: Props) => {
                         element={
                             <CartPage
                                 productsInCart={productsInCart}
-                                deleteProductFromCart={deleteProductFromCart}
+                                removeProductFromCart={removeProductFromCart}
                             />
                         }
                     />

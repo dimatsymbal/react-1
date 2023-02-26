@@ -16,24 +16,14 @@ type Props = {
     product: Products
     productCount: number
 
-    deleteProductFromCart: (countFinal: number, priceFinal: number) => void
+    removeProductFromCart: (id: number) => void
 }
 
 const CartProductListItemExtended = ({
     product,
     productCount,
-    deleteProductFromCart,
+    removeProductFromCart,
 }: Props) => {
-    const [count, setCount] = useState<number>(1)
-
-    const onIncrement = () => {
-        setCount((prevState) => prevState + 1)
-    }
-
-    const onDecrement = () => {
-        setCount((prevState) => prevState - 1)
-    }
-
     return (
         <Grid item xs={12} sm={4}>
             <Card className="card_cartpage">
@@ -49,33 +39,12 @@ const CartProductListItemExtended = ({
                     <p>Price for one item: {product.price}</p>
                     <p>Count: {productCount}</p>
                     <p>For all: {product.price * productCount}</p>
-
-                    <div className="product_quantity">
-                        <Button
-                            className="button_minus"
-                            variant="outlined"
-                            size="small"
-                            onClick={() => onDecrement()}
-                            disabled={count <= 1}
-                        >
-                            <RemoveIcon />
-                        </Button>
-                        <TextField size="small" value={count}></TextField>
-                        <Button
-                            className="button_plus"
-                            variant="outlined"
-                            size="small"
-                            onClick={() => onIncrement()}
-                            disabled={count >= productCount}
-                        >
-                            <AddIcon />
-                        </Button>
-                    </div>
                 </CardContent>
                 <CardActions>
                     <Button
                         variant="contained"
-                        onClick={() => deleteProductFromCart(product.id, count)}
+                        onClick={() => removeProductFromCart(product.id)} //пишимо стрілкову функцію, пов'язано з параметрами. Відбувається зациклення
+                        // Викликаємо тоді коли наша функція має параметри (айді), то ми викликаємо її через стрілкову функцію в онкліку
                     >
                         <DeleteIcon />
                     </Button>
