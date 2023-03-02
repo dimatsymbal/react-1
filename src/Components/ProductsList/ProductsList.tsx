@@ -20,31 +20,34 @@ const ProductsList = ({ addProductToCart }: Props) => {
             </Typography>
 
             <Grid container spacing={3}>
-                {productsArrey.map(
-                    ({
-                        id,
-                        title,
-                        description,
-                        type,
-                        copacity,
-                        price,
-                        images,
-                    }) => (
-                        <Grid item xs={12} sm={6} md={4} key={id}>
-                            {' '}
-                            <ProductsListItem
-                                id={id}
-                                images={images}
-                                title={title}
-                                description={description}
-                                type={type}
-                                copacity={copacity}
-                                price={price}
-                                addProductToCart={addProductToCart}
-                            />
-                        </Grid>
-                    )
-                )}
+                {productsArrey
+                    // .filter((product) => product.category === 'phone')  //МЕТОД ФІЛЬТР, ПРОДУКТ - ПОТОЧНИЙ ЕЛЕМЕНТ МАСИВУ, І МИ З ТОГО ПРОДУКТУ ФІЛЬТРУЄМО ПО КАТЕГОРІЇ
+                    .map(
+                        //ПІСЛЯ ФІЛЬТРУ ЗАПУСКАЄМО МЕТОД МЄП І ПРОХОДИМОСЬ ПО ЕЛЕМЕНТАХ МАСИВУ
+                        ({
+                            id,
+                            title,
+                            description,
+                            type,
+                            copacity,
+                            price,
+                            images,
+                        }) => (
+                            <Grid item xs={12} sm={6} md={4} key={id}>
+                                {' '}
+                                <ProductsListItem
+                                    id={id}
+                                    images={images}
+                                    title={title}
+                                    description={description}
+                                    type={type}
+                                    copacity={copacity}
+                                    price={price}
+                                    addProductToCart={addProductToCart}
+                                />
+                            </Grid>
+                        )
+                    )}
             </Grid>
         </>
     )

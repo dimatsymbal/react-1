@@ -6,6 +6,7 @@ export type Products = {
     copacity: string
     price: number
     images: string
+    category?: string
 }
 
 const productsArrey: Products[] = [
@@ -17,6 +18,7 @@ const productsArrey: Products[] = [
         copacity: '256 GB',
         price: 1400,
         images: '/images/iphone13.jpg',
+        // category: 'phone',
     },
     {
         id: 2,
