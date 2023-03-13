@@ -9,6 +9,7 @@ import Home from 'Pages/Home/Home'
 import { Container } from '@mui/material'
 import CartPage from 'Pages/Cart/CartPage'
 import { omit } from 'lodash'
+import Examen from 'Pages/Examen/Examen'
 type Props = {}
 
 type productsInCart = {
@@ -63,6 +64,8 @@ const App = (props: Props) => {
                             />
                         }
                     />
+
+                    <Route path="/examen" element={<Examen />} />
                 </Routes>
             </Container>
             <Footer />

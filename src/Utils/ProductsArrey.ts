@@ -92,6 +92,37 @@ const productsArrey: Products[] = [
         price: 950,
         images: '/images/iphone11-y.jpg',
     },
+
+    {
+        id: 10,
+        title: 'iPhone 140 pro',
+        description: 'bebebebeb',
+        type: 'phone',
+        copacity: '256 GB',
+        price: 600,
+        images: '/images/iphone11.jpg',
+        category: 'task2',
+    },
+    {
+        id: 11,
+        title: 'iPhone 100',
+        description: 'bebebebeb',
+        type: 'phone',
+        copacity: '128 GB',
+        price: 750,
+        images: '/images/iphone11-y.jpg',
+        category: 'task2',
+    },
+    {
+        id: 12,
+        title: 'iPhone 110 pro',
+        description: 'bebebebeb',
+        type: 'phone',
+        copacity: '64 GB',
+        price: 950,
+        images: '/images/iphone11-y.jpg',
+        category: 'task2',
+    },
 ]
 
 export const getProductsObject = (array: Products[]) =>

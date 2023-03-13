@@ -1,5 +1,4 @@
 import ProductsList from 'Components/ProductsList/ProductsList'
-import ProductsListItem from 'Components/ProductsList/ProductsListItem'
 import './home.scss'
 import Reviews from 'Components/Reviews/Reviews'
 type Props = {

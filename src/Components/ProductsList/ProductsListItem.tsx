@@ -3,6 +3,9 @@ import { useState } from 'react'
 import './ProductsListItem.scss'
 import AddShoppingCartSharpIcon from '@mui/icons-material/AddShoppingCartSharp'
 import Quantity from 'Components/Quantity/Quantity'
+import FavoriteIcon from '@mui/icons-material/Favorite'
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
+import { useAppSelector } from 'redux/hooks'
 
 type Props = {
     id: number
@@ -36,9 +39,14 @@ const ProductsListItem = ({
         setCount((prevState) => prevState - 1)
     }
 
+    const isLiked = useAppSelector((state) => state.productsLikeState[id])
+
     return (
         <Card variant="outlined">
             <CardContent>
+                <Button variant="contained">
+                    {isLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+                </Button>
                 <div className="product_image">
                     <img
                         className="product_image_content"
