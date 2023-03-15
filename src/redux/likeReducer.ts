@@ -8,7 +8,7 @@ type likeProductsType = {
 //ОПИС СТРУКТУРИ ЯК БУДУТЬ ЗБЕРІГАТЬСЯ
 //опис значення за замовчуванням
 export const initialState: likeProductsType = {
-    1: true,
+    1: false,
     2: false,
 }
 
@@ -16,7 +16,18 @@ export const initialState: likeProductsType = {
 export const likeSlice = createSlice({
     name: 'like',
     initialState,
-    reducers: {},
+    reducers: {
+        addLike: (state, action) => ({
+            ...state,
+            [action.payload]: true,
+        }),
+
+        removeLike: (state, action) => ({
+            ...state,
+            [action.payload]: false,
+        }),
+    },
 })
 
+export const { addLike, removeLike } = likeSlice.actions
 export default likeSlice.reducer
