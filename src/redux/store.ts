@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit'
 import likeReducer from './likeReducer'
 
-//ми створили сховище
-//далі ми описали конкретно його один слайс
+//ми створили глобальне сховище
+
 export const store = configureStore({
     reducer: {
         productsLikeState: likeReducer,

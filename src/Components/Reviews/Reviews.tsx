@@ -90,7 +90,8 @@ const Reviews = (props: Props) => {
             <Typography
                 variant="h4"
                 component="h2"
-                sx={{ margin: '60px auto' }}
+                align="center"
+                sx={{ marginTop: '60px', marginBottom: '60px' }}
             >
                 Reviews
             </Typography>

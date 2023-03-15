@@ -9,14 +9,16 @@ type Props = {
     productCount: number
 
     removeProductFromCart: (id: number) => void
-    changeProductQuantity: (id: number, count: number) => void
+    addProductQuantity: (id: number) => void
+    removeProductQuantity: (id: number) => void
 }
 
 const CartProductListItemExtended = ({
     product,
     productCount,
     removeProductFromCart,
-    changeProductQuantity,
+    addProductQuantity,
+    removeProductQuantity,
 }: Props) => {
     return (
         <Grid item xs={12} sm={4}>
@@ -37,18 +39,14 @@ const CartProductListItemExtended = ({
                         // ПЕРЕВІРКА НА ВИДАЛЕННЯ КАРТОЧКИ
                         count={productCount}
                         onDecrement={() =>
-                            productCount <= 1 // ЯКЩО productCount <= 1 ТО ВИКЛИКАЄТЬСЯ ВИДАЛЕННЯ, ІНАКШЕ ЗМІНЮЄТСЯ productCount
+                            productCount <= 1
                                 ? removeProductFromCart(product.id)
-                                : changeProductQuantity(
-                                      product.id,
-                                      productCount - 1
-                                  )
+                                : removeProductQuantity(product.id)
                         }
-                        onIncrement={() =>
-                            changeProductQuantity(product.id, productCount + 1)
-                        }
+                        onIncrement={() => addProductQuantity(product.id)}
                         minCount={0}
                     />
+
                     <p>For all: {product.price * productCount}$</p>
                 </CardContent>
                 <CardActions className="card_actions">

@@ -10,6 +10,7 @@ import { Container } from '@mui/material'
 import CartPage from 'Pages/Cart/CartPage'
 import { omit } from 'lodash'
 import Examen from 'Pages/Examen/Examen'
+import { createContext } from 'vm'
 type Props = {}
 
 type productsInCart = {
@@ -34,12 +35,26 @@ const App = (props: Props) => {
         setProductsInCart((prevState) => omit(prevState, [id])) //викликаємо функцію оміт, на вхід передаємо обєект з якогo будемо видаляти данні і той ключ що будемо видаляти, а саме айді
     }
 
-    // ФУНКЦІЯ ЗМІНИ КІЛЬКОСТІ НА КАРТОЧКАХ У КОРЗИНІ
-    const changeProductQuantity = (id: number, count: number) => {
+    // // ФУНКЦІЯ ЗМІНИ КІЛЬКОСТІ НА КАРТОЧКАХ У КОРЗИНІ
+    // const changeProductQuantity = (id: number, count: number) => {
+    //     setProductsInCart((prevState) => ({
+    //         //повертає setProductsInCart, бере попередній стейт
+    //         ...prevState, //змерджить попередній стейт
+    //         [id]: count,
+    //     }))
+    // }
+
+    const addProductQuantity = (id: number) => {
         setProductsInCart((prevState) => ({
-            //повертає setProductsInCart, бере попередній стейт
-            ...prevState, //змерджить попередній стейт
-            [id]: count,
+            ...prevState,
+            [id]: prevState[id] + 1,
+        }))
+    }
+
+    const removeProductQuantity = (id: number) => {
+        setProductsInCart((prevState) => ({
+            ...prevState,
+            [id]: prevState[id] - 1,
         }))
     }
 
@@ -60,7 +75,8 @@ const App = (props: Props) => {
                             <CartPage
                                 productsInCart={productsInCart}
                                 removeProductFromCart={removeProductFromCart}
-                                changeProductQuantity={changeProductQuantity}
+                                addProductQuantity={addProductQuantity}
+                                removeProductQuantity={removeProductQuantity}
                             />
                         }
                     />

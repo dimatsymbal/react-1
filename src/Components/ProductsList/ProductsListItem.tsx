@@ -42,7 +42,7 @@ const ProductsListItem = ({
     const isLiked = useAppSelector((state) => state.productsLikeState[id])
 
     return (
-        <Card variant="outlined">
+        <Card className="ProductsListItem" variant="outlined">
             <CardContent>
                 <Button variant="contained">
                     {isLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}

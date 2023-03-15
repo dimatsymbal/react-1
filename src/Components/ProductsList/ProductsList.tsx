@@ -1,27 +1,60 @@
 import { Grid, Typography } from '@mui/material'
 import ProductsListItem from './ProductsListItem'
 import productsArrey from 'Utils/ProductsArrey'
-
+import { useState } from 'react'
+import { Button } from '@mui/material'
+import './ProductsList.scss'
 type Props = {
     addProductToCart: (countFinal: number, priceFinal: number) => void
 }
 
 const ProductsList = ({ addProductToCart }: Props) => {
+    const [rozdilName, setRozdilName] = useState<string>('iPhones List')
+
+    const [sortBtnName, setSortBtnName] = useState<string>('phones')
+
+    const changeSortBtnByPhones = () => {
+        setSortBtnName(() => 'phones')
+        setRozdilName(() => 'iPhones List')
+    }
+
+    const changeSortBtnByHeadphones = () => {
+        setSortBtnName(() => 'headphones')
+        setRozdilName(() => 'AirPods List')
+    }
+
+    const changeSortBtnByLaptops = () => {
+        setSortBtnName(() => 'laptops')
+        setRozdilName(() => 'Laptops List')
+    }
+
     return (
         <>
             <Typography
                 variant="h4"
+                component="h2"
                 align="center"
                 sx={{
-                    marginBottom: '50px',
+                    marginTop: '-20px',
+                    marginBottom: '60px',
                 }}
             >
-                iPhones List
+                {rozdilName}
             </Typography>
+
+            <div className="sort_btns_block">
+                <Button onClick={() => changeSortBtnByPhones()}>Phones</Button>
+                <Button onClick={() => changeSortBtnByHeadphones()}>
+                    Headphones
+                </Button>
+                <Button onClick={() => changeSortBtnByLaptops()}>
+                    Laptops
+                </Button>
+            </div>
 
             <Grid container spacing={3}>
                 {productsArrey
-                    // .filter((product) => product.category === 'phone')  //МЕТОД ФІЛЬТР, ПРОДУКТ - ПОТОЧНИЙ ЕЛЕМЕНТ МАСИВУ, І МИ З ТОГО ПРОДУКТУ ФІЛЬТРУЄМО ПО КАТЕГОРІЇ
+                    .filter((product) => product.category === sortBtnName) //МЕТОД ФІЛЬТР, ПРОДУКТ - ПОТОЧНИЙ ЕЛЕМЕНТ МАСИВУ, І МИ З ТОГО ПРОДУКТУ ФІЛЬТРУЄМО ПО КАТЕГОРІЇ
                     .map(
                         //ПІСЛЯ ФІЛЬТРУ ЗАПУСКАЄМО МЕТОД МЄП І ПРОХОДИМОСЬ ПО ЕЛЕМЕНТАХ МАСИВУ
                         ({

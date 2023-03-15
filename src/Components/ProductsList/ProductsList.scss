@@ -1,0 +1,9 @@
+.sort_btns_block {
+    width: 390px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    left: calc(50% - 400px / 2);
+    margin-bottom: 20px;
+}

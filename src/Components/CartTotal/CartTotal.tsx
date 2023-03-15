@@ -14,7 +14,15 @@ const CartTotal = ({
     return (
         <div>
             <div>
-                Total:{' '}
+                {/* <Typography
+                    variant="h4"
+                    component="h2"
+                    align="center"
+                    sx={{ marginTop: '60px', marginBottom: '60px' }}
+                >
+                    Total:
+                </Typography> */}
+                total:
                 {Object.keys(productsInCart).reduce(
                     (total, productId) =>
                         total +

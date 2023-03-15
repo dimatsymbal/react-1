@@ -9,7 +9,7 @@ type likeProductsType = {
 //опис значення за замовчуванням
 export const initialState: likeProductsType = {
     1: true,
-    2: true,
+    2: false,
 }
 
 //СТВОРЕННЯ СЛАЙСУ
