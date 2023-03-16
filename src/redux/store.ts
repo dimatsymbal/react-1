@@ -1,4 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
+import cartReducer from './cartReducer'
 import likeReducer from './likeReducer'
 
 //ми створили глобальне сховище
@@ -6,6 +7,7 @@ import likeReducer from './likeReducer'
 export const store = configureStore({
     reducer: {
         productsLikeState: likeReducer,
+        productsInCart: cartReducer,
     },
 })
 

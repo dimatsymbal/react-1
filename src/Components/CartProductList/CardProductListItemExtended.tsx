@@ -3,23 +3,21 @@ import './CardProductListItemExtended.css'
 import { Products } from 'Utils/ProductsArrey'
 import DeleteIcon from '@mui/icons-material/Delete'
 import Quantity from 'Components/Quantity/Quantity'
+import { useAppDispatch, useAppSelector } from 'redux/hooks'
+import {
+    addProductQuantity,
+    removeProductFromCart,
+    removeProductQuantity,
+} from 'redux/cartReducer'
 
 type Props = {
     product: Products
     productCount: number
-
-    removeProductFromCart: (id: number) => void
-    addProductQuantity: (id: number) => void
-    removeProductQuantity: (id: number) => void
 }
 
-const CartProductListItemExtended = ({
-    product,
-    productCount,
-    removeProductFromCart,
-    addProductQuantity,
-    removeProductQuantity,
-}: Props) => {
+const CartProductListItemExtended = ({ product, productCount }: Props) => {
+    const dispatch = useAppDispatch()
+
     return (
         <Grid item xs={12} sm={4}>
             <Card className="card_cartpage">
@@ -40,10 +38,14 @@ const CartProductListItemExtended = ({
                         count={productCount}
                         onDecrement={() =>
                             productCount <= 1
-                                ? removeProductFromCart(product.id)
-                                : removeProductQuantity(product.id)
+                                ? dispatch(removeProductFromCart(product.id))
+                                : dispatch(
+                                      removeProductQuantity({ id: product.id })
+                                  )
                         }
-                        onIncrement={() => addProductQuantity(product.id)}
+                        onIncrement={() =>
+                            dispatch(addProductQuantity({ id: product.id }))
+                        }
                         minCount={0}
                     />
 
@@ -52,7 +54,9 @@ const CartProductListItemExtended = ({
                 <CardActions className="card_actions">
                     <Button
                         variant="contained"
-                        onClick={() => removeProductFromCart(product.id)} //пишимо стрілкову функцію, пов'язано з параметрами. Відбувається зациклення
+                        onClick={() =>
+                            dispatch(removeProductFromCart(product.id))
+                        } //пишимо стрілкову функцію, пов'язано з параметрами. Відбувається зациклення
                         // Викликаємо тоді коли наша функція має параметри (айді), то ми викликаємо її через стрілкову функцію в онкліку
                     >
                         <DeleteIcon />

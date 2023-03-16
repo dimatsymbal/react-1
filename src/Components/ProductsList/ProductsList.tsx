@@ -4,11 +4,9 @@ import productsArrey from 'Utils/ProductsArrey'
 import { useState } from 'react'
 import { Button } from '@mui/material'
 import './ProductsList.scss'
-type Props = {
-    addProductToCart: (countFinal: number, priceFinal: number) => void
-}
+type Props = {}
 
-const ProductsList = ({ addProductToCart }: Props) => {
+const ProductsList = (props: Props) => {
     const [rozdilName, setRozdilName] = useState<string>('iPhones List')
 
     const [sortBtnName, setSortBtnName] = useState<string>('phones')
@@ -76,7 +74,6 @@ const ProductsList = ({ addProductToCart }: Props) => {
                                     type={type}
                                     copacity={copacity}
                                     price={price}
-                                    addProductToCart={addProductToCart}
                                 />
                             </Grid>
                         )

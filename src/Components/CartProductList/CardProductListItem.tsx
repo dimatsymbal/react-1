@@ -7,7 +7,7 @@ type Props = {
 const CardProductListItem = ({ product, productCount }: Props) => {
     return (
         <div>
-            {product.type} : {productCount}
+            {product.title} : {productCount}
         </div>
     )
 }

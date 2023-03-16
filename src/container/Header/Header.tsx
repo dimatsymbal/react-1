@@ -9,13 +9,9 @@ import Menu from 'Components/Menu/Menu'
 import CardHeader from 'Components/CardHeader/CardHeader'
 import TemporaryDrawer from 'Components/Adaptive_Burger/burger_header'
 
-type Props = {
-    productsInCart: {
-        [id: number]: number
-    }
-}
+type Props = {}
 
-const Header = ({ productsInCart }: Props) => {
+const Header = (props: Props) => {
     return (
         <AppBar className="app_bar" position="static">
             <Container className="cont_header" maxWidth="lg">
@@ -23,7 +19,7 @@ const Header = ({ productsInCart }: Props) => {
                     <Logo />
                     <Menu />
 
-                    <CardHeader productsInCart={productsInCart} />
+                    <CardHeader />
 
                     <div className="adaptive_burger">
                         <TemporaryDrawer />
