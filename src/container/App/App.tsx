@@ -9,6 +9,7 @@ import { Container } from '@mui/material'
 import CartPage from 'Pages/Cart/CartPage'
 import Examen from 'Pages/Examen/Examen'
 import CheckoutPage from 'Pages/Checkout/CheckoutPage'
+import ProductPage from 'Pages/Product/ProductPage'
 
 type Props = {}
 
@@ -24,6 +25,7 @@ const App = (props: Props) => {
                     <Route path="cart" element={<CartPage />} />
                     <Route path="/checkout" element={<CheckoutPage />} />
                     <Route path="/examen" element={<Examen />} />
+                    <Route path="/products/:id" element={<ProductPage />} />
                 </Routes>
             </Container>
             <Footer />
