@@ -1,5 +1,4 @@
 import CartTotal from 'Components/CartTotal/CartTotal'
-import CartProductList from 'Components/CartProductList/CartProductList'
 import { useAppSelector } from 'redux/hooks'
 
 const CardHeader = () => {

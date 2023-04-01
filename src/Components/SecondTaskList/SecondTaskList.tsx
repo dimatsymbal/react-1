@@ -1,4 +1,4 @@
-import Second_task_listItem from './Second_task_listItem'
+import Second_task_listItem from './SecondTaskListItem'
 import productsArrey from 'Utils/ProductsArrey'
 import './Second_task_list.scss'
 type Props = {
@@ -18,7 +18,7 @@ type Products = {
     category?: string
 }
 
-const Sekond_task_list = ({
+const SecondTaskList = ({
     addCardToCart,
     currenscyNumber,
     currenscyText,
@@ -56,4 +56,4 @@ const Sekond_task_list = ({
         </div>
     )
 }
-export default Sekond_task_list
+export default SecondTaskList

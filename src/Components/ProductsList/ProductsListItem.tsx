@@ -59,7 +59,7 @@ const ProductsListItem = ({
                     <img
                         className="product_image_content"
                         src={images}
-                        alt="image card"
+                        alt="product_image_content card"
                     />
                 </div>
                 <h6 className="product_title">

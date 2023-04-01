@@ -3,7 +3,7 @@ import './CardProductListItemExtended.css'
 import { Products } from 'Utils/ProductsArrey'
 import DeleteIcon from '@mui/icons-material/Delete'
 import Quantity from 'Components/Quantity/Quantity'
-import { useAppDispatch, useAppSelector } from 'redux/hooks'
+import { useAppDispatch } from 'redux/hooks'
 import {
     addProductQuantity,
     removeProductFromCart,

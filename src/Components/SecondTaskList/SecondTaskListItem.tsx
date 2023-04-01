@@ -1,5 +1,5 @@
 import { Card, Button } from '@mui/material'
-import './Second_task_listItem.scss'
+import './SecondTaskListItem.scss'
 type Props = {
     id: number
     title: string

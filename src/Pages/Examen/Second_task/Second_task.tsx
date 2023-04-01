@@ -1,5 +1,5 @@
 import { Button } from '@mui/material'
-import Second_task_list from 'Components/Second_task_list/Second_task_list'
+import SecondTaskList from 'Components/SecondTaskList/SecondTaskList'
 import './Second_task.scss'
 import { useState } from 'react'
 
@@ -9,7 +9,7 @@ type CartDataProps = {
     totalPrice: number
 }
 
-const Second_task = (props: Props) => {
+const SecondTask = (props: Props) => {
     const [cartData, setCartData] = useState<CartDataProps>({
         totalPrice: 0,
     })
@@ -67,7 +67,7 @@ const Second_task = (props: Props) => {
             </div>
 
             <div>
-                <Second_task_list
+                <SecondTaskList
                     addCardToCart={addCardToCart}
                     currenscyNumber={currenscyNumber}
                     currenscyText={currenscyText}
@@ -80,4 +80,4 @@ const Second_task = (props: Props) => {
         </div>
     )
 }
-export default Second_task
+export default SecondTask

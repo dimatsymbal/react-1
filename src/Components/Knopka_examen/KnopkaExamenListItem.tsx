@@ -4,7 +4,7 @@ type Props = {
     id: number
     text: string
 }
-const Knopka_examen_listItem = ({ id, text }: Props) => {
+const KnopkaExamenListItem = ({ id, text }: Props) => {
     const [kilkist, setKilkist] = useState<number>(0)
 
     return (
@@ -13,4 +13,4 @@ const Knopka_examen_listItem = ({ id, text }: Props) => {
         </Button>
     )
 }
-export default Knopka_examen_listItem
+export default KnopkaExamenListItem

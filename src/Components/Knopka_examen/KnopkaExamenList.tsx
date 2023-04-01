@@ -1,4 +1,4 @@
-import Knopka_examen_listItem from './Knopka_examen_listItem'
+import Knopka_examen_listItem from './KnopkaExamenListItem'
 import buttonsArrey from 'Utils/ButtonsArrey'
 type Props = {}
 
@@ -7,7 +7,7 @@ type Button = {
     text: string
 }
 
-const Knopka_examen_list = (props: Props) => {
+const KnopkaExamenList = (props: Props) => {
     return (
         <div>
             <div className="btns_div">
@@ -20,4 +20,4 @@ const Knopka_examen_list = (props: Props) => {
         </div>
     )
 }
-export default Knopka_examen_list
+export default KnopkaExamenList
