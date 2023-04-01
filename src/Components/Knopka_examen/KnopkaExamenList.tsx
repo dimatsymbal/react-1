@@ -1,4 +1,4 @@
-import Knopka_examen_listItem from './KnopkaExamenListItem'
+import KnopkaExamenListItem from './KnopkaExamenListItem'
 import buttonsArrey from 'Utils/ButtonsArrey'
 type Props = {}
 
@@ -13,7 +13,7 @@ const KnopkaExamenList = (props: Props) => {
             <div className="btns_div">
                 {buttonsArrey.map(({ id, text }: Button) => (
                     <div className="child" key={id}>
-                        <Knopka_examen_listItem id={id} text={text} />
+                        <KnopkaExamenListItem id={id} text={text} />
                     </div>
                 ))}
             </div>

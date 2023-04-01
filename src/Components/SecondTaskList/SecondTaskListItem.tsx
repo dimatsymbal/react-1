@@ -12,7 +12,7 @@ type Props = {
     currenscyText: string
     addCardToCart: (price: number) => void
 }
-const Second_task_listItem = ({
+const SecondTaskListItem = ({
     id,
     title,
     description,
@@ -39,4 +39,4 @@ const Second_task_listItem = ({
         </Card>
     )
 }
-export default Second_task_listItem
+export default SecondTaskListItem

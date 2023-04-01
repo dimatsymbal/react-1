@@ -1,4 +1,4 @@
-import Second_task_listItem from './SecondTaskListItem'
+import SecondTaskListItem from './SecondTaskListItem'
 import productsArrey from 'Utils/ProductsArrey'
 import './Second_task_list.scss'
 type Props = {
@@ -38,7 +38,7 @@ const SecondTaskList = ({
                         images,
                     }: Products) => (
                         <div className="child" key={id}>
-                            <Second_task_listItem
+                            <SecondTaskListItem
                                 id={id}
                                 title={title}
                                 description={description}
