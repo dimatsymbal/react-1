@@ -3,49 +3,31 @@ import Header from 'container/Header/Header'
 import CssBaseline from '@mui/material/CssBaseline'
 import { StyledEngineProvider } from '@mui/material/styles'
 import 'assets/font.css'
-import { useState } from 'react'
-import { count } from 'console'
 import { Route, Routes } from 'react-router-dom'
 import Home from 'Pages/Home/Home'
 import { Container } from '@mui/material'
 import CartPage from 'Pages/Cart/CartPage'
+import Examen from 'Pages/Examen/Examen'
+import CheckoutPage from 'Pages/Checkout/CheckoutPage'
+import ProductPage from 'Pages/Product/ProductPage'
 
 type Props = {}
 
-type productsInCart = {
-    [id: number]: number
-}
-
 const App = (props: Props) => {
-    const [productsInCart, setProductsInCart] = useState<productsInCart>({
-        1: 0,
-    })
-
-    const addProductToCart = (id: number, count: number) => {
-        setProductsInCart((prevState) => ({
-            ...prevState,
-            [id]: (prevState[id] || 0) + count,
-        }))
-    }
-
     return (
         <StyledEngineProvider injectFirst>
             <CssBaseline />
-            <Header productsInCart={productsInCart} />
+            <Header />
             <Container sx={{ padding: '60px 0' }}>
                 <Routes>
-                    <Route
-                        path="/"
-                        element={<Home addProductToCart={addProductToCart} />}
-                    />
+                    <Route path="/" element={<Home />} />
 
-                    <Route
-                        path="cart"
-                        element={<CartPage productsInCart={productsInCart} />}
-                    />
+                    <Route path="cart" element={<CartPage />} />
+                    <Route path="/checkout" element={<CheckoutPage />} />
+                    <Route path="/examen" element={<Examen />} />
+                    <Route path="/products/:id" element={<ProductPage />} />
                 </Routes>
             </Container>
-            {/* <Main addProductToCart={addProductToCart} /> */}
             <Footer />
         </StyledEngineProvider>
     )
