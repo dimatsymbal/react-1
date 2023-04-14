@@ -7,6 +7,10 @@ export type Products = {
     price: number
     images: string
     quantity: number
+    extraDesc?: string
+    extraDesc2?: string
+    extraPhoto?: string
+    extraPhoto2?: string
 
     category?: string
 }
@@ -22,6 +26,13 @@ const productsArrey: Products[] = [
         price: 1400,
         images: '/images/iphone13.jpg',
         quantity: 14,
+        extraDesc:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraDesc2:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraPhoto: 'https://mediaonecentre.com/images/default/post.png',
+        extraPhoto2:
+            'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
     },
     {
         id: 2,
@@ -33,6 +44,13 @@ const productsArrey: Products[] = [
         price: 1250,
         images: '/images/iphone13-pink.jpg',
         quantity: 17,
+        extraDesc:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraDesc2:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraPhoto: 'https://mediaonecentre.com/images/default/post.png',
+        extraPhoto2:
+            'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
     },
     {
         id: 3,
@@ -44,6 +62,13 @@ const productsArrey: Products[] = [
         price: 1150,
         images: '/images/iphone12.jpg',
         quantity: 8,
+        extraDesc:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraDesc2:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraPhoto: 'https://mediaonecentre.com/images/default/post.png',
+        extraPhoto2:
+            'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
     },
     {
         id: 4,
@@ -55,6 +80,13 @@ const productsArrey: Products[] = [
         price: 1200,
         images: 'https://content1.rozetka.com.ua/goods/images/big/284920914.jpg',
         quantity: 1,
+        extraDesc:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraDesc2:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraPhoto: 'https://mediaonecentre.com/images/default/post.png',
+        extraPhoto2:
+            'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
     },
     {
         id: 5,
@@ -66,6 +98,13 @@ const productsArrey: Products[] = [
         price: 1090,
         images: 'https://content.rozetka.com.ua/goods/images/big/259416456.jpg',
         quantity: 18,
+        extraDesc:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraDesc2:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraPhoto: 'https://mediaonecentre.com/images/default/post.png',
+        extraPhoto2:
+            'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
     },
     {
         id: 6,
@@ -77,6 +116,13 @@ const productsArrey: Products[] = [
         price: 1300,
         images: 'https://content2.rozetka.com.ua/goods/images/big/284920812.jpg',
         quantity: 3,
+        extraDesc:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraDesc2:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraPhoto: 'https://mediaonecentre.com/images/default/post.png',
+        extraPhoto2:
+            'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
     },
     {
         id: 7,
@@ -88,6 +134,13 @@ const productsArrey: Products[] = [
         price: 600,
         images: 'https://content1.rozetka.com.ua/goods/images/big/284920900.jpg',
         quantity: 8,
+        extraDesc:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraDesc2:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraPhoto: 'https://mediaonecentre.com/images/default/post.png',
+        extraPhoto2:
+            'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
     },
     {
         id: 8,
@@ -99,6 +152,13 @@ const productsArrey: Products[] = [
         price: 750,
         images: 'https://content.rozetka.com.ua/goods/images/big/284920823.jpg',
         quantity: 21,
+        extraDesc:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraDesc2:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraPhoto: 'https://mediaonecentre.com/images/default/post.png',
+        extraPhoto2:
+            'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
     },
     {
         id: 9,
@@ -110,6 +170,13 @@ const productsArrey: Products[] = [
         price: 950,
         images: 'https://content2.rozetka.com.ua/goods/images/big/284920883.jpg',
         quantity: 4,
+        extraDesc:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraDesc2:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraPhoto: 'https://mediaonecentre.com/images/default/post.png',
+        extraPhoto2:
+            'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
     },
     {
         id: 113,
@@ -122,6 +189,13 @@ const productsArrey: Products[] = [
         price: 790,
         images: 'https://estore.ua/ua/media/catalog/product/cache/9/small_image/295x295/9df78eab33525d08d6e5fb8d27136e95/a/p/apple-airpods-pro-2-mqd83_1_.jpeg',
         quantity: 10,
+        extraDesc:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraDesc2:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraPhoto: 'https://mediaonecentre.com/images/default/post.png',
+        extraPhoto2:
+            'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
     },
     {
         id: 114,
@@ -134,6 +208,13 @@ const productsArrey: Products[] = [
 
         images: 'https://estore.ua/ua/media/catalog/product/cache/9/image/600x600/9df78eab33525d08d6e5fb8d27136e95/m/v/mv7n2_1-newpic.jpg',
         quantity: 24,
+        extraDesc:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraDesc2:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraPhoto: 'https://mediaonecentre.com/images/default/post.png',
+        extraPhoto2:
+            'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
     },
     {
         id: 115,
@@ -145,6 +226,13 @@ const productsArrey: Products[] = [
         price: 950,
         images: 'https://estore.ua/ua/media/catalog/product/cache/9/image/600x600/9df78eab33525d08d6e5fb8d27136e95/a/i/airpods-max-space-gray_1.jpeg',
         quantity: 1,
+        extraDesc:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraDesc2:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraPhoto: 'https://mediaonecentre.com/images/default/post.png',
+        extraPhoto2:
+            'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
     },
     {
         id: 116,
@@ -157,6 +245,13 @@ const productsArrey: Products[] = [
         price: 650,
         images: 'https://stylus.ua/thumbs/378x378/a2/6f/2648120.jpeg',
         quantity: 2,
+        extraDesc:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraDesc2:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraPhoto: 'https://mediaonecentre.com/images/default/post.png',
+        extraPhoto2:
+            'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
     },
     {
         id: 16,
@@ -168,6 +263,13 @@ const productsArrey: Products[] = [
         price: 1900,
         images: 'https://content1.rozetka.com.ua/goods/images/big/308887781.jpg',
         quantity: 14,
+        extraDesc:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraDesc2:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraPhoto: 'https://mediaonecentre.com/images/default/post.png',
+        extraPhoto2:
+            'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
     },
     {
         id: 17,
@@ -179,6 +281,13 @@ const productsArrey: Products[] = [
         price: 1150,
         images: 'https://content.rozetka.com.ua/goods/images/big/269257669.jpg',
         quantity: 15,
+        extraDesc:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraDesc2:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraPhoto: 'https://mediaonecentre.com/images/default/post.png',
+        extraPhoto2:
+            'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
     },
     {
         id: 18,
@@ -191,6 +300,13 @@ const productsArrey: Products[] = [
         price: 1450,
         images: 'https://content2.rozetka.com.ua/goods/images/big/269256825.jpg',
         quantity: 13,
+        extraDesc:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraDesc2:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraPhoto: 'https://mediaonecentre.com/images/default/post.png',
+        extraPhoto2:
+            'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
     },
     {
         id: 19,
@@ -202,6 +318,13 @@ const productsArrey: Products[] = [
         price: 950,
         images: 'https://content.rozetka.com.ua/goods/images/big/320954862.jpg',
         quantity: 2,
+        extraDesc:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraDesc2:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraPhoto: 'https://mediaonecentre.com/images/default/post.png',
+        extraPhoto2:
+            'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
     },
     {
         id: 20,
@@ -213,6 +336,13 @@ const productsArrey: Products[] = [
         price: 1050,
         images: 'https://content1.rozetka.com.ua/goods/images/big/320917424.jpg',
         quantity: 1,
+        extraDesc:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraDesc2:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraPhoto: 'https://mediaonecentre.com/images/default/post.png',
+        extraPhoto2:
+            'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
     },
     {
         id: 21,
@@ -224,6 +354,13 @@ const productsArrey: Products[] = [
         price: 950,
         images: 'https://content1.rozetka.com.ua/goods/images/big/289930043.jpg',
         quantity: 3,
+        extraDesc:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraDesc2:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraPhoto: 'https://mediaonecentre.com/images/default/post.png',
+        extraPhoto2:
+            'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
     },
     {
         id: 22,
@@ -235,6 +372,13 @@ const productsArrey: Products[] = [
         price: 1300,
         images: 'https://content.rozetka.com.ua/goods/images/big/302547833.jpg',
         quantity: 6,
+        extraDesc:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraDesc2:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraPhoto: 'https://mediaonecentre.com/images/default/post.png',
+        extraPhoto2:
+            'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
     },
     {
         id: 23,
@@ -246,6 +390,13 @@ const productsArrey: Products[] = [
         price: 1190,
         images: 'https://content.rozetka.com.ua/goods/images/big/304993193.jpg',
         quantity: 24,
+        extraDesc:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraDesc2:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraPhoto: 'https://mediaonecentre.com/images/default/post.png',
+        extraPhoto2:
+            'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
     },
     {
         id: 24,
@@ -257,6 +408,13 @@ const productsArrey: Products[] = [
         price: 1000,
         images: 'https://content.rozetka.com.ua/goods/images/big/298509428.jpg',
         quantity: 14,
+        extraDesc:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraDesc2:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraPhoto: 'https://mediaonecentre.com/images/default/post.png',
+        extraPhoto2:
+            'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
     },
     {
         id: 25,
@@ -268,6 +426,13 @@ const productsArrey: Products[] = [
         price: 800,
         images: 'https://content1.rozetka.com.ua/goods/images/big/304210461.jpg',
         quantity: 7,
+        extraDesc:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraDesc2:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraPhoto: 'https://mediaonecentre.com/images/default/post.png',
+        extraPhoto2:
+            'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
     },
 
     // ____________________________________________________________________________________________

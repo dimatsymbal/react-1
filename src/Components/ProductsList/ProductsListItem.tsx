@@ -100,7 +100,6 @@ const ProductsListItem = ({
                 ) : (
                     <h4 className="product_price">{price * count}$</h4>
                 )}
-                {/* <h4 className="product_price">{price * count}$</h4> */}
                 <Button
                     className="add_to_cart_btn"
                     onClick={() => dispatch(addProductToCart({ id, count }))}
