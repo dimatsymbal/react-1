@@ -9,6 +9,7 @@ import { useAppDispatch, useAppSelector } from 'redux/hooks'
 import { addLike, removeLike } from 'redux/likeReducer'
 import { addProductToCart } from 'redux/cartReducer'
 import { Link } from 'react-router-dom'
+import PercentIcon from '@mui/icons-material/Percent'
 
 type Props = {
     id: number
@@ -18,6 +19,7 @@ type Props = {
     copacity: string
     price: number
     images: string
+    quantity: number
 }
 
 const ProductsListItem = ({
@@ -28,6 +30,7 @@ const ProductsListItem = ({
     copacity,
     price,
     images,
+    quantity,
 }: Props) => {
     const [count, setCount] = useState<number>(1)
 
@@ -55,6 +58,14 @@ const ProductsListItem = ({
                 >
                     {isLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
                 </Button>
+
+                {quantity <= 3 && (
+                    <div className="saleCircle">
+                        {' '}
+                        <PercentIcon /> Only {quantity} left
+                    </div>
+                )}
+
                 <div className="product_image">
                     <img
                         className="product_image_content"
@@ -67,18 +78,29 @@ const ProductsListItem = ({
                     <Link to={`/products/${id}`}>{title}</Link>{' '}
                 </h6>
                 <div className="product_desc">{description}</div>
-                <div className="product_features">{type}</div>
+                <div className="product_type">{type}</div>
                 <div className="product_features">{copacity} GB</div>
 
                 <Quantity
                     onDecrement={onDecrement}
                     onIncrement={onIncrement}
                     count={count}
+                    quantity={quantity}
                 />
             </CardContent>
 
             <CardActions className="flex_btn_in_card">
-                <div className="product_price">{price * count}$</div>
+                {quantity <= 3 ? (
+                    <>
+                        <h4 className="product_old_price">{price * count}$</h4>
+                        <h4 className="product_discount_price">
+                            {price * count * 0.8}$
+                        </h4>
+                    </>
+                ) : (
+                    <h4 className="product_price">{price * count}$</h4>
+                )}
+                {/* <h4 className="product_price">{price * count}$</h4> */}
                 <Button
                     className="add_to_cart_btn"
                     onClick={() => dispatch(addProductToCart({ id, count }))}

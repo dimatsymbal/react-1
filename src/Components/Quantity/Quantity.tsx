@@ -7,8 +7,15 @@ type Props = {
     onIncrement: () => void
     count: number
     minCount?: number
+    quantity: number
 }
-const Quantity = ({ onDecrement, onIncrement, count, minCount = 1 }: Props) => {
+const Quantity = ({
+    onDecrement,
+    onIncrement,
+    count,
+    minCount = 1,
+    quantity,
+}: Props) => {
     return (
         <div className="product_quantity">
             <Button
@@ -26,7 +33,7 @@ const Quantity = ({ onDecrement, onIncrement, count, minCount = 1 }: Props) => {
                 variant="outlined"
                 size="small"
                 onClick={() => onIncrement()}
-                disabled={count >= 10}
+                disabled={count >= quantity}
             >
                 <AddIcon />
             </Button>

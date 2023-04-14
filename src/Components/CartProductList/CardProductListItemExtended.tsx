@@ -1,9 +1,13 @@
 import { Button, Card, CardActions, CardContent, Grid } from '@mui/material'
-import './CardProductListItemExtended.css'
+import './CardProductListItemExtended.scss'
 import { Products } from 'Utils/ProductsArrey'
 import DeleteIcon from '@mui/icons-material/Delete'
 import Quantity from 'Components/Quantity/Quantity'
-import { useAppDispatch } from 'redux/hooks'
+import { useAppDispatch, useAppSelector } from 'redux/hooks'
+import { addLike, removeLike } from 'redux/likeReducer'
+import FavoriteIcon from '@mui/icons-material/Favorite'
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
+import { Link } from 'react-router-dom'
 import {
     addProductQuantity,
     removeProductFromCart,
@@ -13,26 +17,53 @@ import {
 type Props = {
     product: Products
     productCount: number
+    quantity: number
 }
 
-const CartProductListItemExtended = ({ product, productCount }: Props) => {
+const CartProductListItemExtended = ({
+    product,
+    productCount,
+    quantity,
+}: Props) => {
+    const isLiked = useAppSelector(
+        (state) => state.productsLikeState[product.id]
+    )
+
     const dispatch = useAppDispatch()
 
     return (
         <Grid item xs={12} sm={4}>
-            <Card className="card_cartpage">
+            <Card className="cartProductsListItem" variant="outlined">
                 <CardContent>
-                    <div className="product-image">
+                    <Button
+                        variant="outlined"
+                        onClick={() =>
+                            isLiked
+                                ? dispatch(removeLike(product.id))
+                                : dispatch(addLike(product.id))
+                        }
+                    >
+                        {isLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+                    </Button>
+                    <div className="product_image">
                         <img
-                            className="skajnf3j2n42j3n4m3nj4n2j42n34jn5j3"
+                            className="product_image_content"
                             src={product.images}
-                            alt="cartimg"
+                            alt="product_image_content card"
                         />
                     </div>
-                    <div>{product.title}</div>
-                    <p>Price for one item: {product.price}</p>
-                    <p>Count: {productCount}</p>
-                    <p>Description: {product.description}</p>
+                    <h6 className="product_title">
+                        {' '}
+                        <Link to={`/products/${product.id}`}>
+                            {product.title}
+                        </Link>{' '}
+                    </h6>
+                    <div className="product_desc">{product.description}</div>
+                    <div className="product_type">{product.type}</div>
+                    <div className="product_features">
+                        {product.copacity} GB
+                    </div>
+
                     <Quantity
                         // ПЕРЕВІРКА НА ВИДАЛЕННЯ КАРТОЧКИ
                         count={productCount}
@@ -47,10 +78,10 @@ const CartProductListItemExtended = ({ product, productCount }: Props) => {
                             dispatch(addProductQuantity({ id: product.id }))
                         }
                         minCount={0}
+                        quantity={product.quantity}
                     />
-
-                    <p>For all: {product.price * productCount}$</p>
                 </CardContent>
+
                 <CardActions className="card_actions">
                     <Button
                         variant="contained"

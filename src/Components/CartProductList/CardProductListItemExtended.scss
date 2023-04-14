@@ -1,21 +1,6 @@
-.ProductsListItem {
+.cartProductsListItem {
     height: 700px;
     position: relative;
-
-    .saleCircle {
-        position: absolute;
-        top: 20px;
-        right: 10px;
-        width: 105px;
-        height: 35px;
-        background-color: rgb(221, 84, 84);
-        border-radius: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        font-size: 13px;
-    }
 
     .product_image {
         display: flex;
@@ -71,46 +56,27 @@
         }
     }
 
-    .flex_btn_in_card {
+    .card_actions {
         position: absolute;
         bottom: 0px;
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         padding-left: 18px;
         padding-right: 16px;
 
-        .product_old_price {
-            font-size: 15px;
-            opacity: 0.3;
-            text-decoration: line-through;
-            position: absolute;
-            bottom: 35px;
-        }
-
-        .product_discount_price {
-            font-size: 28px;
-            color: rgb(221, 84, 84);
-            position: absolute;
-            bottom: -15px;
-        }
-
         Button {
             display: flex;
             justify-content: space-around;
-            width: 150px;
             font-size: 12px;
             height: 50px;
             padding: 0px;
-            position: absolute;
-            bottom: 15px;
-            right: 20px;
         }
     }
 }
 
 .ProductsListItem:hover {
     transition: 0.6s;
-    transform: translateY(-8px);
+    transform: translateY(-3px);
 }

@@ -9,20 +9,20 @@ type Props = {}
 const ProductsList = (props: Props) => {
     const [rozdilName, setRozdilName] = useState<string>('iPhones List')
 
-    const [sortBtnName, setSortBtnName] = useState<string>('phones')
+    const [sortBtnName, setSortBtnName] = useState<string>('Телефон')
 
     const changeSortBtnByPhones = () => {
-        setSortBtnName(() => 'phones')
+        setSortBtnName(() => 'Телефон')
         setRozdilName(() => 'iPhones List')
     }
 
     const changeSortBtnByHeadphones = () => {
-        setSortBtnName(() => 'headphones')
+        setSortBtnName(() => 'Навушники')
         setRozdilName(() => 'AirPods List')
     }
 
     const changeSortBtnByLaptops = () => {
-        setSortBtnName(() => 'laptops')
+        setSortBtnName(() => 'Ноутбук')
         setRozdilName(() => 'Laptops List')
     }
 
@@ -52,7 +52,7 @@ const ProductsList = (props: Props) => {
 
             <Grid container spacing={3}>
                 {productsArrey
-                    .filter((product) => product.category === sortBtnName) //МЕТОД ФІЛЬТР, ПРОДУКТ - ПОТОЧНИЙ ЕЛЕМЕНТ МАСИВУ, І МИ З ТОГО ПРОДУКТУ ФІЛЬТРУЄМО ПО КАТЕГОРІЇ
+                    .filter((product) => product.type === sortBtnName) //МЕТОД ФІЛЬТР, ПРОДУКТ - ПОТОЧНИЙ ЕЛЕМЕНТ МАСИВУ, І МИ З ТОГО ПРОДУКТУ ФІЛЬТРУЄМО ПО КАТЕГОРІЇ
                     .map(
                         //ПІСЛЯ ФІЛЬТРУ ЗАПУСКАЄМО МЕТОД МЄП І ПРОХОДИМОСЬ ПО ЕЛЕМЕНТАХ МАСИВУ
                         ({
@@ -63,6 +63,7 @@ const ProductsList = (props: Props) => {
                             copacity,
                             price,
                             images,
+                            quantity,
                         }) => (
                             <Grid item xs={12} sm={6} md={4} key={id}>
                                 {' '}
@@ -74,6 +75,7 @@ const ProductsList = (props: Props) => {
                                     type={type}
                                     copacity={copacity}
                                     price={price}
+                                    quantity={quantity}
                                 />
                             </Grid>
                         )
