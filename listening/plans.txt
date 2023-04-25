@@ -1,7 +1,0 @@
-1. Add categories, TV, planshets, churges, smart watches
-2. Slider
-3. Block with grid imgBtns (categories)
-4. Footer
-5. Slider AddToFavorites
-6. Search
-7. Map in contacts
