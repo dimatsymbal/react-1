@@ -1,0 +1,31 @@
+.app_bar {
+  background-color: green;
+  position: fixed;
+  z-index: 44;
+}
+.app_bar .adaptive_burger {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .app_bar {
+    background-color: green;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .app_bar .cont_header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .app_bar .cont_header .logo_header {
+    width: 70%;
+  }
+  .app_bar .cont_header .menu_in_nav {
+    display: none;
+  }
+  .app_bar .cont_header .adaptive_burger {
+    display: block;
+  }
+}/*# sourceMappingURL=header.css.map */

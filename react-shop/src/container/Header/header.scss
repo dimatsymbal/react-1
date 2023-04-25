@@ -1,0 +1,36 @@
+.app_bar {
+    background-color: #1976d2;
+    position: fixed;
+    z-index: 44;
+
+    .adaptive_burger {
+        display: none;
+    }
+}
+
+// _____________________________adaptive___________________________________
+
+@media screen and (max-width: 900px) {
+    .app_bar {
+        background-color: #1976d2;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .cont_header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            .logo_header {
+                width: 70%;
+            }
+
+            .menu_in_nav {
+                display: none;
+            }
+            .adaptive_burger {
+                display: block;
+            }
+        }
+    }
+}
