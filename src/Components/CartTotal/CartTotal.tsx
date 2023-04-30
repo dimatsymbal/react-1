@@ -30,28 +30,3 @@ const CartTotal = ({
     )
 }
 export default CartTotal
-
-{
-    /* <Typography
-                    variant="h4"
-                    component="h2"
-                    align="center"
-                    sx={{ marginTop: '60px', marginBottom: '60px' }}
-                >
-                    Total:
-                </Typography> */
-}
-
-{
-    /* <div>
-            total:
-            {Object.keys(productsInCart).reduce(
-                (total, productId) =>
-                    total +
-                    productsInCart[parseInt(productId)] *
-                        productsObject[parseInt(productId)].price,
-                0
-            )}
-            $
-        </div> */
-}
