@@ -4,8 +4,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    .emptyCartMessage {
-        opacity: 0.5;
+    flex-direction: column;
+
+    h5 {
         text-align: center;
+    }
+
+    p {
+        opacity: 0.5;
+        text-transform: none;
     }
 }

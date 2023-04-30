@@ -1,6 +1,7 @@
 .cartProductsListItem {
     height: 700px;
     position: relative;
+    padding: 5px;
 
     .product_image {
         display: flex;
@@ -14,8 +15,7 @@
 
     .product_title {
         font-size: 22px;
-        margin-bottom: 20px;
-        text-align: center;
+        margin-top: 40px;
     }
 
     .product_type {
@@ -42,9 +42,11 @@
         display: flex;
         justify-content: space-between;
         text-align: center;
+        width: 320px;
 
         input {
             text-align: center;
+            width: 190px;
         }
 
         .button_plus,

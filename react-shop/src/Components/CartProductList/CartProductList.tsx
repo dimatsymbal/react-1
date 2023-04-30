@@ -21,7 +21,13 @@ const CartProductList = ({
         <>
             {Object.keys(productsInCart).length === 0 ? (
                 <div className="divForEmptyCartMessage">
-                    <h2 className="emptyCartMessage">Cart is empty</h2>
+                    <img
+                        src="https://xl-static.rozetka.com.ua/assets/img/design/modal-cart-dummy.svg"
+                        alt="emptyCartImg"
+                    />
+
+                    <h5>Кошик порожній</h5>
+                    <p>Але це ніколи не пізно виправити :)</p>
                 </div>
             ) : (
                 Object.keys(productsInCart).map((productId) => (

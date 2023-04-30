@@ -569,15 +569,68 @@ const productsArrey: Products[] = [
         id: 551,
         title: 'LG OLED65CXPUA 65" 4K Smart OLED TV',
         description: '4K UHD (3840 x 2160) Resolution',
-        type: 'Телефон',
+        type: 'Телевізори',
         copacity: 'Dolby Vision IQ, Dolby Atmos, webOS Smart Platform',
         price: 2199,
         images: 'https://content1.rozetka.com.ua/goods/images/big/303985191.jpg',
-        quantity: 10,
+        quantity: 9,
         extraDesc:
             'Dolby Vision IQ and Dolby Atmos combine to deliver exceptional imaging and audio quality',
         extraDesc2:
-            'This LG smart TV features webOS, allowing you to stream your favorite entertainment apps with ease',
+            'This LG smart TV features webOS, allowing you to stream your favorite entertainment apps with ease Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraPhoto: 'https://mediaonecentre.com/images/default/post.png',
+        extraPhoto2:
+            'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
+    },
+    {
+        id: 552,
+        title: 'Телевізор Hisense 43A63H UltraHD 4K SmartTV',
+        description: '4K UHD (3840 x 2160) Resolution',
+        type: 'Телевізори',
+        copacity: 'Діагональ екрана43" Роздільна здатність 3840x2160',
+        price: 1700,
+        images: 'https://content.rozetka.com.ua/goods/images/big/327493665.jpg',
+        quantity: 2,
+        extraDesc:
+            'Dolby Vision IQ and Dolby Atmos combine to deliver exceptional imaging and audio quality',
+        extraDesc2:
+            'This LG smart TV features webOS, allowing you to stream your favorite entertainment apps with ease Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraPhoto: 'https://mediaonecentre.com/images/default/post.png',
+        extraPhoto2:
+            'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
+    },
+    {
+        id: 553,
+        title: 'Телевізор LG 43UQ81006LB',
+        description: 'LG UHD автоматично розпізнає жанри і оптимізує звучання.',
+        type: 'Телевізори',
+        copacity:
+            'Процесор α5 5-го покоління на основі штучного інтелекту перетворює двоканальний звук на 5.1.2-канальний.',
+        price: 2200,
+        images: 'https://content1.rozetka.com.ua/goods/images/big/314481842.jpg',
+        quantity: 0,
+        extraDesc:
+            'Dolby Vision IQ and Dolby Atmos combine to deliver exceptional imaging and audio quality',
+        extraDesc2:
+            'This LG smart TV features webOS, allowing you to stream your favorite entertainment apps with ease Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraPhoto: 'https://mediaonecentre.com/images/default/post.png',
+        extraPhoto2:
+            'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
+    },
+    {
+        id: 554,
+        title: 'Телевізор Kivi 43F750NB',
+        description: 'Mінімалістичний дизайн з високотехнологічними екранами.',
+        type: 'Телевізори',
+        copacity:
+            'Для нової лінійки KIVI Smart TV 2022 використано сучасний потужний процесор.',
+        price: 1650,
+        images: 'https://content1.rozetka.com.ua/goods/images/big/306957053.jpg',
+        quantity: 1,
+        extraDesc:
+            'Dolby Vision IQ and Dolby Atmos combine to deliver exceptional imaging and audio quality',
+        extraDesc2:
+            'This LG smart TV features webOS, allowing you to stream your favorite entertainment apps with ease Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
         extraPhoto: 'https://mediaonecentre.com/images/default/post.png',
         extraPhoto2:
             'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',

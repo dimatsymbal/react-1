@@ -1,0 +1,43 @@
+.widgetBtn {
+  color: white;
+}
+
+.blockWithNavBtns {
+  width: 300px;
+  height: 400px;
+  position: relative;
+}
+.blockWithNavBtns .navBtnHome {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  width: 130px;
+  font-size: 13px;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.blockWithNavBtns .navBtnContacts {
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  width: 130px;
+  font-size: 13px;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.blockWithNavBtns .navBtnCart {
+  position: absolute;
+  top: 100px;
+  left: 10px;
+  width: 130px;
+  font-size: 13px;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.blockWithNavBtns .quantityCircle {
+  position: absolute;
+  top: 100px;
+  left: 130px;
+  z-index: 352525;
+}
+.blockWithNavBtns .navLinkInBtn {
+  color: white;
+  text-decoration: none;
+}/*# sourceMappingURL=BurgerHeader.css.map */

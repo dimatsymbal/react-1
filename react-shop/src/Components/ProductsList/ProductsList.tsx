@@ -31,19 +31,15 @@ const ProductsList = (props: Props) => {
         setRozdilName(() => 'Playstation List')
     }
 
+    const changeSortBtnByTV = () => {
+        setSortBtnName(() => 'Телевізори')
+        setRozdilName(() => 'TV List')
+    }
+
     return (
         <>
-            <Typography
-                variant="h4"
-                component="h2"
-                align="center"
-                sx={{
-                    marginTop: '-20px',
-                    marginBottom: '60px',
-                }}
-            >
-                {rozdilName}
-            </Typography>
+            <br />
+            <br />
 
             <div className="filterPanel">
                 <div className="filter_btns_block">
@@ -54,7 +50,7 @@ const ProductsList = (props: Props) => {
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                         >
-                            Dropdown button
+                            {sortBtnName}
                         </button>
                         <ul className="dropdown-menu">
                             <li>
@@ -93,10 +89,31 @@ const ProductsList = (props: Props) => {
                                     Playstations
                                 </Button>
                             </li>
+                            <li>
+                                {' '}
+                                <Button
+                                    variant="contained"
+                                    onClick={() => changeSortBtnByTV()}
+                                >
+                                    TV
+                                </Button>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
+
+            <Typography
+                variant="h4"
+                component="h2"
+                align="center"
+                sx={{
+                    marginTop: '20px',
+                    marginBottom: '20px',
+                }}
+            >
+                {rozdilName}
+            </Typography>
 
             <Grid container spacing={3}>
                 {productsArrey

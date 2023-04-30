@@ -45,6 +45,11 @@ const ProductsListItem = ({
     const isLiked = useAppSelector((state) => state.productsLikeState[id])
     const dispatch = useAppDispatch()
 
+    const [clickCount, setClickCount] = useState(0)
+    const handleClick = () => {
+        setClickCount(clickCount + 1)
+    }
+
     return (
         <Card
             className={`ProductsListItem ${quantity === 0 ? 'outOfStock' : ''}`}
@@ -115,8 +120,12 @@ const ProductsListItem = ({
                     <h4 className="product_price">{price * count}$</h4>
                 )}
                 <Button
+                    disabled={clickCount >= quantity}
                     className="add_to_cart_btn"
-                    onClick={() => dispatch(addProductToCart({ id, count }))}
+                    onClick={() => {
+                        dispatch(addProductToCart({ id, count }))
+                        handleClick()
+                    }}
                     variant="contained"
                 >
                     Add to cart!

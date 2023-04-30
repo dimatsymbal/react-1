@@ -34,6 +34,11 @@ const ProductPage = ({
     const isLiked = useAppSelector(
         (state) => state.productsLikeState[productsObject[parseInt(id!)].id]
     )
+
+    const [clickCount, setClickCount] = useState(0)
+    const handleClick = () => {
+        setClickCount(clickCount + 1)
+    }
     const dispatch = useAppDispatch()
 
     return (
@@ -126,7 +131,9 @@ const ProductPage = ({
                         <h4>{productsObject[parseInt(id!)].title}</h4>
                         <h6>{productsObject[parseInt(id!)].type}</h6>
 
-                        <p>{productsObject[parseInt(id!)].description}</p>
+                        <p className="paragraph1">
+                            {productsObject[parseInt(id!)].description}
+                        </p>
 
                         <p>{productsObject[parseInt(id!)].copacity}</p>
 
@@ -163,11 +170,17 @@ const ProductPage = ({
                                     $
                                 </h5>
                             )}
+
                             <Button
-                                className="add_to_cart_btn"
-                                onClick={() =>
-                                    dispatch(addProductToCart({ id, count }))
+                                disabled={
+                                    clickCount >=
+                                    productsObject[parseInt(id!)].quantity
                                 }
+                                className="add_to_cart_btn"
+                                onClick={() => {
+                                    handleClick()
+                                    dispatch(addProductToCart({ id, count }))
+                                }}
                                 variant="contained"
                             >
                                 Add to cart!

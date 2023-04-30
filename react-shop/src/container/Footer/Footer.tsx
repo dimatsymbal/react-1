@@ -17,15 +17,17 @@ const Footer = () => {
 
     const footerLinks = [
         { title: 'Home', link: '/' },
-        { title: 'Examen', link: '/examen' },
-        { title: 'Payment', link: '/payment' },
-        { title: 'Shipping', link: '/shipping' },
+        { title: 'Contacts', link: '/contacts' },
         { title: 'Cart', link: '/cart' },
     ]
 
     return (
         <footer>
-            <Container sx={{ padding: '60px 0' }}>
+            <Container
+                sx={{
+                    padding: '60px 0',
+                }}
+            >
                 <div className="row">
                     <div className="col-md-4">
                         <h4>Contact Us</h4>
@@ -57,7 +59,9 @@ const Footer = () => {
                         <h4>Quick Links</h4>
                         {footerLinks.map((link, index) => (
                             <div key={index}>
-                                <a href={link.link}>{link.title}</a>
+                                <a className="footerLinks" href={link.link}>
+                                    {link.title}
+                                </a>
                             </div>
                         ))}
                     </div>

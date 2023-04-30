@@ -1,6 +1,5 @@
 .productPage {
     position: relative;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,6 +14,10 @@
                 top: 25px;
                 right: 25px;
                 z-index: 523532532;
+            }
+
+            p {
+                width: 100%;
             }
         }
 
@@ -53,7 +56,7 @@
 
         .flex_btn_in_card {
             position: absolute;
-            bottom: 20px;
+            top: 600px;
             width: 576px;
 
             padding-left: 18px;
@@ -87,6 +90,64 @@
                 position: absolute;
                 right: 20px;
                 top: 0px;
+            }
+        }
+    }
+}
+
+// _____________________________adaptive___________________________________
+
+@media screen and (max-width: 900px) {
+    .productPage {
+        position: relative;
+
+        .container {
+            visibility: visible;
+            width: 100%;
+            .col-6 {
+                position: relative;
+                width: 100%;
+                .likeBtn {
+                    position: absolute;
+                    top: 25px;
+                    right: 25px;
+                    z-index: 523532532;
+                }
+
+                p {
+                    font-size: 15px;
+                    position: absolute;
+                    top: 400px;
+                    z-index: 124124124124;
+                    color: black;
+                }
+            }
+
+            .col-6 {
+                h4 {
+                    color: red;
+                }
+
+                h6 {
+                    color: gray;
+                }
+
+                .paragraph1 {
+                    color: black;
+                }
+            }
+
+            #carouselExampleDark {
+                height: 330px;
+
+                .carousel-item {
+                    height: 330px;
+                    .productPageImage {
+                        padding-top: 60px;
+                        max-height: 330px;
+                        margin-left: calc(50% - 80% / 2);
+                    }
+                }
             }
         }
     }

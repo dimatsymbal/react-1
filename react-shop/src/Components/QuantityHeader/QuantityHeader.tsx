@@ -9,7 +9,7 @@ const QuantityHeader = () => {
     )
 
     return cartItemsCount === 0 ? (
-        <p>is empty</p>
+        <p className="isEmptyPatagraph">is empty</p>
     ) : (
         <div className="quantityCircle">{cartItemsCount}</div>
     )

@@ -2,15 +2,16 @@ import * as React from 'react'
 import Box from '@mui/material/Box'
 import Drawer from '@mui/material/Drawer'
 import Button from '@mui/material/Button'
-import List from '@mui/material/List'
-import Divider from '@mui/material/Divider'
+import IconButton from '@mui/material/IconButton'
 import HomeIcon from '@mui/icons-material/Home'
-import InfoIcon from '@mui/icons-material/Info'
-import PaymentIcon from '@mui/icons-material/Payment'
-import LocalShippingIcon from '@mui/icons-material/LocalShipping'
+import CallIcon from '@mui/icons-material/Call'
+import WidgetsIcon from '@mui/icons-material/Widgets'
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart'
+import { useAppSelector } from 'redux/hooks'
+import './BurgerHeader.scss'
+import { Link } from 'react-router-dom'
 
-type Anchor = 'top' | 'left' | 'bottom' | 'right'
-
+type Anchor = 'right'
 export default function TemporaryDrawer() {
     const [state, setState] = React.useState({
         top: false,
@@ -36,58 +37,62 @@ export default function TemporaryDrawer() {
     const list = (anchor: Anchor) => (
         <Box
             sx={{
-                width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250,
+                width: 300,
+                backgroundColor: '#1976d2',
+                height: '100%',
             }}
             role="presentation"
             onClick={toggleDrawer(anchor, false)}
             onKeyDown={toggleDrawer(anchor, false)}
         >
-            <List>
-                {['Home'].map((text, index) => (
-                    <h3>
-                        <HomeIcon /> Home
-                    </h3>
-                ))}
-            </List>
-            <List>
-                {['About'].map((text, index) => (
-                    <h3>
-                        <InfoIcon /> About
-                    </h3>
-                ))}
-            </List>
-            <List>
-                {['Payment'].map((text, index) => (
-                    <h3>
-                        <PaymentIcon /> Payment
-                    </h3>
-                ))}
-            </List>
-            <List>
-                {['Shipping'].map((text, index) => (
-                    <h3>
-                        <LocalShippingIcon /> Shipping
-                    </h3>
-                ))}
-            </List>
-            <Divider />
-            <List>
-                {['Cart'].map((text, index) => (
-                    <h3>
-                        <PaymentIcon /> Cart
-                    </h3>
-                ))}
-            </List>
+            <div className="blockWithNavBtns">
+                <Button variant="outlined" className="navBtnHome">
+                    <Link className="navLinkInBtn" to="/">
+                        <HomeIcon />
+                        Home
+                    </Link>
+                </Button>
+
+                <Button variant="outlined" className="navBtnContacts">
+                    <Link className="navLinkInBtn" to="/contacts">
+                        <CallIcon />
+                        Contacts
+                    </Link>
+                </Button>
+
+                {cartItemsCount === 0 ? (
+                    ''
+                ) : (
+                    <div className="quantityCircle">{cartItemsCount}</div>
+                )}
+
+                <Button variant="outlined" className="navBtnCart">
+                    <Link className="navLinkInBtn" to="/cart">
+                        <AddShoppingCartIcon />
+                        Cart
+                    </Link>
+                </Button>
+            </div>
         </Box>
+    )
+
+    const productsInCart = useAppSelector((state) => state.productsInCart)
+
+    const cartItemsCount = Object.values(productsInCart).reduce(
+        (a, b) => a + b,
+        0
     )
 
     return (
         <div>
             {(['right'] as const).map((anchor) => (
                 <React.Fragment key={anchor}>
-                    <Button onClick={toggleDrawer(anchor, true)}>
-                        {anchor}
-                    </Button>
+                    <IconButton
+                        className="widgetBtn"
+                        onClick={toggleDrawer(anchor, true)}
+                    >
+                        <WidgetsIcon />
+                    </IconButton>
                     <Drawer
                         anchor={anchor}
                         open={state[anchor]}
