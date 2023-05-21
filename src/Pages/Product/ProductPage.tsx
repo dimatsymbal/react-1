@@ -127,7 +127,7 @@ const ProductPage = ({
                             </button>
                         </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-6" id="jbsafjkabsjkf">
                         <h4>{productsObject[parseInt(id!)].title}</h4>
                         <h6>{productsObject[parseInt(id!)].type}</h6>
 

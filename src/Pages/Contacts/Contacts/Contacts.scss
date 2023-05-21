@@ -53,3 +53,19 @@
         transition: transform 0.5s;
     }
 }
+
+// _____________________________adaptive___________________________________
+
+@media screen and (max-width: 900px) {
+    .Contacts {
+        padding: 10px;
+        width: 100%;
+        min-height: 800px;
+        .mapImg {
+            width: 360px;
+            margin-left: calc(50% - 360px / 2);
+            height: auto;
+            transition: transform 0.5s;
+        }
+    }
+}

@@ -7,7 +7,6 @@ import Menu from 'Components/Menu/Menu'
 import QuantityHeader from 'Components/QuantityHeader/QuantityHeader'
 import TemporaryDrawer from 'Components/BurgerHeader/BurgerHeader'
 import LeftInfoDrawer from 'Components/LeftInfoDrawer/LeftInfoDrawer'
-import SearchAppBar from 'Components/SearchAppBar/SearchAppBar'
 import { Link } from 'react-router-dom'
 type Props = {}
 
@@ -29,9 +28,6 @@ const Header = (props: Props) => {
                         <LeftInfoDrawer />
                         <Logo />
 
-                        <div className="SearchAppBarDiv">
-                            <SearchAppBar />
-                        </div>
                         <Menu />
 
                         <QuantityHeader />

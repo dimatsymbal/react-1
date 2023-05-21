@@ -4,9 +4,12 @@ import productsArrey from 'Utils/ProductsArrey'
 import { useState } from 'react'
 import { Button } from '@mui/material'
 import './ProductsList.scss'
-type Props = {}
+import AppsIcon from '@mui/icons-material/Apps'
+type Props = {
+    addProductToFav: (quantity: number, price: number) => void
+}
 
-const ProductsList = (props: Props) => {
+const ProductsList = ({ addProductToFav }: Props) => {
     const [rozdilName, setRozdilName] = useState<string>('iPhones List')
 
     const [sortBtnName, setSortBtnName] = useState<string>('Телефон')
@@ -37,7 +40,7 @@ const ProductsList = (props: Props) => {
     }
 
     return (
-        <>
+        <div className="ProductsList">
             <br />
             <br />
 
@@ -50,7 +53,7 @@ const ProductsList = (props: Props) => {
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                         >
-                            {sortBtnName}
+                            <AppsIcon /> Каталог товарів
                         </button>
                         <ul className="dropdown-menu">
                             <li>
@@ -141,6 +144,7 @@ const ProductsList = (props: Props) => {
                                     copacity={copacity}
                                     price={price}
                                     quantity={quantity}
+                                    addProductToFav={addProductToFav}
                                 />
                             </Grid>
                         )
@@ -171,13 +175,14 @@ const ProductsList = (props: Props) => {
                                             copacity={copacity}
                                             price={price}
                                             quantity={quantity}
+                                            addProductToFav={addProductToFav}
                                         />
                                     </Grid>
                                 )
                             )
                     )}
             </Grid>
-        </>
+        </div>
     )
 }
 export default ProductsList

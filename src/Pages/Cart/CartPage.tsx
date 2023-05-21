@@ -7,21 +7,15 @@ import { Link } from 'react-router-dom'
 import './CartPage.scss'
 
 type Props = {}
-const CartPage = (props: Props) => {
+const CartPage = ({}: Props) => {
     const productsInCart = useAppSelector((state) => state.productsInCart)
 
     return (
         <>
-            {/* <Typography
-                variant="h4"
-                component="h2"
-                align="center"
-                sx={{ marginTop: '60px', marginBottom: '60px' }}
-            >
-                Cart List
-            </Typography> */}
-
             <br />
+            {/* <div>
+                <h3>Кількість товарів у кошику :</h3>
+            </div> */}
             <br />
 
             <Grid container spacing={4}>
@@ -30,6 +24,8 @@ const CartPage = (props: Props) => {
                     CartItem={CartProductListItemExtended}
                 />
             </Grid>
+            <br />
+            <br />
             <CartTotal productsInCart={productsInCart} />
             <Link
                 className={
@@ -39,7 +35,7 @@ const CartPage = (props: Props) => {
                 }
                 to="/checkout"
             >
-                Preceed to checkout
+                <button className="cartOrderBtn">Оформити замовлення</button>
             </Link>
         </>
     )

@@ -20,6 +20,7 @@ type Props = {
     price: number
     images: string
     quantity: number
+    addProductToFav: (quantity: number, price: number) => void
 }
 
 const ProductsListItem = ({
@@ -31,6 +32,7 @@ const ProductsListItem = ({
     price,
     images,
     quantity,
+    addProductToFav,
 }: Props) => {
     const [count, setCount] = useState<number>(1)
 
@@ -50,20 +52,35 @@ const ProductsListItem = ({
         setClickCount(clickCount + 1)
     }
 
+    const handleLikeButtonClick = () => {
+        if (isLiked) {
+            dispatch(removeLike(id))
+            addProductToFav(count, price * 0.8)
+        } else {
+            dispatch(addLike(id))
+            addProductToFav(count, price * 0.8)
+        }
+    }
+
     return (
         <Card
-            className={`ProductsListItem ${quantity === 0 ? 'outOfStock' : ''}`}
+            className={quantity === 0 ? 'outOfStock' : 'ProductsListItem'}
             variant="outlined"
         >
             <CardContent>
-                <Button
-                    variant="outlined"
-                    onClick={() =>
-                        isLiked
-                            ? dispatch(removeLike(id))
-                            : dispatch(addLike(id))
-                    }
-                >
+                {/* {quantity <= 3 ? (
+                    <button onClick={() => addProductToFav(count, price * 0.8)}>
+                        add
+                    </button>
+                ) : (
+                    <button
+                        onClick={() => addProductToFav(count, price * count)}
+                    >
+                        add
+                    </button>
+                )} */}
+
+                <Button variant="outlined" onClick={handleLikeButtonClick}>
                     {isLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
                 </Button>
 

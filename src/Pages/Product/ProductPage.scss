@@ -56,7 +56,7 @@
 
         .flex_btn_in_card {
             position: absolute;
-            top: 600px;
+            top: 550px;
             width: 576px;
 
             padding-left: 18px;
@@ -104,47 +104,37 @@
         .container {
             visibility: visible;
             width: 100%;
+            padding: 10px;
             .col-6 {
                 position: relative;
                 width: 100%;
                 .likeBtn {
                     position: absolute;
-                    top: 25px;
+                    top: 5px;
                     right: 25px;
                     z-index: 523532532;
                 }
 
-                p {
-                    font-size: 15px;
+                .flex_btn_in_card {
                     position: absolute;
-                    top: 400px;
-                    z-index: 124124124124;
-                    color: black;
+                    width: 370px;
+                    top: 750px;
+                    padding: 0px;
                 }
             }
 
-            .col-6 {
-                h4 {
-                    color: red;
-                }
-
-                h6 {
-                    color: gray;
-                }
-
-                .paragraph1 {
-                    color: black;
-                }
+            #jbsafjkabsjkf {
+                height: 800px;
             }
 
             #carouselExampleDark {
-                height: 330px;
+                height: 370px;
 
                 .carousel-item {
-                    height: 330px;
+                    height: 370px;
                     .productPageImage {
                         padding-top: 60px;
-                        max-height: 330px;
+                        max-height: 370px;
                         margin-left: calc(50% - 80% / 2);
                     }
                 }

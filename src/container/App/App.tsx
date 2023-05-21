@@ -3,14 +3,15 @@ import Header from 'container/Header/Header'
 import CssBaseline from '@mui/material/CssBaseline'
 import { StyledEngineProvider } from '@mui/material/styles'
 import 'assets/font.css'
-import { Route, Routes } from 'react-router-dom'
+import { Link, Route, Routes } from 'react-router-dom'
 import Home from 'Pages/Home/Home'
 import { Container } from '@mui/material'
 import CartPage from 'Pages/Cart/CartPage'
 import Examen from 'Pages/Examen/Examen'
 import CheckoutPage from 'Pages/Checkout/CheckoutPage'
 import ProductPage from 'Pages/Product/ProductPage'
-import Contacts from 'Pages/Contacts/Contacts'
+
+import ContactsPage from 'Pages/Contacts/ContactsPage'
 
 type Props = {}
 
@@ -24,7 +25,7 @@ const App = (props: Props) => {
                     <Route path="/" element={<Home />} />
                     <Route path="cart" element={<CartPage />} />
                     <Route path="/checkout" element={<CheckoutPage />} />
-                    <Route path="/contacts" element={<Contacts />} />
+                    <Route path="/contacts" element={<ContactsPage />} />
                     <Route path="/examen" element={<Examen />} />
                     <Route path="/products/:id" element={<ProductPage />} />
                 </Routes>
