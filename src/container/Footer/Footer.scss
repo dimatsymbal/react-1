@@ -1,0 +1,66 @@
+footer {
+    width: 100%;
+    min-height: 330px;
+    // background-color: #1976d2;
+    background-image: linear-gradient(to bottom, #424b6b, #29324f);
+    color: white;
+
+    .row {
+        visibility: visible;
+
+        .col-md-4 {
+            visibility: visible;
+
+            h4 {
+                margin-bottom: 50px;
+            }
+
+            .divWithInfo {
+                text-align: left;
+            }
+
+            a {
+                color: white;
+                text-decoration: none;
+            }
+            a:hover {
+                color: white;
+                text-decoration: underline;
+                transition: 0.4s;
+            }
+        }
+    }
+}
+
+// _____________________________adaptive___________________________________
+
+@media screen and (max-width: 900px) {
+    footer {
+        padding-left: 20px;
+
+        .row {
+            visibility: visible;
+            width: 330px;
+            margin: 0px;
+
+            .col-md-4 {
+                visibility: visible;
+                width: 330px;
+
+                h4 {
+                    margin-top: 30px;
+                    margin-bottom: 15px;
+                }
+
+                .divWithInfo {
+                    text-align: left;
+                }
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

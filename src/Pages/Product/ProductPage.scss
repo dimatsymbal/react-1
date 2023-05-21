@@ -1,0 +1,144 @@
+.productPage {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+        visibility: visible;
+
+        .col-6 {
+            position: relative;
+            .likeBtn {
+                position: absolute;
+                top: 25px;
+                right: 25px;
+                z-index: 523532532;
+            }
+
+            p {
+                width: 100%;
+            }
+        }
+
+        #carouselExampleDark {
+            height: 630px;
+
+            .carousel-item {
+                height: 630px;
+                .productPageImage {
+                    padding-top: 60px;
+                    max-height: 590px;
+                    margin-left: calc(50% - 80% / 2);
+                    width: 80%;
+                }
+            }
+        }
+
+        .product_quantity {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            input {
+                text-align: center;
+                width: 400px;
+            }
+
+            .button_plus,
+            .button_minus {
+                max-width: 35px;
+                font-size: 20px;
+                font-weight: 500;
+                padding: 0px;
+            }
+        }
+
+        .flex_btn_in_card {
+            position: absolute;
+            top: 550px;
+            width: 576px;
+
+            padding-left: 18px;
+            padding-right: 16px;
+            height: 100px;
+
+            .product_old_price {
+                font-size: 14px;
+                opacity: 0.3;
+                text-decoration: line-through;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+            }
+
+            .product_discount_price {
+                font-size: 28px;
+                color: rgb(221, 84, 84);
+                position: absolute;
+                left: 50px;
+                top: 10px;
+            }
+
+            .add_to_cart_btn {
+                display: flex;
+                justify-content: space-around;
+                width: 150px;
+                font-size: 12px;
+                height: 50px;
+                padding: 0px;
+                position: absolute;
+                right: 20px;
+                top: 0px;
+            }
+        }
+    }
+}
+
+// _____________________________adaptive___________________________________
+
+@media screen and (max-width: 900px) {
+    .productPage {
+        position: relative;
+
+        .container {
+            visibility: visible;
+            width: 100%;
+            padding: 10px;
+            .col-6 {
+                position: relative;
+                width: 100%;
+                .likeBtn {
+                    position: absolute;
+                    top: 5px;
+                    right: 25px;
+                    z-index: 523532532;
+                }
+
+                .flex_btn_in_card {
+                    position: absolute;
+                    width: 370px;
+                    top: 750px;
+                    padding: 0px;
+                }
+            }
+
+            #jbsafjkabsjkf {
+                height: 800px;
+            }
+
+            #carouselExampleDark {
+                height: 370px;
+
+                .carousel-item {
+                    height: 370px;
+                    .productPageImage {
+                        padding-top: 60px;
+                        max-height: 370px;
+                        margin-left: calc(50% - 80% / 2);
+                    }
+                }
+            }
+        }
+    }
+}

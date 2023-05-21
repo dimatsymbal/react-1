@@ -1,0 +1,131 @@
+.productPage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.productPage .container {
+  visibility: visible;
+}
+.productPage .container .col-6 {
+  position: relative;
+}
+.productPage .container .col-6 .likeBtn {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 523532532;
+}
+.productPage .container .col-6 p {
+  width: 100%;
+}
+.productPage .container #carouselExampleDark {
+  height: 630px;
+}
+.productPage .container #carouselExampleDark .carousel-item {
+  height: 630px;
+}
+.productPage .container #carouselExampleDark .carousel-item .productPageImage {
+  padding-top: 60px;
+  max-height: 590px;
+  margin-left: 10%;
+  width: 80%;
+}
+.productPage .container .product_quantity {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.productPage .container .product_quantity input {
+  text-align: center;
+  width: 400px;
+}
+.productPage .container .product_quantity .button_plus,
+.productPage .container .product_quantity .button_minus {
+  max-width: 35px;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0px;
+}
+.productPage .container .flex_btn_in_card {
+  position: absolute;
+  top: 600px;
+  width: 576px;
+  padding-left: 18px;
+  padding-right: 16px;
+  height: 100px;
+}
+.productPage .container .flex_btn_in_card .product_old_price {
+  font-size: 14px;
+  opacity: 0.3;
+  text-decoration: line-through;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.productPage .container .flex_btn_in_card .product_discount_price {
+  font-size: 28px;
+  color: rgb(221, 84, 84);
+  position: absolute;
+  left: 50px;
+  top: 10px;
+}
+.productPage .container .flex_btn_in_card .add_to_cart_btn {
+  display: flex;
+  justify-content: space-around;
+  width: 150px;
+  font-size: 12px;
+  height: 50px;
+  padding: 0px;
+  position: absolute;
+  right: 20px;
+  top: 0px;
+}
+
+@media screen and (max-width: 900px) {
+  .productPage {
+    position: relative;
+  }
+  .productPage .container {
+    visibility: visible;
+    width: 100%;
+  }
+  .productPage .container .col-6 {
+    position: relative;
+    width: 100%;
+  }
+  .productPage .container .col-6 .likeBtn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 523532532;
+  }
+  .productPage .container .col-6 p {
+    font-size: 15px;
+    position: absolute;
+    top: 400px;
+    z-index: 124124124124;
+    color: black;
+  }
+  .productPage .container .col-6 h4 {
+    color: red;
+  }
+  .productPage .container .col-6 h6 {
+    color: gray;
+  }
+  .productPage .container .col-6 .paragraph1 {
+    color: black;
+  }
+  .productPage .container #carouselExampleDark {
+    height: 330px;
+  }
+  .productPage .container #carouselExampleDark .carousel-item {
+    height: 330px;
+  }
+  .productPage .container #carouselExampleDark .carousel-item .productPageImage {
+    padding-top: 60px;
+    max-height: 330px;
+    margin-left: 10%;
+  }
+}/*# sourceMappingURL=ProductPage.css.map */

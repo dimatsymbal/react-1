@@ -1,0 +1,231 @@
+.ProductsListItem {
+    height: 700px;
+    position: relative;
+
+    .saleCircle {
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        width: 105px;
+        height: 35px;
+        background-color: rgb(221, 84, 84);
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 13px;
+    }
+
+    .product_image {
+        display: flex;
+        justify-content: center;
+
+        .product_image_content {
+            margin-top: 25px;
+            height: 200px;
+            width: auto;
+        }
+    }
+
+    .product_title {
+        position: absolute;
+        top: 340px;
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .product_type {
+        position: absolute;
+        top: 390px;
+        font-size: 22px;
+    }
+
+    .product_desc {
+        position: absolute;
+        top: 430px;
+        font-size: 17px;
+    }
+
+    .product_features {
+        position: absolute;
+        top: 490px;
+        font-size: 17px;
+    }
+
+    .product_quantity {
+        position: absolute;
+        top: 580px;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+
+        input {
+            text-align: center;
+        }
+
+        .button_plus,
+        .button_minus {
+            max-width: 35px;
+            font-size: 20px;
+            font-weight: 500;
+            padding: 0px;
+        }
+    }
+
+    .flex_btn_in_card {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 18px;
+        padding-right: 16px;
+
+        .product_old_price {
+            font-size: 14px;
+            opacity: 0.3;
+            text-decoration: line-through;
+            position: absolute;
+            bottom: 45px;
+        }
+
+        .product_discount_price {
+            font-size: 28px;
+            color: rgb(221, 84, 84);
+            position: absolute;
+            bottom: 10px;
+        }
+
+        Button {
+            display: flex;
+            justify-content: space-around;
+            width: 150px;
+            font-size: 12px;
+            height: 50px;
+            padding: 0px;
+            position: absolute;
+            bottom: 15px;
+            right: 20px;
+        }
+    }
+}
+
+//-----------------------------------------------------------------------------------
+.outOfStock {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+    height: 700px;
+    position: relative;
+
+    .saleCircle {
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        width: 105px;
+        height: 35px;
+        background-color: rgb(221, 84, 84);
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 13px;
+    }
+
+    .product_image {
+        display: flex;
+        justify-content: center;
+
+        .product_image_content {
+            margin-top: 25px;
+            height: 200px;
+            width: auto;
+        }
+    }
+
+    .product_title {
+        position: absolute;
+        top: 340px;
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .product_type {
+        position: absolute;
+        top: 390px;
+        font-size: 22px;
+    }
+
+    .product_desc {
+        position: absolute;
+        top: 430px;
+        font-size: 17px;
+    }
+
+    .product_features {
+        position: absolute;
+        top: 490px;
+        font-size: 17px;
+    }
+
+    .product_quantity {
+        position: absolute;
+        top: 580px;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+
+        input {
+            text-align: center;
+        }
+
+        .button_plus,
+        .button_minus {
+            max-width: 35px;
+            font-size: 20px;
+            font-weight: 500;
+            padding: 0px;
+        }
+    }
+
+    .flex_btn_in_card {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 18px;
+        padding-right: 16px;
+
+        .product_old_price {
+            font-size: 14px;
+            opacity: 0.3;
+            text-decoration: line-through;
+            position: absolute;
+            bottom: 45px;
+        }
+
+        .product_discount_price {
+            font-size: 28px;
+            color: rgb(221, 84, 84);
+            position: absolute;
+            bottom: 10px;
+        }
+
+        Button {
+            display: flex;
+            justify-content: space-around;
+            width: 150px;
+            font-size: 12px;
+            height: 50px;
+            padding: 0px;
+            position: absolute;
+            bottom: 15px;
+            right: 20px;
+        }
+    }
+}

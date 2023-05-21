@@ -1,0 +1,11 @@
+.linkDisabled {
+  pointer-events: none;
+  color: black;
+  opacity: 0.5;
+  text-decoration: none;
+  cursor: not-allowed;
+}
+
+.link {
+  text-decoration: none;
+}/*# sourceMappingURL=CartPage.css.map */

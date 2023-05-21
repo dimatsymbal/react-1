@@ -1,0 +1,37 @@
+.menu-item {
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.menu-item::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    height: 0.5px;
+    width: 0;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+.menu-item:hover::after {
+    width: 100%;
+}
+
+.menu-item-active {
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.menu-item-active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    height: 0.5px;
+    width: 0;
+    background-color: white;
+    width: 100%;
+}

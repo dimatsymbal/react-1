@@ -1,0 +1,29 @@
+.SliderInfo {
+    width: 100%;
+    height: 400px;
+
+    .slick-prev:before {
+        content: '←';
+        color: #1976d2;
+    }
+
+    .slick-next:before {
+        content: '→';
+        color: #1976d2;
+    }
+}
+// _____________________________adaptive___________________________________
+
+@media screen and (max-width: 900px) {
+    .SliderInfo {
+        width: 85%;
+        height: 260px;
+        margin: -50px auto;
+
+        img {
+            margin: auto;
+            width: 100%;
+            height: 160px;
+        }
+    }
+}
