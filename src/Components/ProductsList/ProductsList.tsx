@@ -6,10 +6,11 @@ import { Button } from '@mui/material'
 import './ProductsList.scss'
 import AppsIcon from '@mui/icons-material/Apps'
 type Props = {
-    addProductToFav: (quantity: number, price: number) => void
+    addProductToFav: (id: number) => void
+    deleteProductToFav: (id: number) => void
 }
 
-const ProductsList = ({ addProductToFav }: Props) => {
+const ProductsList = ({ addProductToFav, deleteProductToFav }: Props) => {
     const [rozdilName, setRozdilName] = useState<string>('iPhones List')
 
     const [sortBtnName, setSortBtnName] = useState<string>('Телефон')
@@ -145,6 +146,7 @@ const ProductsList = ({ addProductToFav }: Props) => {
                                     price={price}
                                     quantity={quantity}
                                     addProductToFav={addProductToFav}
+                                    deleteProductToFav={deleteProductToFav}
                                 />
                             </Grid>
                         )
@@ -176,6 +178,9 @@ const ProductsList = ({ addProductToFav }: Props) => {
                                             price={price}
                                             quantity={quantity}
                                             addProductToFav={addProductToFav}
+                                            deleteProductToFav={
+                                                deleteProductToFav
+                                            }
                                         />
                                     </Grid>
                                 )

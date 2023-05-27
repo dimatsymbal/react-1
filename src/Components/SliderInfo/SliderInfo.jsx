@@ -17,6 +17,12 @@ export default class SimpleSlider extends Component {
     return (
       <div className="SliderInfo">
         <Slider {...settings}>
+        <div>
+          <img src=" https://content2.rozetka.com.ua/banner_main/image_ua/original/334668544.jpg" alt="slider6" />
+          </div>
+        <div>
+          <img src="https://content2.rozetka.com.ua/banner_main/image_ua/original/332023950.jpg" alt="slider7" />
+          </div>
           <div>
           <img src="https://content1.rozetka.com.ua/banner_main/image_ua/original/330057635.jpg" alt="slider4" />
           </div>

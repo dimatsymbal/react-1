@@ -6,28 +6,38 @@ import Favorites from './Favorites/Favorites'
 import { useState } from 'react'
 type Props = {}
 
-type cartDataProps = {
-    totalCount: number
-    totalPrice: number
+type productsInFav = {
+    [id: number]: boolean
 }
 
 const Home = (props: Props) => {
-    const [favorites, setFavorites] = useState<cartDataProps>({
-        totalCount: 0,
-        totalPrice: 0,
-    })
+    const [productsInFav, setProductsInFav] = useState<productsInFav>({})
 
-    const addProductToFav = (quantity: number, price: number) => {
-        setFavorites((prevState) => ({
-            totalCount: prevState.totalCount + quantity,
-            totalPrice: prevState.totalPrice + quantity * price,
+    const addProductToFav = (id: number) => {
+        setProductsInFav((prevState) => ({
+            ...prevState,
+            [id]: true,
         }))
+    }
+
+    const deleteProductToFav = (id: number) => {
+        setProductsInFav((prevState) => {
+            const copyOfProduct = { ...prevState } // створюэмо копыю обекта
+            delete copyOfProduct[id] // видаляємо ключ з цього обекту
+            return copyOfProduct // повертаємо новий обект який вже не має властивості, сопія вже не буде мати id
+        })
     }
     return (
         <div className="HomePage">
             <SimpleSlider />
-            <Favorites favorites={favorites} />
-            <ProductsList addProductToFav={addProductToFav} />
+            <Favorites
+                productsInFav={productsInFav}
+                deleteProductToFav={deleteProductToFav}
+            />
+            <ProductsList
+                addProductToFav={addProductToFav}
+                deleteProductToFav={deleteProductToFav}
+            />
             <Reviews />
         </div>
     )

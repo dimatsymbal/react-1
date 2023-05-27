@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 import './CartPage.scss'
 
 type Props = {}
-const CartPage = ({}: Props) => {
+const CartPage = (props: Props) => {
     const productsInCart = useAppSelector((state) => state.productsInCart)
 
     return (

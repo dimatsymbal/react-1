@@ -1,0 +1,94 @@
+.favoriteCard {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    text-align: center;
+    position: relative;
+
+    .favoriteCardContent {
+        display: flex;
+        flex-direction: column;
+        padding: 3px;
+        text-align: center;
+        position: relative;
+
+        .saleCircle {
+            position: absolute;
+            right: 4px;
+            top: 4px;
+            border-radius: 50px;
+            background-color: rgb(221, 84, 84);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: white;
+            font-size: 10px;
+            z-index: 1;
+            transition: all 0.1s ease;
+
+            span {
+                display: none;
+            }
+        }
+
+        .imgDiv {
+            width: 175px;
+            display: flex;
+            justify-content: center;
+            .favoriteCardImg {
+                padding-top: 10px;
+                max-width: 165px;
+                height: 140px;
+                position: absolute;
+            }
+        }
+
+        .favoriteTitle {
+            position: absolute;
+            top: 150px;
+            color: black;
+            text-decoration: none;
+            width: 175px;
+            left: calc(50% - 175px / 2);
+        }
+
+        .favoritePrice {
+            position: absolute;
+            top: 205px;
+            color: black;
+            text-decoration: none;
+            width: 175px;
+            left: calc(50% - 175px / 2);
+        }
+    }
+    .deteleFavoriteCard {
+        position: absolute;
+        top: 255px;
+        left: calc(50% - 64px / 2);
+    }
+}
+
+.favoriteCard:hover {
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.4);
+
+    .saleCircle {
+        transform: scaleX(1.2);
+        position: absolute;
+        right: 10px;
+        top: 4px;
+        border-radius: 10px;
+        background-color: rgb(221, 84, 84);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 10px;
+        z-index: 1;
+
+        span {
+            display: block;
+            margin-right: 4px;
+        }
+    }
+}

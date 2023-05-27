@@ -11,7 +11,6 @@ export type Products = {
     extraDesc2?: string
     extraPhoto?: string
     extraPhoto2?: string
-
     category?: string
 }
 

@@ -7,7 +7,9 @@ type likeProductsType = {
 
 //ОПИС СТРУКТУРИ ЯК БУДУТЬ ЗБЕРІГАТЬСЯ
 //опис значення за замовчуванням
-export const initialState: likeProductsType = {}
+export const initialState: likeProductsType = {
+    1: true,
+}
 
 //СТВОРЕННЯ СЛАЙСУ
 export const likeSlice = createSlice({
