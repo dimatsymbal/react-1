@@ -25,7 +25,7 @@ const Favorites = ({
                 Favorites
             </h2>
 
-            {Object.keys(productsInFav).length == 0 ? (
+            {Object.keys(productsInFav).length === 0 ? (
                 <div className="emptyFavorites">
                     <img
                         className="emptyFavoritesImg"
