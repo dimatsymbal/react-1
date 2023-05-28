@@ -6,12 +6,15 @@ import DeleteIcon from '@mui/icons-material/Delete'
 import { Link } from 'react-router-dom'
 import './FavoriteItem.scss'
 import PercentIcon from '@mui/icons-material/Percent'
+import { removeLike } from 'redux/likeReducer'
+import { useAppDispatch } from 'redux/hooks'
 
 type Props = {
     product: Products
-    deleteProductToFav: (id: number) => void
 }
-const FavoriteItem = ({ product, deleteProductToFav }: Props) => {
+const FavoriteItem = ({ product }: Props) => {
+    const dispatch = useAppDispatch()
+
     return (
         <>
             <Card className="favoriteCard" variant="outlined">
@@ -42,7 +45,7 @@ const FavoriteItem = ({ product, deleteProductToFav }: Props) => {
                 </CardContent>
 
                 <Button
-                    onClick={() => deleteProductToFav(product.id)}
+                    onClick={() => dispatch(removeLike(product.id))}
                     className="deteleFavoriteCard"
                     variant="contained"
                 >

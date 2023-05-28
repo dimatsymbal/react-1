@@ -8,6 +8,10 @@ import QuantityHeader from 'Components/QuantityHeader/QuantityHeader'
 import TemporaryDrawer from 'Components/BurgerHeader/BurgerHeader'
 import LeftInfoDrawer from 'Components/LeftInfoDrawer/LeftInfoDrawer'
 import { Link } from 'react-router-dom'
+import IconButton from '@mui/material/IconButton'
+import InstagramIcon from '@mui/icons-material/Instagram'
+import FacebookIcon from '@mui/icons-material/Facebook'
+import TwitterIcon from '@mui/icons-material/Twitter'
 type Props = {}
 
 const Header = (props: Props) => {
@@ -27,6 +31,18 @@ const Header = (props: Props) => {
                     <Toolbar>
                         <LeftInfoDrawer />
                         <Logo />
+
+                        <div className="mediaDiv">
+                            <IconButton aria-label="delete">
+                                <InstagramIcon sx={{ color: 'white' }} />
+                            </IconButton>
+                            <IconButton aria-label="delete">
+                                <FacebookIcon sx={{ color: 'white' }} />
+                            </IconButton>
+                            <IconButton aria-label="delete">
+                                <TwitterIcon sx={{ color: 'white' }} />
+                            </IconButton>
+                        </div>
 
                         <Menu />
 

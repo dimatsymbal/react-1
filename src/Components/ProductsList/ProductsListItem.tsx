@@ -20,8 +20,6 @@ type Props = {
     price: number
     images: string
     quantity: number
-    addProductToFav: (id: number) => void
-    deleteProductToFav: (id: number) => void
 }
 
 const ProductsListItem = ({
@@ -33,8 +31,6 @@ const ProductsListItem = ({
     price,
     images,
     quantity,
-    addProductToFav,
-    deleteProductToFav,
 }: Props) => {
     const [count, setCount] = useState<number>(1)
 
@@ -60,7 +56,6 @@ const ProductsListItem = ({
             variant="outlined"
         >
             <CardContent>
-                <button onClick={() => addProductToFav(id)}>Add</button>
                 <Button
                     variant="outlined"
                     onClick={() =>

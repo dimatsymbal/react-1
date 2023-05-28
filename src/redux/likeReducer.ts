@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-
+import { omit } from 'lodash'
 //ОПИС ТИПІВ ДАННИХ
 type likeProductsType = {
     [id: number]: boolean
@@ -9,6 +9,7 @@ type likeProductsType = {
 //опис значення за замовчуванням
 export const initialState: likeProductsType = {
     1: true,
+    43: true,
 }
 
 //СТВОРЕННЯ СЛАЙСУ
@@ -21,10 +22,7 @@ export const likeSlice = createSlice({
             [action.payload]: true,
         }),
 
-        removeLike: (state, action) => ({
-            ...state,
-            [action.payload]: false,
-        }),
+        removeLike: (state, action) => omit(state, action.payload),
     },
 })
 

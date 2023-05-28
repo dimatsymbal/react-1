@@ -47,6 +47,11 @@
         border-radius: 50px;
     }
 
+    .mediaDiv {
+        position: absolute;
+        left: 150px;
+    }
+
     .adaptive_burger {
         display: none;
     }
@@ -70,6 +75,10 @@
 
             .logo_header {
                 margin-left: calc(50% - 50px / 2);
+            }
+
+            .mediaDiv {
+                display: none;
             }
 
             .menu_in_nav {

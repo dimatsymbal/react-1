@@ -1,31 +1,29 @@
 import FavoriteItem from './FavoriteItem/FavoriteItem'
 import { Grid } from '@mui/material'
+import { useAppSelector } from 'redux/hooks'
 import './Favorites.scss'
 import productsArrey, { Products, getProductsObject } from 'Utils/ProductsArrey'
 
 type Props = {
-    productsInFav: {
-        [id: number]: boolean
-    }
     productsObject?: {
         [id: number]: Products
     }
-    deleteProductToFav: (id: number) => void
 }
 const Favorites = ({
-    productsInFav,
     productsObject = getProductsObject(productsArrey),
-    deleteProductToFav,
 }: Props) => {
     // console.log(Object.keys(productsInFav)) // це наш масив ключів у стрінг
 
+    const productsInFavRedux = useAppSelector(
+        (state) => state.productsLikeState
+    )
     return (
         <div className="Favorites">
             <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>
                 Favorites
             </h2>
 
-            {Object.keys(productsInFav).length === 0 ? (
+            {Object.keys(productsInFavRedux).length === 0 ? (
                 <div className="emptyFavorites">
                     <img
                         className="emptyFavoritesImg"
@@ -36,10 +34,9 @@ const Favorites = ({
                 </div>
             ) : (
                 <Grid container spacing={2}>
-                    {Object.keys(productsInFav).map((itemId) => (
+                    {Object.keys(productsInFavRedux).map((itemId) => (
                         <Grid item xs={6} sm={4} md={2} key={itemId}>
                             <FavoriteItem
-                                deleteProductToFav={deleteProductToFav}
                                 key={itemId}
                                 product={productsObject[parseInt(itemId)]}
                             />

@@ -5,12 +5,9 @@ import { useState } from 'react'
 import { Button } from '@mui/material'
 import './ProductsList.scss'
 import AppsIcon from '@mui/icons-material/Apps'
-type Props = {
-    addProductToFav: (id: number) => void
-    deleteProductToFav: (id: number) => void
-}
+type Props = {}
 
-const ProductsList = ({ addProductToFav, deleteProductToFav }: Props) => {
+const ProductsList = (props: Props) => {
     const [rozdilName, setRozdilName] = useState<string>('iPhones List')
 
     const [sortBtnName, setSortBtnName] = useState<string>('Телефон')
@@ -145,8 +142,6 @@ const ProductsList = ({ addProductToFav, deleteProductToFav }: Props) => {
                                     copacity={copacity}
                                     price={price}
                                     quantity={quantity}
-                                    addProductToFav={addProductToFav}
-                                    deleteProductToFav={deleteProductToFav}
                                 />
                             </Grid>
                         )
@@ -177,10 +172,6 @@ const ProductsList = ({ addProductToFav, deleteProductToFav }: Props) => {
                                             copacity={copacity}
                                             price={price}
                                             quantity={quantity}
-                                            addProductToFav={addProductToFav}
-                                            deleteProductToFav={
-                                                deleteProductToFav
-                                            }
                                         />
                                     </Grid>
                                 )
