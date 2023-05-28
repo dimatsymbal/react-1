@@ -17,25 +17,25 @@ export default class SimpleSlider extends Component {
     return (
       <div className="SliderInfo">
         <Slider {...settings}>
-        <div>
+        <div className="sliderImgDiv">
           <img src=" https://content2.rozetka.com.ua/banner_main/image_ua/original/334668544.jpg" alt="slider6" />
           </div>
-        <div>
+        <div className="sliderImgDiv">
           <img src="https://content2.rozetka.com.ua/banner_main/image_ua/original/332023950.jpg" alt="slider7" />
           </div>
-          <div>
+          <div className="sliderImgDiv">
           <img src="https://content1.rozetka.com.ua/banner_main/image_ua/original/330057635.jpg" alt="slider4" />
           </div>
-          <div>
+          <div className="sliderImgDiv">
            <img src="https://content1.rozetka.com.ua/banner_main/image_ua/original/314575388.jpg" alt="slider2" />
           </div>
-          <div>
+          <div className="sliderImgDiv">
             <img src="https://content1.rozetka.com.ua/banner_main/image_ua/original/328040372.jpg" alt="slider3" />
           </div>
-          <div>
+          <div className="sliderImgDiv">
           <img src="https://content2.rozetka.com.ua/banner_main/image_ua/original/329827968.jpg" alt="slider1" />
           </div>
-          <div>
+          <div className="sliderImgDiv">
           <img src="https://content.rozetka.com.ua/banner_main/image_ua/original/328665382.jpg" alt="slider5" />
           </div>
         </Slider>

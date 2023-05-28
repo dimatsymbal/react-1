@@ -10,6 +10,7 @@ import CartPage from 'Pages/Cart/CartPage'
 import Examen from 'Pages/Examen/Examen'
 import CheckoutPage from 'Pages/Checkout/CheckoutPage'
 import ProductPage from 'Pages/Product/ProductPage'
+import ScrollToTop from 'Utils/scrollToTop'
 
 import ContactsPage from 'Pages/Contacts/ContactsPage'
 
@@ -21,6 +22,7 @@ const App = (props: Props) => {
             <CssBaseline />
             <Header />
             <Container sx={{ padding: '20px 0' }}>
+                <ScrollToTop />
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="cart" element={<CartPage />} />
@@ -35,3 +37,6 @@ const App = (props: Props) => {
     )
 }
 export default App
+function useEffect(arg0: any) {
+    throw new Error('Function not implemented.')
+}
