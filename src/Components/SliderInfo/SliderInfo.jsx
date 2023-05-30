@@ -7,7 +7,7 @@ import './SliderInfo.scss'
 export default class SimpleSlider extends Component {
   render() {
     const settings = {
-      dots: true,
+      dots: false,
       infinite: true,
       speed: 400,
       autoplay: true,
@@ -18,25 +18,25 @@ export default class SimpleSlider extends Component {
       <div className="SliderInfo">
         <Slider {...settings}>
         <div className="sliderImgDiv">
-          <img src=" https://content2.rozetka.com.ua/banner_main/image_ua/original/334668544.jpg" alt="slider6" />
+          <img className="sliderImg" src=" https://content2.rozetka.com.ua/banner_main/image_ua/original/334668544.jpg" alt="slider6" />
           </div>
         <div className="sliderImgDiv">
-          <img src="https://content2.rozetka.com.ua/banner_main/image_ua/original/332023950.jpg" alt="slider7" />
+          <img className="sliderImg" src="https://content2.rozetka.com.ua/banner_main/image_ua/original/332023950.jpg" alt="slider7" />
           </div>
           <div className="sliderImgDiv">
-          <img src="https://content1.rozetka.com.ua/banner_main/image_ua/original/330057635.jpg" alt="slider4" />
+          <img className="sliderImg" src="https://content1.rozetka.com.ua/banner_main/image_ua/original/330057635.jpg" alt="slider4" />
+          </div>
+          {/* <div className="sliderImgDiv">
+           <img className="sliderImg" src="https://content1.rozetka.com.ua/banner_main/image_ua/original/314575388.jpg" alt="slider2" />
           </div>
           <div className="sliderImgDiv">
-           <img src="https://content1.rozetka.com.ua/banner_main/image_ua/original/314575388.jpg" alt="slider2" />
-          </div>
+            <img className="sliderImg" src="https://content1.rozetka.com.ua/banner_main/image_ua/original/328040372.jpg" alt="slider3" />
+          </div> */}
           <div className="sliderImgDiv">
-            <img src="https://content1.rozetka.com.ua/banner_main/image_ua/original/328040372.jpg" alt="slider3" />
+          <img className="sliderImg" src="https://content2.rozetka.com.ua/banner_main/image_ua/original/329827968.jpg" alt="slider1" />
           </div>
-          <div className="sliderImgDiv">
-          <img src="https://content2.rozetka.com.ua/banner_main/image_ua/original/329827968.jpg" alt="slider1" />
-          </div>
-          <div className="sliderImgDiv">
-          <img src="https://content.rozetka.com.ua/banner_main/image_ua/original/328665382.jpg" alt="slider5" />
+          <div  className="sliderImgDiv">
+          <img className="sliderImg" src="https://content.rozetka.com.ua/banner_main/image_ua/original/328665382.jpg" alt="slider5" />
           </div>
         </Slider>
       </div>

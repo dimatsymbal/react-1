@@ -3,7 +3,7 @@ import './home.scss'
 import Reviews from 'Components/Reviews/Reviews'
 import SimpleSlider from 'Components/SliderInfo/SliderInfo'
 import Favorites from './Favorites/Favorites'
-import { useState } from 'react'
+import HoverAbout from './HoverAbout/HoverAbout'
 
 type Props = {}
 
@@ -11,6 +11,7 @@ const Home = (props: Props) => {
     return (
         <div className="HomePage">
             <SimpleSlider />
+            <HoverAbout />
             <Favorites />
             <ProductsList />
             <Reviews />
