@@ -1,4 +1,4 @@
-import { Grid, Typography } from '@mui/material'
+import { Grid } from '@mui/material'
 import ProductsListItem from './ProductsListItem'
 import productsArrey from 'Utils/ProductsArrey'
 import { useState } from 'react'
