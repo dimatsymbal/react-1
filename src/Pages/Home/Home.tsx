@@ -4,6 +4,7 @@ import Reviews from 'Components/Reviews/Reviews'
 import SimpleSlider from 'Components/SliderInfo/SliderInfo'
 import Favorites from './Favorites/Favorites'
 import HoverAbout from './HoverAbout/HoverAbout'
+import Recommends from './Recommends/Recommends'
 
 type Props = {}
 
@@ -12,6 +13,9 @@ const Home = (props: Props) => {
         <div className="HomePage">
             <SimpleSlider />
             <HoverAbout />
+            <div className="fullWidthComponent">
+                <Recommends />
+            </div>
             <Favorites />
             <ProductsList />
             <Reviews />

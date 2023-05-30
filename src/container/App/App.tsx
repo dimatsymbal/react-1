@@ -37,6 +37,3 @@ const App = (props: Props) => {
     )
 }
 export default App
-function useEffect(arg0: any) {
-    throw new Error('Function not implemented.')
-}
