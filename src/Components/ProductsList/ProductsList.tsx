@@ -5,37 +5,42 @@ import { useState } from 'react'
 import { Button } from '@mui/material'
 import './ProductsList.scss'
 import AppsIcon from '@mui/icons-material/Apps'
+import { useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 type Props = {}
 
 const ProductsList = (props: Props) => {
-    const [rozdilName, setRozdilName] = useState<string>('iPhones List')
-
     const [sortBtnName, setSortBtnName] = useState<string>('Телефон')
 
     const changeSortBtnByPhones = () => {
         setSortBtnName(() => 'Телефон')
-        setRozdilName(() => 'iPhones List')
     }
 
     const changeSortBtnByHeadphones = () => {
         setSortBtnName(() => 'Навушники')
-        setRozdilName(() => 'AirPods List')
     }
 
     const changeSortBtnByLaptops = () => {
         setSortBtnName(() => 'Ноутбук')
-        setRozdilName(() => 'Laptops List')
     }
 
     const changeSortBtnByPlayStations = () => {
         setSortBtnName(() => 'Ігровa консоль')
-        setRozdilName(() => 'Playstation List')
     }
 
     const changeSortBtnByTV = () => {
         setSortBtnName(() => 'Телевізори')
-        setRozdilName(() => 'TV List')
     }
+
+    const { category } = useParams()
+
+    useEffect(() => {
+        if (category === 'headphones') {
+            setSortBtnName('Навушники')
+        } else if (category === 'laptops') {
+            setSortBtnName('Ноутбук')
+        }
+    }, [category])
 
     return (
         <div className="ProductsList">
@@ -103,18 +108,6 @@ const ProductsList = (props: Props) => {
                     </div>
                 </div>
             </div>
-
-            <Typography
-                variant="h4"
-                component="h2"
-                align="center"
-                sx={{
-                    marginTop: '20px',
-                    marginBottom: '20px',
-                }}
-            >
-                {rozdilName}
-            </Typography>
 
             <Grid container spacing={3}>
                 {productsArrey

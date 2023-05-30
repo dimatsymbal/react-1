@@ -20,7 +20,7 @@ const Recommends = (props: Props) => {
                             Dolor dictumst pretium
                         </h5>
 
-                        <Link to="/cart">
+                        <Link to="/products/laptops">
                             <button className="recommendBtn">Buy now</button>
                         </Link>
                     </div>
@@ -32,7 +32,9 @@ const Recommends = (props: Props) => {
                         <h5 className="subtitleRecommend">
                             Dolor dictumst pretium
                         </h5>
-                        <button className="recommendBtn">Buy now</button>
+                        <Link to="/products/headphones">
+                            <button className="recommendBtn">Buy now</button>
+                        </Link>
                     </div>
                 </Grid>
             </Grid>

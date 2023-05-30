@@ -13,6 +13,7 @@ import ProductPage from 'Pages/Product/ProductPage'
 import ScrollToTop from 'Utils/scrollToTop'
 
 import ContactsPage from 'Pages/Contacts/ContactsPage'
+import ProductsList from 'Components/ProductsList/ProductsList'
 
 type Props = {}
 
@@ -26,6 +27,10 @@ const App = (props: Props) => {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="cart" element={<CartPage />} />
+                    <Route
+                        path="/products/:category"
+                        element={<ProductsList />}
+                    />
                     <Route path="/checkout" element={<CheckoutPage />} />
                     <Route path="/contacts" element={<ContactsPage />} />
                     <Route path="/examen" element={<Examen />} />

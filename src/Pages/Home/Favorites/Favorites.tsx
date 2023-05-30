@@ -19,9 +19,7 @@ const Favorites = ({
     )
     return (
         <div className="Favorites">
-            <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>
-                Favorites
-            </h2>
+            <h2 className="titleFavorites">Favorites</h2>
 
             {Object.keys(productsInFavRedux).length === 0 ? (
                 <div className="emptyFavorites">
