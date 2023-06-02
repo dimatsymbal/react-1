@@ -517,7 +517,7 @@ const productsArrey: Products[] = [
             'Процесор 8-ядерний процесор Custom Zen 2 з тактовою частотою @ 3.6 ГГц (3.4 ГГЦ із SMT)',
         price: 650,
         images: 'https://content.rozetka.com.ua/goods/images/big/276694901.jpg',
-        quantity: 0,
+        quantity: 3,
         extraDesc:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
         extraDesc2:
@@ -528,7 +528,7 @@ const productsArrey: Products[] = [
     },
     {
         id: 45,
-        title: 'Бандл Ігрова приставка PlayStation 5 God of War Ragnarok',
+        title: 'Ігрова приставка PlayStation 5 God of War Ragnarok',
         description:
             'Процесор 8-ядерний x86-64 AMD Ryzen Zen 2 (Частота: до 3.5 ГГц)',
         type: 'Ігровa консоль',

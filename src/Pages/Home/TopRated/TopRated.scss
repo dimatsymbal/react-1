@@ -1,0 +1,125 @@
+.TopRated {
+    background-color: #f2f2f0;
+    width: 12500px;
+    margin-left: calc(50% - 12500px / 2);
+
+    .TopRatedTitle {
+        font-size: 42px;
+        line-height: 50px;
+        font-weight: 700;
+        letter-spacing: -1px;
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    .TopRatedParagraph {
+        margin-top: 30px;
+        text-align: center;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+        color: #4c4d52;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        letter-spacing: 0px;
+        margin-bottom: 30px;
+    }
+
+    .ProductsListItem {
+        width: 370px;
+        margin-left: calc(50% - 370px / 2);
+    }
+
+    .showMore {
+        width: 170px;
+        margin-top: 40px;
+        margin-left: calc(50% - 170px / 2);
+        font-family: 'Plus Jakarta Sans';
+        font-size: 16px;
+        line-height: 16px;
+        font-weight: 600;
+        letter-spacing: 0px;
+        padding: 16px 40px 16px 40px;
+        border-width: 0px;
+        border-radius: 8px;
+        color: #ffffff;
+        background-color: #2a27e9;
+        border-color: transparent;
+    }
+
+    .hideAll {
+        width: 170px;
+        margin-top: 40px;
+        margin-left: calc(50% - 170px / 2);
+        font-family: 'Plus Jakarta Sans';
+        font-size: 16px;
+        line-height: 16px;
+        font-weight: 600;
+        letter-spacing: 0px;
+        padding: 16px 40px 16px 40px;
+        border-width: 0px;
+        border-radius: 8px;
+        color: #ffffff;
+        background-color: rgb(221, 70, 70);
+        border-color: transparent;
+    }
+
+    .hideAllDisabled {
+        display: none;
+    }
+}
+
+// _____________________________adaptive___________________________________
+
+@media screen and (max-width: 900px) {
+    .TopRated {
+        background-color: #f2f2f0;
+        width: 12500px;
+        margin-left: calc(50% - 12500px / 2);
+
+        .TopRatedTitle {
+            font-size: 42px;
+            line-height: 50px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .TopRatedParagraph {
+            margin-top: 30px;
+            text-align: center;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+            color: #4c4d52;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            margin-bottom: 30px;
+        }
+
+        .showMore {
+            width: 170px;
+            margin-top: 40px;
+            margin-left: calc(50% - 170px / 2);
+            font-family: 'Plus Jakarta Sans';
+            font-size: 16px;
+            line-height: 16px;
+            font-weight: 600;
+            letter-spacing: 0px;
+            padding: 16px 40px 16px 40px;
+            border-width: 0px;
+            border-radius: 8px;
+            color: #ffffff;
+            background-color: #2a27e9;
+            border-color: transparent;
+        }
+    }
+}

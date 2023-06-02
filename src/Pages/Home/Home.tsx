@@ -5,6 +5,7 @@ import SimpleSlider from 'Components/SliderInfo/SliderInfo'
 import Favorites from './Favorites/Favorites'
 import HoverAbout from './HoverAbout/HoverAbout'
 import Recommends from './Recommends/Recommends'
+import TopRated from './TopRated/TopRated'
 
 type Props = {}
 
@@ -17,6 +18,7 @@ const Home = (props: Props) => {
                 <Recommends />
             </div>
             <Favorites />
+            <TopRated />
             <ProductsList />
             <Reviews />
         </div>
