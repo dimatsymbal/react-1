@@ -35,3 +35,17 @@
     background-color: white;
     width: 100%;
 }
+
+/* -----------------------------------POPUP------------------------------------ */
+
+.popupInHeader {
+    width: 200px;
+    height: 200px;
+    background-color: aliceblue;
+    position: absolute;
+    right: -120px;
+    top: 70px;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: none;
+}

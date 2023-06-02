@@ -2,6 +2,12 @@
     width: 100%;
     height: 400px;
     margin-bottom: 40px;
+    border-radius: 10px;
+
+    .sliderImg {
+        border-radius: 10px;
+        width: 100%;
+    }
 
     .slick-prev:before {
         content: '←';

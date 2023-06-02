@@ -1,0 +1,46 @@
+.FeelTheSound {
+    min-height: 600px;
+    background-color: rgb(233, 223, 223);
+    width: 12500px;
+    margin-left: calc(50% - 12500px / 2);
+
+    .FeelTheSoundTitle {
+        font-size: 42px;
+        line-height: 50px;
+        font-weight: 700;
+        letter-spacing: -1px;
+        margin-top: 190px;
+        width: 180px;
+    }
+
+    .FeelTheSoundParagraph {
+        margin-top: 10px;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+        color: #4c4d52;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        letter-spacing: 0px;
+        margin-bottom: 30px;
+    }
+
+    .feelCardImg {
+        width: 150px;
+    }
+}
+
+// background-image: url('https://themes.muffingroup.com/betheme-store2/wp-content/uploads/2022/08/bethemestore2-wrap-bg2.webp');
+// background-repeat: no-repeat;
+
+// _____________________________adaptive___________________________________
+
+@media screen and (max-width: 900px) {
+    .FeelTheSound {
+        width: 390px;
+        margin-left: calc(50% - 390px / 2);
+    }
+}

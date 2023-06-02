@@ -60,7 +60,14 @@ const TopRated = (props: Props) => {
                                 images,
                                 quantity,
                             }) => (
-                                <Grid item xs={12} sm={6} md={4}>
+                                <Grid
+                                    className="gridItem"
+                                    item
+                                    xs={12}
+                                    sm={6}
+                                    md={4}
+                                    key={id}
+                                >
                                     <ProductsListItem
                                         id={id}
                                         images={images}

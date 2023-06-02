@@ -21,21 +21,20 @@ const App = (props: Props) => {
         <StyledEngineProvider injectFirst>
             <CssBaseline />
             <Header />
-            <Container sx={{ padding: '20px 0' }}>
-                <ScrollToTop />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="cart" element={<CartPage />} />
-                    {/* <Route
+
+            <ScrollToTop />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="cart" element={<CartPage />} />
+                {/* <Route
                         path="/products/:category"
                         element={<ProductsList />}
                     /> */}
-                    <Route path="/checkout" element={<CheckoutPage />} />
-                    <Route path="/contacts" element={<ContactsPage />} />
-                    <Route path="/examen" element={<Examen />} />
-                    <Route path="/products/:id" element={<ProductPage />} />
-                </Routes>
-            </Container>
+                <Route path="/checkout" element={<CheckoutPage />} />
+                <Route path="/contacts" element={<ContactsPage />} />
+                <Route path="/examen" element={<Examen />} />
+                <Route path="/products/:id" element={<ProductPage />} />
+            </Routes>
             <Footer />
         </StyledEngineProvider>
     )

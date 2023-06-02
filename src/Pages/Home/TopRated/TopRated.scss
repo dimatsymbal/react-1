@@ -1,7 +1,5 @@
 .TopRated {
     background-color: #f2f2f0;
-    width: 12500px;
-    margin-left: calc(50% - 12500px / 2);
 
     .TopRatedTitle {
         font-size: 42px;
@@ -77,8 +75,8 @@
 @media screen and (max-width: 900px) {
     .TopRated {
         background-color: #f2f2f0;
-        width: 12500px;
-        margin-left: calc(50% - 12500px / 2);
+        width: 390px;
+        margin-left: calc(50% - 390px / 2);
 
         .TopRatedTitle {
             font-size: 42px;

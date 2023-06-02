@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { useState } from 'react'
-
+import { Container } from '@mui/material'
 type Props = {}
 
 type Order = {
@@ -61,32 +61,36 @@ const CheckoutPage = (props: Props) => {
 
     const renderForm = () => {
         return (
-            <form onSubmit={orderSend}>
-                <div>
-                    <input
-                        type="text"
-                        placeholder="Name"
-                        value={orderData.name}
-                        onChange={handleName}
-                    />
-                </div>
-                <div>
-                    <input
-                        type="text"
-                        placeholder="Address"
-                        value={orderData.address}
-                        onChange={handleAddress}
-                    />
-                </div>
-                <button type="submit">Send</button>
-            </form>
+            <>
+                <form onSubmit={orderSend}>
+                    <div>
+                        <input
+                            type="text"
+                            placeholder="Name"
+                            value={orderData.name}
+                            onChange={handleName}
+                        />
+                    </div>
+                    <div>
+                        <input
+                            type="text"
+                            placeholder="Address"
+                            value={orderData.address}
+                            onChange={handleAddress}
+                        />
+                    </div>
+                    <button type="submit">Send</button>
+                </form>
+            </>
         )
     }
 
     return (
         <>
-            <h2>Checkout</h2>
-            {isOrderSend ? renderMessage() : renderForm()}
+            <Container sx={{ padding: '20px 0' }}>
+                <h2>Checkout</h2>
+                {isOrderSend ? renderMessage() : renderForm()}
+            </Container>
         </>
     )
 }

@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import './SliderInfo.scss'
+import { Container } from '@mui/material'
 
 export default class SimpleSlider extends Component {
   render() {
@@ -15,6 +16,7 @@ export default class SimpleSlider extends Component {
       slidesToScroll: 1,
     };
     return (
+      <Container sx={{ padding: '20px 0' }}>
       <div className="SliderInfo">
         <Slider {...settings}>
         <div className="sliderImgDiv">
@@ -40,6 +42,8 @@ export default class SimpleSlider extends Component {
           </div>
         </Slider>
       </div>
+      </Container>
+
     );
   }
 }

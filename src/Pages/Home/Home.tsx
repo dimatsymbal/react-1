@@ -6,21 +6,31 @@ import Favorites from './Favorites/Favorites'
 import HoverAbout from './HoverAbout/HoverAbout'
 import Recommends from './Recommends/Recommends'
 import TopRated from './TopRated/TopRated'
+import FeelTheSound from './FeelTheSound/FeelTheSound'
+import { Container } from '@mui/material'
 
 type Props = {}
 
 const Home = (props: Props) => {
     return (
         <div className="HomePage">
-            <SimpleSlider />
-            <HoverAbout />
-            <div className="fullWidthComponent">
-                <Recommends />
-            </div>
-            <Favorites />
+            <Container sx={{ padding: '20px 0' }}>
+                <SimpleSlider />
+                <HoverAbout />
+            </Container>
+
+            <Recommends />
+            <Container sx={{ padding: '20px 0' }}>
+                <Favorites />
+            </Container>
+
             <TopRated />
-            <ProductsList />
-            <Reviews />
+
+            <FeelTheSound />
+            <Container sx={{ padding: '20px 0' }}>
+                <ProductsList />
+                <Reviews />
+            </Container>
         </div>
     )
 }
