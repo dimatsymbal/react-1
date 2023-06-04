@@ -28,8 +28,46 @@
         margin-bottom: 30px;
     }
 
-    .feelCardImg {
-        width: 150px;
+    .rightContainer {
+        margin-top: 80px;
+        .FeelTheSoundCard {
+            padding: 10px;
+            border: 0;
+
+            height: 320px;
+            border-radius: 10px;
+            .feelCardImg {
+                width: 150px;
+                margin-left: calc(50% - 150px / 2);
+            }
+
+            .feelCardTitle {
+                margin-top: 20px;
+                text-align: center;
+            }
+
+            .product_price {
+                font-size: 28px;
+                text-align: center;
+            }
+
+            .product_old_price {
+                font-size: 14px;
+                opacity: 0.3;
+                text-decoration: line-through;
+                text-align: center;
+            }
+
+            .product_discount_price {
+                font-size: 28px;
+                color: rgb(221, 84, 84);
+                text-align: center;
+            }
+        }
+
+        .FeelTheSoundCard:hover {
+            box-shadow: 0 5px 7px rgba(0, 0, 0, 0.4);
+        }
     }
 }
 
