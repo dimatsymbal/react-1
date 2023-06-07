@@ -2,7 +2,7 @@
     height: 300px;
     display: flex;
     flex-direction: column;
-    padding: 0px;
+    padding: 3px;
     text-align: center;
     position: relative;
 
@@ -49,8 +49,8 @@
             top: 150px;
             color: black;
             text-decoration: none;
-            width: 175px;
-            left: calc(50% - 175px / 2);
+            width: 170px;
+            left: calc(50% - 170px / 2);
         }
 
         .favoritePrice {

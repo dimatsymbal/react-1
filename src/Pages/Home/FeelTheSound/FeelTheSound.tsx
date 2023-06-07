@@ -7,7 +7,7 @@ import { useState } from 'react'
 
 type Props = {}
 const FeelTheSound = (props: Props) => {
-    const [count, setCount] = useState<number>(1)
+    const [count] = useState<number>(1)
     return (
         <div className="FeelTheSound">
             <Container sx={{ padding: '20px 0' }}>
@@ -54,13 +54,12 @@ const FeelTheSound = (props: Props) => {
                                                     src={images}
                                                     alt=""
                                                 />
-                                                <h6 className="feelCardTitle">
-                                                    <Link
-                                                        to={`/products/${id}`}
-                                                    >
+                                                <Link to={`/products/${id}`}>
+                                                    <h6 className="feelCardTitle">
+                                                        {' '}
                                                         {title}
-                                                    </Link>{' '}
-                                                </h6>
+                                                    </h6>
+                                                </Link>{' '}
                                                 {quantity === 0 ? (
                                                     <p>Товара нема</p>
                                                 ) : quantity <= 3 ? (

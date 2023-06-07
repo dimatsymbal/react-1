@@ -57,38 +57,51 @@ const ProductsListItem = ({
         >
             <CardContent>
                 <Button
-                    variant="outlined"
                     onClick={() =>
                         isLiked
                             ? dispatch(removeLike(id))
                             : dispatch(addLike(id))
                     }
                 >
-                    {isLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+                    {isLiked ? (
+                        <FavoriteIcon
+                            style={{
+                                color: 'rgb(221, 84, 84)',
+                            }}
+                        />
+                    ) : (
+                        <FavoriteBorderIcon
+                            style={{
+                                color: 'rgb(221, 84, 84)',
+                            }}
+                        />
+                    )}
                 </Button>
-
                 {quantity <= 3 && (
                     <div className="saleCircle">
-                        {' '}
                         <PercentIcon /> Only {quantity} left
                     </div>
                 )}
-
-                <div className="product_image">
+                <div
+                    className="product_image"
+                    onDoubleClick={() =>
+                        isLiked
+                            ? dispatch(removeLike(id))
+                            : dispatch(addLike(id))
+                    }
+                >
                     <img
                         className="product_image_content"
                         src={images}
                         alt="product_image_content card"
                     />
                 </div>
-                <h6 className="product_title">
-                    {' '}
-                    <Link to={`/products/${id}`}>{title}</Link>{' '}
-                </h6>
+                <Link to={`/products/${id}`}>
+                    <h6 className="product_title">{title}</h6>
+                </Link>
                 <div className="product_desc">{description}</div>
                 <div className="product_type">{type}</div>
                 <div className="product_features">{copacity} GB</div>
-
                 {quantity === 0 ? (
                     <Quantity
                         onDecrement={onDecrement}

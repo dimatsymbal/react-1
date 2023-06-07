@@ -47,7 +47,6 @@ const FavoriteItem = ({ product }: Props) => {
                 <Button
                     onClick={() => dispatch(removeLike(product.id))}
                     className="deteleFavoriteCard"
-                    variant="contained"
                 >
                     <DeleteIcon />
                 </Button>

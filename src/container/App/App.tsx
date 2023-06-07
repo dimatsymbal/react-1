@@ -20,7 +20,6 @@ const App = (props: Props) => {
         <StyledEngineProvider injectFirst>
             <CssBaseline />
             <Header />
-
             <ScrollToTop />
             <Routes>
                 <Route path="/" element={<Home />} />
