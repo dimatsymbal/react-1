@@ -12,10 +12,13 @@ import ProductPage from 'Pages/Product/ProductPage'
 import ScrollToTop from 'Utils/scrollToTop'
 import ContactsPage from 'Pages/Contacts/ContactsPage'
 import ProductsList from 'Components/ProductsList/ProductsList'
+import { useAppSelector } from 'redux/hooks'
 
 type Props = {}
 
 const App = (props: Props) => {
+    const productsInCart = useAppSelector((state) => state.productsInCart)
+
     return (
         <StyledEngineProvider injectFirst>
             <CssBaseline />
@@ -25,7 +28,10 @@ const App = (props: Props) => {
                 <Route path="/" element={<Home />} />
                 <Route path="cart" element={<CartPage />} />
                 <Route path="/products" element={<ProductsList />} />
-                <Route path="/checkout" element={<CheckoutPage />} />
+                <Route
+                    path="/checkout"
+                    element={<CheckoutPage productsInCart={productsInCart} />}
+                />
                 <Route path="/contacts" element={<ContactsPage />} />
                 <Route path="/examen" element={<Examen />} />
                 <Route path="/products/:id" element={<ProductPage />} />

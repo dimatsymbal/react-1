@@ -16,8 +16,11 @@ const CartPage = (props: Props) => {
             <Container sx={{ padding: '20px 0' }}>
                 <br />
                 {/* <div>
-                <h3>Кількість товарів у кошику :</h3>
-            </div> */}
+                    <h3>
+                        Кількість товарів у кошику :{' '}
+                        {Object.keys(productsInCart).length}
+                    </h3>
+                </div> */}
                 <br />
 
                 <Grid container spacing={4}>

@@ -1,0 +1,172 @@
+.CheckoutPage {
+    min-height: 500px;
+
+    .checkoutTitle {
+        text-align: center;
+        font-size: 42px;
+        line-height: 50px;
+        font-weight: 700;
+        letter-spacing: -1px;
+    }
+
+    .orderForm {
+        margin-top: 40px;
+        min-height: 270px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        .upperInputs {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            input {
+                width: 350px;
+                height: 30px;
+                border: 0;
+                padding-left: 10px;
+                border-bottom: 1px solid rgb(147, 145, 145);
+            }
+        }
+
+        .lowerInputs {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            input {
+                width: 350px;
+                height: 30px;
+                border: 0;
+                border-bottom: 1px solid rgb(147, 145, 145);
+                padding-left: 10px;
+            }
+        }
+
+        .telInputs {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            input {
+                width: 350px;
+                height: 30px;
+                border: 0;
+                border-bottom: 1px solid rgb(147, 145, 145);
+                padding-left: 10px;
+            }
+        }
+
+        .orderSubmitBtn {
+            width: 350px;
+            margin-left: calc(50% - 350px / 2);
+            height: 40px;
+            border: 0;
+            border-radius: 5px;
+            background-color: rgb(205, 230, 113);
+        }
+
+        .orderSubmitBtn:hover {
+            background-color: rgb(153, 170, 91);
+            transition: 0.4s;
+        }
+    }
+
+    .right {
+        margin-top: 40px;
+        min-height: 100px;
+
+        .checkoutCard {
+            position: relative;
+            margin-bottom: 10px;
+            border-radius: 10px;
+
+            .checkoutCardTitle {
+                position: absolute;
+                left: 5px;
+            }
+
+            .checkoutCardQuantity {
+                position: absolute;
+                right: 80px;
+            }
+
+            .checkoutCardPrice {
+                margin-left: 310px;
+            }
+        }
+
+        .checkoutCard:hover {
+            box-shadow: 0 5px 7px rgba(0, 0, 0, 0.4);
+        }
+
+        .checkoutLink {
+            margin-top: 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .checkoutTotal {
+            margin-top: 20px;
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .CheckoutPage {
+        padding: 10px;
+
+        .orderForm {
+            margin-top: 40px;
+            min-height: 270px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+
+            input::placeholder {
+                color: #999;
+                font-size: 14px;
+            }
+
+            .upperInputs {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                input {
+                    width: 170px;
+                    height: 30px;
+                    border: 0;
+                    border-bottom: 1px solid rgb(147, 145, 145);
+                }
+            }
+
+            .lowerInputs {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                input {
+                    width: 170px;
+                    height: 30px;
+                    border: 0;
+                    border-bottom: 1px solid rgb(147, 145, 145);
+                }
+            }
+
+            .telInputs {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                input {
+                    width: 170px;
+                    height: 30px;
+                    border: 0;
+                    border-bottom: 1px solid rgb(147, 145, 145);
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+}
