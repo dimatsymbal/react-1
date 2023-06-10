@@ -1,15 +1,17 @@
 import { Grid } from '@mui/material'
 import ProductsListItem from './ProductsListItem'
-import productsArrey from 'Utils/ProductsArrey'
+// import productsArrey from 'Utils/ProductsArrey'
 import { useState } from 'react'
 import { Button } from '@mui/material'
 import './ProductsList.scss'
 import AppsIcon from '@mui/icons-material/Apps'
 import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import { useAppSelector } from 'redux/hooks'
 type Props = {}
 
 const ProductsList = (props: Props) => {
+    const productsArrey = useAppSelector((state) => state.products)
     const [sortBtnName, setSortBtnName] = useState<string>('Телефон')
 
     const changeSortBtnByPhones = () => {

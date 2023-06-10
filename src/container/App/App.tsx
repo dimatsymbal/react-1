@@ -12,12 +12,20 @@ import ProductPage from 'Pages/Product/ProductPage'
 import ScrollToTop from 'Utils/scrollToTop'
 import ContactsPage from 'Pages/Contacts/ContactsPage'
 import ProductsList from 'Components/ProductsList/ProductsList'
-import { useAppSelector } from 'redux/hooks'
+import { useAppDispatch, useAppSelector } from 'redux/hooks'
+import { useEffect } from 'react'
+import { fetchProducts } from 'redux/productsReducer'
 
 type Props = {}
 
 const App = (props: Props) => {
     const productsInCart = useAppSelector((state) => state.productsInCart)
+
+    const dispatch = useAppDispatch()
+
+    useEffect(() => {
+        dispatch(fetchProducts())
+    })
 
     return (
         <StyledEngineProvider injectFirst>

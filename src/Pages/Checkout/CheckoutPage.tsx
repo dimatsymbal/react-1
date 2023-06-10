@@ -2,9 +2,9 @@ import axios from 'axios'
 import { useState } from 'react'
 import { Container, Grid, Card } from '@mui/material'
 import './CheckoutPage.scss'
-// import CheckoutList from './CheckoutList/CheckoutList'
 import productsArray, { getProductsObject, Products } from 'Utils/ProductsArrey'
 import { Link } from 'react-router-dom'
+// import { useFormik } from 'formik';
 
 type Props = {
     productsInCart: {
@@ -22,12 +22,6 @@ type Order = {
     phone: string
     address: string
 }
-
-// {productsObject[parseInt(productId)].title}{' '}
-// : {productsInCart[parseInt(productId)]} :{' '}
-// {productsObject[parseInt(productId)].price *
-//     productsInCart[parseInt(productId)]}
-// $
 
 const CheckoutPage = ({
     productsObject = getProductsObject(productsArray),
@@ -230,13 +224,40 @@ const CheckoutPage = ({
         )
     }
 
+    // const SignupForm = () => {
+    //     // Pass the useFormik() hook initial form values and a submit function that will
+    //     // be called when the form is submitted
+    //     const formik = useFormik({
+    //       initialValues: {
+    //         email: '',
+    //       },
+    //       onSubmit: values => {
+    //         alert(JSON.stringify(values, null, 2));
+    //       },
+    //     });
+    //     return (
+    //       <form onSubmit={formik.handleSubmit}>
+    //         <label htmlFor="email">Email Address</label>
+    //         <input
+    //           id="email"
+    //           name="email"
+    //           type="email"
+    //           onChange={formik.handleChange}
+    //           value={formik.values.email}
+    //         />
+
+    //         <button type="submit">Submit</button>
+    //       </form>
+    //     );
+    //   };
+
     return (
         <>
             <Container sx={{ padding: '20px 0' }}>
                 <div className="CheckoutPage">
                     <h2 className="checkoutTitle">
-                        Confirm{' '}
-                        <span style={{ color: '#2A27E9' }}>your order</span>
+                        Confirm
+                        <span style={{ color: '#2A27E9' }}> your order</span>
                     </h2>
                     {isOrderSend ? renderMessage() : renderForm()}
                 </div>
