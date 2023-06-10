@@ -1,14 +1,18 @@
 import { Grid } from '@mui/material'
 import ProductsListItem from './ProductsListItem'
-// import productsArrey from 'Utils/ProductsArrey'
 import { useState } from 'react'
-import { Button } from '@mui/material'
 import './ProductsList.scss'
-import AppsIcon from '@mui/icons-material/Apps'
 import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from 'redux/hooks'
 import { sortByPrice } from 'redux/productsReducer'
+
+import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone'
+import HeadphonesIcon from '@mui/icons-material/Headphones'
+import LaptopIcon from '@mui/icons-material/Laptop'
+import SportsEsportsIcon from '@mui/icons-material/SportsEsports'
+import TvIcon from '@mui/icons-material/Tv'
+
 type Props = {}
 
 const ProductsList = (props: Props) => {
@@ -51,73 +55,67 @@ const ProductsList = (props: Props) => {
     return (
         <div className="ProductsList">
             <br />
-            <br />
 
             <div className="filterPanel">
                 <div className="filter_btns_block">
-                    <div className="dropdown">
-                        <button
-                            className="btn btn-secondary dropdown-toggle"
-                            type="button"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                        >
-                            <AppsIcon /> Каталог товарів
-                        </button>
-                        <ul className="dropdown-menu">
-                            <li>
-                                <Button
-                                    variant="contained"
-                                    onClick={() => changeSortBtnByPhones()}
-                                >
-                                    Phones
-                                </Button>
-                            </li>
-                            <li>
-                                <Button
-                                    variant="contained"
-                                    onClick={() => changeSortBtnByHeadphones()}
-                                >
-                                    Headphones
-                                </Button>
-                            </li>
-                            <li>
-                                {' '}
-                                <Button
-                                    variant="contained"
-                                    onClick={() => changeSortBtnByLaptops()}
-                                >
-                                    Laptops
-                                </Button>
-                            </li>
-                            <li>
-                                {' '}
-                                <Button
-                                    variant="contained"
-                                    onClick={() =>
-                                        changeSortBtnByPlayStations()
-                                    }
-                                >
-                                    Playstations
-                                </Button>
-                            </li>
-                            <li>
-                                {' '}
-                                <Button
-                                    variant="contained"
-                                    onClick={() => changeSortBtnByTV()}
-                                >
-                                    TV
-                                </Button>
-                            </li>
-                        </ul>
-                    </div>
+                    <Grid container spacing={5}>
+                        <Grid item>
+                            <button
+                                className="filterBtns"
+                                onClick={changeSortBtnByPhones}
+                            >
+                                <PhoneIphoneIcon />
+                                Phones
+                            </button>
+                        </Grid>
+                        <Grid item>
+                            <button
+                                className="filterBtns"
+                                onClick={changeSortBtnByHeadphones}
+                            >
+                                <HeadphonesIcon />
+                                Headphones
+                            </button>
+                        </Grid>
+                        <Grid item>
+                            <button
+                                className="filterBtns"
+                                onClick={changeSortBtnByLaptops}
+                            >
+                                <LaptopIcon />
+                                Laptops
+                            </button>
+                        </Grid>
+                        <Grid item>
+                            <button
+                                className="filterBtns"
+                                onClick={changeSortBtnByPlayStations}
+                            >
+                                <SportsEsportsIcon />
+                                Gaming
+                            </button>
+                        </Grid>
+                        <Grid item>
+                            <button
+                                className="filterBtns"
+                                onClick={changeSortBtnByTV}
+                            >
+                                <TvIcon />
+                                TV
+                            </button>
+                        </Grid>
+                    </Grid>
                 </div>
             </div>
+            <br />
+            <br />
 
             <button onClick={() => dispatch(sortByPrice())}>
                 sort by price
             </button>
+
+            <br />
+            <br />
 
             <Grid container spacing={3}>
                 {productsArrey
