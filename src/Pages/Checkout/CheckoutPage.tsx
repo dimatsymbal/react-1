@@ -2,16 +2,18 @@ import axios from 'axios'
 import { useState } from 'react'
 import { Container, Grid, Card } from '@mui/material'
 import './CheckoutPage.scss'
-import productsArray, { getProductsObject, Products } from 'Utils/ProductsArrey'
+import { getProductsObject, Products } from 'Utils/ProductsArrey'
 import { Link } from 'react-router-dom'
+import { useAppSelector } from 'redux/hooks'
 // import { useFormik } from 'formik';
+
+type ProductsObject = {
+    [id: number]: Products
+}
 
 type Props = {
     productsInCart: {
         [id: number]: number
-    }
-    productsObject?: {
-        [id: number]: Products
     }
 }
 
@@ -23,10 +25,10 @@ type Order = {
     address: string
 }
 
-const CheckoutPage = ({
-    productsObject = getProductsObject(productsArray),
-    productsInCart,
-}: Props) => {
+const CheckoutPage = ({ productsInCart }: Props) => {
+    const productsArrey = useAppSelector((state) => state.products) // приймаэмо масив з сховища
+    const productsObject: ProductsObject = getProductsObject(productsArrey)
+
     const [isOrderSend, setIsOrderSend] = useState<Boolean>(false) // перевірка чи надіслана форма чи ні
 
     const [orderData, setOrderData] = useState<Order>({

@@ -1,13 +1,16 @@
 import './FeelTheSound.scss'
 import { Card, Grid } from '@mui/material'
-import productsArrey from 'Utils/ProductsArrey'
 import { Container } from '@mui/material'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
+import { useAppSelector } from 'redux/hooks'
 
 type Props = {}
 const FeelTheSound = (props: Props) => {
     const [count] = useState<number>(1)
+
+    const productsArrey = useAppSelector((state) => state.products) // приймаэмо масив з сховища
+
     return (
         <div className="FeelTheSound">
             <Container sx={{ padding: '20px 0' }}>

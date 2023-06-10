@@ -19,7 +19,7 @@ const CartProductList = ({
     productsInCart,
     CartItem = CardProductListItem,
 }: Props) => {
-    const productsArrey = useAppSelector((state) => state.products)
+    const productsArrey = useAppSelector((state) => state.products) // приймаэмо масив з сховища
     const productsObject: ProductsObject = getProductsObject(productsArrey)
 
     return (

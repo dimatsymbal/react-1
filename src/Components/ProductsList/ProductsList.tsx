@@ -11,7 +11,8 @@ import { useAppSelector } from 'redux/hooks'
 type Props = {}
 
 const ProductsList = (props: Props) => {
-    const productsArrey = useAppSelector((state) => state.products)
+    const productsArrey = useAppSelector((state) => state.products) // приймаэмо масив з сховища
+
     const [sortBtnName, setSortBtnName] = useState<string>('Телефон')
 
     const changeSortBtnByPhones = () => {

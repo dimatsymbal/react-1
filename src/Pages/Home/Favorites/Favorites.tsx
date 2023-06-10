@@ -2,21 +2,27 @@ import FavoriteItem from './FavoriteItem/FavoriteItem'
 import { Grid } from '@mui/material'
 import { useAppSelector } from 'redux/hooks'
 import './Favorites.scss'
-import productsArrey, { Products, getProductsObject } from 'Utils/ProductsArrey'
+import { Products, getProductsObject } from 'Utils/ProductsArrey'
+
+type ProductsObject = {
+    [id: number]: Products
+}
 
 type Props = {
     productsObject?: {
         [id: number]: Products
     }
 }
-const Favorites = ({
-    productsObject = getProductsObject(productsArrey),
-}: Props) => {
+const Favorites = (props: Props) => {
     // console.log(Object.keys(productsInFav)) // це наш масив ключів у стрінг
 
     const productsInFavRedux = useAppSelector(
         (state) => state.productsLikeState
     )
+
+    const productsArrey = useAppSelector((state) => state.products) // приймаэмо масив з сховища
+    const productsObject: ProductsObject = getProductsObject(productsArrey)
+
     return (
         <div className="Favorites">
             <h2 className="titleFavorites">Favorites</h2>

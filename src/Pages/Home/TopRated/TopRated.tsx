@@ -1,9 +1,9 @@
 import './TopRated.scss'
 import { Grid } from '@mui/material'
 import ProductsListItem from 'Components/ProductsList/ProductsListItem'
-import productsArrey from 'Utils/ProductsArrey'
 import { Container } from '@mui/material'
 import { useState } from 'react'
+import { useAppSelector } from 'redux/hooks'
 type Props = {}
 const TopRated = (props: Props) => {
     const [productShow, setProductShow] = useState<number>(4)
@@ -28,6 +28,9 @@ const TopRated = (props: Props) => {
             })
         }
     }
+
+    const productsArrey = useAppSelector((state) => state.products) // приймаэмо масив з сховища
+
     return (
         <div className="TopRated">
             <Container sx={{ padding: '20px 0' }}>

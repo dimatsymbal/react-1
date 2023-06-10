@@ -12,9 +12,8 @@ type Props = {
     }
 }
 const CartTotal = ({ productsInCart }: Props) => {
-    const productsArrey = useAppSelector((state) => state.products)
+    const productsArrey = useAppSelector((state) => state.products) // приймаэмо масив з сховища
     const productsObject: ProductsObject = getProductsObject(productsArrey)
-
     let total = 0
 
     //productsInCart - це обект
