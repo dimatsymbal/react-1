@@ -17,7 +17,11 @@ export const fetchProducts = createAsyncThunk<Products[]>(
 export const productsSlice = createSlice({
     name: 'products',
     initialState,
-    reducers: {},
+    reducers: {
+        sortByPrice: (state) => {
+            state.sort((a, b) => a.price - b.price)
+        },
+    },
     extraReducers(builder) {
         builder.addCase(fetchProducts.fulfilled, (state, action) => {
             return (state = action.payload)
@@ -25,6 +29,7 @@ export const productsSlice = createSlice({
     },
 })
 
+export const { sortByPrice } = productsSlice.actions
 export default productsSlice.reducer
 
 // 'https://run.mocky.io/v3/598625f3-f504-4b4f-88c0-68c651404a13'

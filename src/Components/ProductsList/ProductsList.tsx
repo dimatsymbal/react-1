@@ -7,11 +7,14 @@ import './ProductsList.scss'
 import AppsIcon from '@mui/icons-material/Apps'
 import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { useAppSelector } from 'redux/hooks'
+import { useAppDispatch, useAppSelector } from 'redux/hooks'
+import { sortByPrice } from 'redux/productsReducer'
 type Props = {}
 
 const ProductsList = (props: Props) => {
     const productsArrey = useAppSelector((state) => state.products) // приймаэмо масив з сховища
+
+    const dispatch = useAppDispatch()
 
     const [sortBtnName, setSortBtnName] = useState<string>('Телефон')
 
@@ -111,6 +114,10 @@ const ProductsList = (props: Props) => {
                     </div>
                 </div>
             </div>
+
+            <button onClick={() => dispatch(sortByPrice())}>
+                sort by price
+            </button>
 
             <Grid container spacing={3}>
                 {productsArrey
