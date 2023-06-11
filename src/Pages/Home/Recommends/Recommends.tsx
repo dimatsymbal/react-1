@@ -4,6 +4,13 @@ import { Link } from 'react-router-dom'
 
 type Props = {}
 const Recommends = (props: Props) => {
+    const handleScrollToProductsList = () => {
+        const productsList = document.getElementById('ProductsList')
+        if (productsList) {
+            productsList.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
+    }
+
     return (
         <div className="Recommends">
             <Grid container spacing={2}>
@@ -20,9 +27,14 @@ const Recommends = (props: Props) => {
                             Dolor dictumst pretium
                         </h5>
 
-                        <Link to="/products/laptops">
-                            <button className="recommendBtn">Buy now</button>
-                        </Link>
+                        <button
+                            className="recommendBtn"
+                            onClick={() => {
+                                handleScrollToProductsList()
+                            }}
+                        >
+                            Buy now
+                        </button>
                     </div>
                 </Grid>
                 <Grid item xs={12} sm={12} md={6}>

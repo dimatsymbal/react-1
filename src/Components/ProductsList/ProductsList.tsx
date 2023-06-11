@@ -1,59 +1,32 @@
 import { Grid } from '@mui/material'
 import ProductsListItem from './ProductsListItem'
-import { useState } from 'react'
 import './ProductsList.scss'
-import { useEffect } from 'react'
-import { useParams } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from 'redux/hooks'
 import { sortByPrice } from 'redux/productsReducer'
-
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone'
 import HeadphonesIcon from '@mui/icons-material/Headphones'
 import LaptopIcon from '@mui/icons-material/Laptop'
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports'
 import TvIcon from '@mui/icons-material/Tv'
+import {
+    filterByHeadphones,
+    filterByLaptops,
+    filterByPhones,
+    filterByPlayStations,
+    filterByTV,
+} from 'redux/filterFunctions/filterReducer'
 
 type Props = {}
 
 const ProductsList = (props: Props) => {
     const productsArrey = useAppSelector((state) => state.products) // приймаэмо масив з сховища
 
+    const sortBtnName = useAppSelector((state) => state.filter.sortBtnName)
+
     const dispatch = useAppDispatch()
 
-    const [sortBtnName, setSortBtnName] = useState<string>('Телефон')
-
-    const changeSortBtnByPhones = () => {
-        setSortBtnName(() => 'Телефон')
-    }
-
-    const changeSortBtnByHeadphones = () => {
-        setSortBtnName(() => 'Навушники')
-    }
-
-    const changeSortBtnByLaptops = () => {
-        setSortBtnName(() => 'Ноутбук')
-    }
-
-    const changeSortBtnByPlayStations = () => {
-        setSortBtnName(() => 'Ігровa консоль')
-    }
-
-    const changeSortBtnByTV = () => {
-        setSortBtnName(() => 'Телевізори')
-    }
-
-    const { category } = useParams()
-
-    useEffect(() => {
-        if (category === 'headphones') {
-            setSortBtnName('Навушники')
-        } else if (category === 'laptops') {
-            setSortBtnName('Ноутбук')
-        }
-    }, [category])
-
     return (
-        <div className="ProductsList">
+        <div className="ProductsList" id="ProductsList">
             <br />
 
             <div className="filterPanel">
@@ -62,7 +35,7 @@ const ProductsList = (props: Props) => {
                         <Grid item>
                             <button
                                 className="filterBtns"
-                                onClick={changeSortBtnByPhones}
+                                onClick={() => dispatch(filterByPhones())}
                             >
                                 <PhoneIphoneIcon />
                                 Phones
@@ -71,7 +44,7 @@ const ProductsList = (props: Props) => {
                         <Grid item>
                             <button
                                 className="filterBtns"
-                                onClick={changeSortBtnByHeadphones}
+                                onClick={() => dispatch(filterByHeadphones())}
                             >
                                 <HeadphonesIcon />
                                 Headphones
@@ -80,7 +53,7 @@ const ProductsList = (props: Props) => {
                         <Grid item>
                             <button
                                 className="filterBtns"
-                                onClick={changeSortBtnByLaptops}
+                                onClick={() => dispatch(filterByLaptops())}
                             >
                                 <LaptopIcon />
                                 Laptops
@@ -89,7 +62,7 @@ const ProductsList = (props: Props) => {
                         <Grid item>
                             <button
                                 className="filterBtns"
-                                onClick={changeSortBtnByPlayStations}
+                                onClick={() => dispatch(filterByPlayStations())}
                             >
                                 <SportsEsportsIcon />
                                 Gaming
@@ -98,7 +71,7 @@ const ProductsList = (props: Props) => {
                         <Grid item>
                             <button
                                 className="filterBtns"
-                                onClick={changeSortBtnByTV}
+                                onClick={() => dispatch(filterByTV())}
                             >
                                 <TvIcon />
                                 TV
