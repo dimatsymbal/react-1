@@ -3,7 +3,7 @@ import './Recommends.scss'
 import { useAppDispatch } from 'redux/hooks'
 import {
     filterByHeadphones,
-    filterByTV,
+    filterByWatches,
 } from 'redux/filterFunctions/filterReducer'
 
 type Props = {}
@@ -41,7 +41,7 @@ const Recommends = (props: Props) => {
                             className="recommendBtn"
                             onClick={() => {
                                 handleScrollToProductsList()
-                                dispatch(filterByTV())
+                                dispatch(filterByWatches())
                             }}
                         >
                             Buy now

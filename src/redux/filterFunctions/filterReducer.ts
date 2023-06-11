@@ -27,6 +27,9 @@ export const filterSlice = createSlice({
         filterByTV: (state) => {
             state.sortBtnName = 'Телевізори'
         },
+        filterByWatches: (state) => {
+            state.sortBtnName = 'Годинник'
+        },
     },
 })
 
@@ -36,6 +39,7 @@ export const {
     filterByLaptops,
     filterByPlayStations,
     filterByTV,
+    filterByWatches,
 } = filterSlice.actions
 
 export default filterSlice.reducer

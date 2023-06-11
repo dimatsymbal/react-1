@@ -8,12 +8,14 @@ import HeadphonesIcon from '@mui/icons-material/Headphones'
 import LaptopIcon from '@mui/icons-material/Laptop'
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports'
 import TvIcon from '@mui/icons-material/Tv'
+import WatchIcon from '@mui/icons-material/Watch'
 import {
     filterByHeadphones,
     filterByLaptops,
     filterByPhones,
     filterByPlayStations,
     filterByTV,
+    filterByWatches,
 } from 'redux/filterFunctions/filterReducer'
 
 type Props = {}
@@ -75,6 +77,16 @@ const ProductsList = (props: Props) => {
                             >
                                 <TvIcon />
                                 TV
+                            </button>
+                        </Grid>
+
+                        <Grid item>
+                            <button
+                                className="filterBtns"
+                                onClick={() => dispatch(filterByWatches())}
+                            >
+                                <WatchIcon />
+                                Watches
                             </button>
                         </Grid>
                     </Grid>

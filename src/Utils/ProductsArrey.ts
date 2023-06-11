@@ -633,6 +633,101 @@ const productsArrey: Products[] = [
     //     extraPhoto2:
     //         'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
     // },
+    // {
+    //     id: 601,
+    //     title: 'Смарт-годинник Apple Watch Ultra GPS',
+    //     description: 'Cellular 49mm Titanium Case with Blue/Gray Trail Loop',
+    //     type: 'Годинник',
+    //     copacity:
+    //         '49-міліметровий корпусіз титану, який використовується в аерокосмічній галузі, цілодобова робота',
+    //     price: 850,
+    //     images: 'https://content.rozetka.com.ua/goods/images/big/325618213.jpg',
+    //     quantity: 6,
+    //     extraDesc:
+    //         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+    //     extraDesc2:
+    //         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+    //     extraPhoto:
+    //         'https://content.rozetka.com.ua/files/images/original/308935906.png',
+    //     extraPhoto2:
+    //         'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
+    // },
+    // {
+    //     id: 602,
+    //     title: 'Смарт-годинник Amazfit T-Rex 2 Wild Green',
+    //     description: 'Перед вами модель, що орієнтована на найжорсткіші умови.',
+    //     type: 'Годинник',
+    //     copacity:
+    //         'Amazfit T-Rex 2 — відчуйте справжню силу. "Виживальщики" зможуть сміливо використовувати девайс.',
+    //     price: 1300,
+    //     images: 'https://content1.rozetka.com.ua/goods/images/big/302569547.jpg',
+    //     quantity: 1,
+    //     extraDesc:
+    //         'Dolby Vision IQ and Dolby Atmos combine to deliver exceptional imaging and audio quality',
+    //     extraDesc2:
+    //         'This LG smart TV features webOS, allowing you to stream your favorite entertainment apps with ease Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+    //     extraPhoto: 'https://mediaonecentre.com/images/default/post.png',
+    //     extraPhoto2:
+    //         'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
+    // },
+    // {
+    //     id: 603,
+    //     title: 'Смарт-годинник Apple Watch Ultra GPS',
+    //     description: 'Cellular 49mm Titanium Case with White Ocean Band',
+    //     type: 'Годинник',
+    //     copacity:
+    //         '49-міліметровий корпусіз титану, який використовується в аерокосмічній галузі, цілодобова робота',
+    //     price: 850,
+    //     images: 'https://content2.rozetka.com.ua/goods/images/big/325621259.jpg',
+    //     quantity: 2,
+    //     extraDesc:
+    //         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+    //     extraDesc2:
+    //         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+    //     extraPhoto:
+    //         'https://content.rozetka.com.ua/files/images/original/308935906.png',
+    //     extraPhoto2:
+    //         'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
+    // },
+    // {
+    //     id: 604,
+    //     title: 'Смарт-годинник Apple Watch SE (2022) GPS',
+    //     description: '40mm Midnight Aluminium Case with Midnight Sport Band',
+    //     type: 'Годинник',
+    //     copacity:
+    //         '49-міліметровий корпусіз титану, який використовується в аерокосмічній галузі, цілодобова робота',
+    //     price: 550,
+    //     images: 'https://content1.rozetka.com.ua/goods/images/big/325584586.jpg',
+    //     quantity: 12,
+    //     extraDesc:
+    //         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+    //     extraDesc2:
+    //         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+    //     extraPhoto:
+    //         'https://content.rozetka.com.ua/files/images/original/308935906.png',
+    //     extraPhoto2:
+    //         'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
+    // },
+    // {
+    //     id: 605,
+    //     title: 'Смарт-годинник Amazfit GTS 4',
+    //     description:
+    //         'Спортивно орієнтований годинник Amazfit GTS 4: отримайте 150+ силових',
+    //     type: 'Годинник',
+    //     copacity:
+    //         'Крім цього, контролюйте дзвінки та відповідайте на них за допомогою зєднання Bluetooth.',
+    //     price: 650,
+    //     images: 'https://content1.rozetka.com.ua/goods/images/big/302566567.jpg',
+    //     quantity: 1,
+    //     extraDesc:
+    //         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+    //     extraDesc2:
+    //         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+    //     extraPhoto:
+    //         'https://content.rozetka.com.ua/files/images/original/308935906.png',
+    //     extraPhoto2:
+    //         'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
+    // },
 ]
 
 export const getProductsObject = (array: Products[]) =>

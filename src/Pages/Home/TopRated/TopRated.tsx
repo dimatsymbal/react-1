@@ -49,7 +49,8 @@ const TopRated = (props: Props) => {
                                 product.type === 'Навушники' ||
                                 product.type === 'Телефон' ||
                                 product.type === 'Телевізори' ||
-                                product.type === 'Ноутбук'
+                                product.type === 'Ноутбук' ||
+                                product.type === 'Годинник'
                         )
                         .slice(1, productShow)
                         .map(
