@@ -1,15 +1,25 @@
 import Grid from '@mui/material/Grid'
 import './Recommends.scss'
-import { Link } from 'react-router-dom'
+import { useAppDispatch } from 'redux/hooks'
+import {
+    filterByHeadphones,
+    filterByTV,
+} from 'redux/filterFunctions/filterReducer'
 
 type Props = {}
 const Recommends = (props: Props) => {
+    const dispatch = useAppDispatch()
+
     const handleScrollToProductsList = () => {
-        const productsList = document.getElementById('ProductsList')
+        const productsList = document.getElementById('ProductsList') //Знаходимо продуктЛіст в іншому компоненті
         if (productsList) {
-            productsList.scrollIntoView({ behavior: 'smooth', block: 'start' })
+            //Якщо продуктЛіст не пустий
+            productsList.scrollIntoView({ behavior: 'smooth', block: 'start' }) //прокручуємо продуктЛіст на початок
         }
     }
+
+    //В данном случае указано,
+    //что прокрутка должна быть плавной, а элемент должен быть выровнен по верхней границе родительского элемента.
 
     return (
         <div className="Recommends">
@@ -31,6 +41,7 @@ const Recommends = (props: Props) => {
                             className="recommendBtn"
                             onClick={() => {
                                 handleScrollToProductsList()
+                                dispatch(filterByTV())
                             }}
                         >
                             Buy now
@@ -44,9 +55,16 @@ const Recommends = (props: Props) => {
                         <h5 className="subtitleRecommend">
                             Dolor dictumst pretium
                         </h5>
-                        <Link to="/products/headphones">
-                            <button className="recommendBtn">Buy now</button>
-                        </Link>
+
+                        <button
+                            className="recommendBtn"
+                            onClick={() => {
+                                handleScrollToProductsList()
+                                dispatch(filterByHeadphones())
+                            }}
+                        >
+                            Products
+                        </button>
                     </div>
                 </Grid>
             </Grid>
