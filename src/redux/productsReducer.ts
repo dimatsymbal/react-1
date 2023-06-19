@@ -18,8 +18,11 @@ export const productsSlice = createSlice({
     name: 'products',
     initialState,
     reducers: {
-        sortByPrice: (state) => {
+        sortByLowestPrice: (state) => {
             state.sort((a, b) => a.price - b.price)
+        },
+        sortByHighestPrice: (state) => {
+            state.sort((a, b) => b.price - a.price)
         },
     },
     extraReducers(builder) {
@@ -29,7 +32,9 @@ export const productsSlice = createSlice({
     },
 })
 
-export const { sortByPrice } = productsSlice.actions
+export const { sortByHighestPrice, sortByLowestPrice } = productsSlice.actions
 export default productsSlice.reducer
 
 // https://run.mocky.io/v3/13d82ed7-56a9-4589-a8b1-8ce783a8f6ed - no watches
+
+// https://run.mocky.io/v3/84b32432-9d86-4bdd-b97d-db85a4c4dc33 - + watches

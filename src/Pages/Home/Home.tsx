@@ -25,7 +25,6 @@ const Home = (props: Props) => {
             </Container>
 
             <TopRated />
-
             <FeelTheSound />
             <Container sx={{ padding: '20px 0' }}>
                 <ProductsList />

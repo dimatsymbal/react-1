@@ -1,8 +1,10 @@
 .FeelTheSound {
     min-height: 600px;
     background-color: rgb(233, 223, 223);
-    width: 12500px;
-    margin-left: calc(50% - 12500px / 2);
+    background-image: url('https://themes.muffingroup.com/betheme-store2/wp-content/uploads/2022/08/bethemestore2-wrap-bg2.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
     .FeelTheSoundTitle {
         font-size: 42px;
@@ -109,5 +111,32 @@
     .FeelTheSound {
         width: 390px;
         margin-left: calc(50% - 390px / 2);
+        background-image: none;
+
+        .FeelTheSoundTitle {
+            font-size: 42px;
+            line-height: 50px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-top: 30px;
+            width: 290px;
+            margin-left: calc(50% - 290px / 2);
+        }
+
+        .FeelTheSoundParagraph {
+            margin-top: 20px;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            text-align: center;
+            font: inherit;
+            vertical-align: baseline;
+            color: #4c4d52;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            margin-bottom: 0px;
+        }
     }
 }

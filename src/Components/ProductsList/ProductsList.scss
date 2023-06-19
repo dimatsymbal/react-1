@@ -1,29 +1,37 @@
 .ProductsList {
     width: 100%;
     padding: 10px;
-}
 
-.filterPanel {
-    width: 100%;
-    min-height: 70px;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    border: 1px solid rgb(198, 196, 196);
+    .filterPanel {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+        min-height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
 
-    .filter_btns_block {
-        .filterBtns {
-            width: 140px;
-            height: 50px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            border-radius: 5px;
-            border: 0.1px solid rgb(198, 196, 196);
+        .filter_btns_block {
+            .filterBtns {
+                width: 140px;
+                height: 50px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                color: WHITE;
+                border-radius: 5px;
+                border: 0.1px solid rgb(198, 196, 196);
+                background-color: #1976d2;
+            }
+
+            .filterBtns:hover {
+                box-shadow: 0 4px 4px rgba(88, 87, 87, 0.4);
+            }
         }
+    }
 
-        .filterBtns:hover {
-            box-shadow: 0 1px 2px rgba(88, 87, 87, 0.4);
-        }
+    .sortPanel {
+        display: none;
     }
 }

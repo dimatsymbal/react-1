@@ -2,12 +2,13 @@ import { Grid } from '@mui/material'
 import ProductsListItem from './ProductsListItem'
 import './ProductsList.scss'
 import { useAppDispatch, useAppSelector } from 'redux/hooks'
-import { sortByPrice } from 'redux/productsReducer'
+import { sortByHighestPrice, sortByLowestPrice } from 'redux/productsReducer'
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone'
 import HeadphonesIcon from '@mui/icons-material/Headphones'
 import LaptopIcon from '@mui/icons-material/Laptop'
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports'
 import TvIcon from '@mui/icons-material/Tv'
+
 import WatchIcon from '@mui/icons-material/Watch'
 import {
     filterByHeadphones,
@@ -29,8 +30,6 @@ const ProductsList = (props: Props) => {
 
     return (
         <div className="ProductsList" id="ProductsList">
-            <br />
-
             <div className="filterPanel">
                 <div className="filter_btns_block">
                     <Grid container spacing={5}>
@@ -92,15 +91,37 @@ const ProductsList = (props: Props) => {
                     </Grid>
                 </div>
             </div>
-            <br />
-            <br />
 
-            <button onClick={() => dispatch(sortByPrice())}>
-                sort by price
-            </button>
-
-            <br />
-            <br />
+            <div className="sortPanel">
+                <div className="dropdown">
+                    <button
+                        className="btn  dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                    >
+                        Sort by...
+                    </button>
+                    <ul className="dropdown-menu">
+                        <li>
+                            <button
+                                className="sortBtns"
+                                onClick={() => dispatch(sortByLowestPrice())}
+                            >
+                                Lowest price
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                className="sortBtns"
+                                onClick={() => dispatch(sortByHighestPrice())}
+                            >
+                                Most expensive
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
             <Grid container spacing={3}>
                 {productsArrey
