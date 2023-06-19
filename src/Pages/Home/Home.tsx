@@ -8,6 +8,7 @@ import Recommends from './Recommends/Recommends'
 import TopRated from './TopRated/TopRated'
 import FeelTheSound from './FeelTheSound/FeelTheSound'
 import { Container } from '@mui/material'
+import DiscountInputs from './DiscountInputs/DiscountInputs'
 
 type Props = {}
 
@@ -28,6 +29,9 @@ const Home = (props: Props) => {
             <FeelTheSound />
             <Container sx={{ padding: '20px 0' }}>
                 <ProductsList />
+            </Container>
+            <DiscountInputs />
+            <Container sx={{ padding: '20px 0' }}>
                 <Reviews />
             </Container>
         </div>

@@ -1,0 +1,130 @@
+.DiscountInputs {
+    min-height: 610px;
+    background-image: url('https://themes.muffingroup.com/betheme-store2/wp-content/uploads/2022/08/bethemestore2-section-bg2.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    .leftSide {
+        padding-top: 100px;
+
+        .DiscountInputsParagraph {
+            color: white;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 500;
+            letter-spacing: 0px;
+            padding-top: 10px;
+        }
+
+        .DiscountInputsTitle {
+            padding-top: 25px;
+            color: white;
+            font-size: 42px;
+            line-height: 50px;
+            font-weight: 700;
+            letter-spacing: 3px;
+
+            span {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+        }
+
+        .checkboxBlock {
+            padding-top: 25px;
+        }
+    }
+
+    .rightSide {
+        padding-top: 60px;
+
+        .DiscountInputsForm {
+            background-color: white;
+            height: 370px;
+            width: 100%;
+            border-radius: 10px;
+            position: relative;
+
+            .DiscountInputsFormTitle {
+                color: #4c4d52;
+                text-align: center;
+                padding-top: 40px;
+                padding-bottom: 20px;
+            }
+
+            .DiscountInputsFormInputName {
+                position: absolute;
+                top: 100px;
+                left: calc(50% - 400px / 2);
+                width: 400px;
+                border: 0;
+                border-bottom: 1px solid #4c4d52;
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 500;
+                letter-spacing: 0px;
+                padding-bottom: 5px;
+            }
+
+            .DiscountInputsFormInputEmail {
+                position: absolute;
+                top: 180px;
+                left: calc(50% - 400px / 2);
+                width: 400px;
+                border: 0;
+                border-bottom: 1px solid #4c4d52;
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 500;
+                letter-spacing: 0px;
+                padding-bottom: 5px;
+            }
+
+            .DiscountInputsFormButton {
+                position: absolute;
+                top: 275px;
+                width: 400px;
+                left: calc(50% - 400px / 2);
+                color: #ffffff;
+                background-color: #2a27e9;
+                border-color: transparent;
+                font-family: Plus Jakarta Sans;
+                font-size: 16px;
+                line-height: 16px;
+                font-weight: 600;
+                letter-spacing: 0px;
+                padding: 12px 20px 12px 20px;
+                border-width: 0px;
+                border-radius: 8px;
+            }
+
+            .DiscountInputsFormButton:hover {
+                transition: 0.4s;
+                background-color: #1e1c8f;
+            }
+        }
+
+        .DiscountInputsOkBlock {
+            background-color: white;
+            height: 370px;
+            width: 100%;
+            border-radius: 10px;
+            position: relative;
+
+            .DiscountInputsOkBlockTitle {
+                position: absolute;
+                color: #4c4d52;
+                text-align: center;
+                top: 40px;
+            }
+
+            .DiscountInputsOkBlockImg {
+                position: absolute;
+                width: 120px;
+                left: calc(50% - 120px / 2);
+                top: 150px;
+            }
+        }
+    }
+}
