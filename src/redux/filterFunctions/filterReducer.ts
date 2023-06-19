@@ -1,11 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 type filterType = {
-    sortBtnName: string
+    filtertBtnName: string
 }
 
 const initialState: filterType = {
-    sortBtnName: 'Телефон',
+    filtertBtnName: 'Телефон',
 }
 
 export const filterSlice = createSlice({
@@ -13,22 +13,22 @@ export const filterSlice = createSlice({
     initialState,
     reducers: {
         filterByPhones: (state) => {
-            state.sortBtnName = 'Телефон'
+            state.filtertBtnName = 'Телефон'
         },
         filterByHeadphones: (state) => {
-            state.sortBtnName = 'Навушники'
+            state.filtertBtnName = 'Навушники'
         },
         filterByLaptops: (state) => {
-            state.sortBtnName = 'Ноутбук'
+            state.filtertBtnName = 'Ноутбук'
         },
         filterByPlayStations: (state) => {
-            state.sortBtnName = 'Ігровa консоль'
+            state.filtertBtnName = 'Ігровa консоль'
         },
         filterByTV: (state) => {
-            state.sortBtnName = 'Телевізори'
+            state.filtertBtnName = 'Телевізори'
         },
         filterByWatches: (state) => {
-            state.sortBtnName = 'Годинник'
+            state.filtertBtnName = 'Годинник'
         },
     },
 })

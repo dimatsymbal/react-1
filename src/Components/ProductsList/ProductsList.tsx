@@ -2,7 +2,6 @@ import { Grid } from '@mui/material'
 import ProductsListItem from './ProductsListItem'
 import './ProductsList.scss'
 import { useAppDispatch, useAppSelector } from 'redux/hooks'
-import { sortByHighestPrice, sortByLowestPrice } from 'redux/productsReducer'
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone'
 import HeadphonesIcon from '@mui/icons-material/Headphones'
 import LaptopIcon from '@mui/icons-material/Laptop'
@@ -24,9 +23,13 @@ type Props = {}
 const ProductsList = (props: Props) => {
     const productsArrey = useAppSelector((state) => state.products) // приймаэмо масив з сховища
 
-    const sortBtnName = useAppSelector((state) => state.filter.sortBtnName)
+    const filtertBtnName = useAppSelector(
+        (state) => state.filter.filtertBtnName
+    )
 
     const dispatch = useAppDispatch()
+
+    // -----------------------------------------------------------------------------
 
     return (
         <div className="ProductsList" id="ProductsList">
@@ -95,7 +98,7 @@ const ProductsList = (props: Props) => {
             <div className="sortPanel">
                 <div className="dropdown">
                     <button
-                        className="btn  dropdown-toggle"
+                        className="btn dropdown-toggle"
                         type="button"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
@@ -104,20 +107,10 @@ const ProductsList = (props: Props) => {
                     </button>
                     <ul className="dropdown-menu">
                         <li>
-                            <button
-                                className="sortBtns"
-                                onClick={() => dispatch(sortByLowestPrice())}
-                            >
-                                Lowest price
-                            </button>
+                            <button className="sortBtns">Lowest price</button>
                         </li>
                         <li>
-                            <button
-                                className="sortBtns"
-                                onClick={() => dispatch(sortByHighestPrice())}
-                            >
-                                Most expensive
-                            </button>
+                            <button className="sortBtns">Most expensive</button>
                         </li>
                     </ul>
                 </div>
@@ -125,7 +118,8 @@ const ProductsList = (props: Props) => {
 
             <Grid container spacing={3}>
                 {productsArrey
-                    .filter((product) => product.type === sortBtnName)
+                    .slice()
+                    .filter((product) => product.type === filtertBtnName)
                     .filter((product) => product.quantity > 0)
                     .map(
                         ({
@@ -155,7 +149,9 @@ const ProductsList = (props: Props) => {
                     )
                     .concat(
                         productsArrey
-                            .filter((product) => product.type === sortBtnName)
+                            .filter(
+                                (product) => product.type === filtertBtnName
+                            )
                             .filter((product) => product.quantity === 0)
                             .map(
                                 ({
