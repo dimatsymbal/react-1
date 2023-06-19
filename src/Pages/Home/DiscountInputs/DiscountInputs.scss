@@ -128,3 +128,52 @@
         }
     }
 }
+
+// _____________________________adaptive___________________________________
+
+@media screen and (max-width: 900px) {
+    .DiscountInputs {
+        min-height: 610px;
+
+        .leftSide {
+            width: 100%;
+            padding-top: 50px;
+
+            .DiscountInputsParagraph {
+                padding-left: 20px;
+                text-align: center;
+            }
+
+            .DiscountInputsTitle {
+                padding-top: 25px;
+                text-align: center;
+
+                span {
+                    margin-left: 15px;
+                    margin-right: 15px;
+                }
+            }
+
+            .checkboxBlock {
+                text-align: right;
+                padding-top: 25px;
+            }
+        }
+
+        .rightSide {
+            width: 100%;
+
+            .DiscountInputsForm {
+                width: 360px;
+                margin-left: calc(50% - 360px / 2);
+
+                .DiscountInputsFormInputName,
+                .DiscountInputsFormInputEmail,
+                .DiscountInputsFormButton {
+                    width: 300px;
+                    left: calc(50% - 300px / 2);
+                }
+            }
+        }
+    }
+}
