@@ -163,7 +163,8 @@
         .rightSide {
             width: 100%;
 
-            .DiscountInputsForm {
+            .DiscountInputsForm,
+            .DiscountInputsOkBlock {
                 width: 360px;
                 margin-left: calc(50% - 360px / 2);
 
