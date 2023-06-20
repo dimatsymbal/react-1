@@ -19,12 +19,10 @@ const Home = (props: Props) => {
                 <SimpleSlider />
                 <HoverAbout />
             </Container>
-
             <Recommends />
             <Container sx={{ padding: '20px 0' }}>
                 <Favorites />
             </Container>
-
             <TopRated />
             <FeelTheSound />
             <Container sx={{ padding: '20px 0' }}>

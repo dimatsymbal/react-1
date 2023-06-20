@@ -9,6 +9,8 @@ const ContactsPage = (props: Props) => {
             <Container sx={{ padding: '20px 0' }}>
                 <Contacts />
                 <WhyShop />
+            </Container>
+            <Container sx={{ padding: '20px 0' }}>
                 <AboutUs />
             </Container>
         </div>

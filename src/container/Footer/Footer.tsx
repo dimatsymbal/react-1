@@ -30,7 +30,25 @@ const Footer = () => {
             >
                 <div className="row">
                     <div className="col-md-4">
-                        <h4>Contact Us</h4>
+                        <h5 className="footerTitle">FAQ</h5>
+
+                        <button className="footerBtn">
+                            <img
+                                style={{ width: '48px' }}
+                                src="https://themes.muffingroup.com/betheme-store2/wp-content/uploads/2022/08/bethemestore2-footer-icon1.svg"
+                                alt="footerBtnImg"
+                            />
+                            <h6>Got questions? Call us 24/7!</h6>
+                            <p>+61 (0) 383 766 284</p>
+                        </button>
+
+                        <p>
+                            Level 13, 2 Elizabeth St, Melbourne, Victoria 3000,
+                            Australia
+                        </p>
+                    </div>
+                    <div className="col-md-3">
+                        <h5 className="footerTitle">Contact Us</h5>
                         {contacts.map((contact, index) => (
                             <div className="divWithInfo" key={index}>
                                 <i className={`fa fa-${contact.icon}`} />
@@ -41,24 +59,24 @@ const Footer = () => {
                             </div>
                         ))}
                     </div>
-                    <div className="col-md-4">
-                        <h4>Follow Us</h4>
+                    <div className="col-md-2">
+                        <h5 className="footerTitle">Follow Us</h5>
                         <div className="social-icons">
                             <a href="/#" className="facebook">
-                                <FacebookIcon />
+                                <FacebookIcon /> - Facebook
                             </a>
                             <a href="/#" className="twitter">
-                                <TwitterIcon />
+                                <TwitterIcon /> - Twitter
                             </a>
                             <a href="/#" className="google">
-                                <GoogleIcon />
+                                <GoogleIcon /> - Google
                             </a>
                         </div>
                     </div>
-                    <div className="col-md-4">
-                        <h4>Quick Links</h4>
+                    <div className="col-md-3">
+                        <h5 className="footerTitle">Quick Links</h5>
                         {footerLinks.map((link, index) => (
-                            <div key={index}>
+                            <div className="divWithRouterLinks" key={index}>
                                 <a className="footerLinks" href={link.link}>
                                     {link.title}
                                 </a>
