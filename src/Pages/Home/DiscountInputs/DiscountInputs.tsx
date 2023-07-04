@@ -52,7 +52,7 @@ const DiscountInputs = (props: Props) => {
                 </h3>
                 <img
                     className="DiscountInputsOkBlockImg"
-                    src="https://assets.stickpng.com/images/586383a07d90850fc3ce290f.png"
+                    src="https://cms-assets.tutsplus.com/cdn-cgi/image/width=850/uploads/users/523/posts/32694/final_image/tutorial-preview-large.png"
                     alt="checkImg"
                 />
             </div>

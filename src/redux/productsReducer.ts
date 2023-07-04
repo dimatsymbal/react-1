@@ -1,6 +1,21 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import { Products } from 'Utils/ProductsArrey'
 import axios from 'axios'
+
+export type Products = {
+    id: number
+    title: string
+    description: string
+    type: string
+    copacity: string
+    price: number
+    images: string
+    quantity: number
+    extraDesc?: string
+    extraDesc2?: string
+    extraPhoto?: string
+    extraPhoto2?: string
+    category?: string
+}
 
 const initialState: Products[] = []
 

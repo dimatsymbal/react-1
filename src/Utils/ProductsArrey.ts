@@ -741,5 +741,5 @@ export const getProductsObject = (array: Products[]) =>
 
 export default productsArrey
 
-const productsJson = JSON.stringify(productsArrey)
-console.log(productsJson)
+// const productsJson = JSON.stringify(productsArrey)
+// console.log(productsJson)
