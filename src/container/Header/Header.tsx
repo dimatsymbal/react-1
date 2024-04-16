@@ -7,7 +7,7 @@ import Menu from 'Components/Menu/Menu'
 import QuantityHeader from 'Components/QuantityHeader/QuantityHeader'
 import TemporaryDrawer from 'Components/BurgerHeader/BurgerHeader'
 import LeftInfoDrawer from 'Components/LeftInfoDrawer/LeftInfoDrawer'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import IconButton from '@mui/material/IconButton'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import FacebookIcon from '@mui/icons-material/Facebook'
@@ -17,7 +17,7 @@ type Props = {}
 const Header = (props: Props) => {
     return (
         <>
-            <div className="narrow-panel">
+            {/* <div className="narrow-panel">
                 <Link className="helpUkraineLink" to="https://u24.gov.ua/">
                     Click to help Ukraine!
                     <img
@@ -25,7 +25,7 @@ const Header = (props: Props) => {
                         alt="UaFlag"
                     />
                 </Link>
-            </div>
+            </div> */}
             <AppBar className="app_bar" position="static">
                 <Container className="cont_header" maxWidth="lg">
                     <Toolbar>

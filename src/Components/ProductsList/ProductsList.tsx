@@ -95,7 +95,7 @@ const ProductsList = (props: Props) => {
                 </div>
             </div>
 
-            <div className="sortPanel">
+            {/* <div className="sortPanel">
                 <div className="dropdown">
                     <button
                         className="btn dropdown-toggle"
@@ -114,7 +114,7 @@ const ProductsList = (props: Props) => {
                         </li>
                     </ul>
                 </div>
-            </div>
+            </div> */}
 
             <Grid container spacing={3}>
                 {productsArrey
