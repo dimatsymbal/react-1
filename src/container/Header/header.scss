@@ -43,8 +43,13 @@
 
     .logo_header {
         height: 50px;
-        margin-left: 20px;
-        border-radius: 50px;
+        margin-left: 10px;
+        width: 188px;
+    }
+
+    .mediaDiv {
+        position: absolute;
+        left: 280px;
     }
 
     .adaptive_burger {
@@ -69,7 +74,11 @@
             padding: 0;
 
             .logo_header {
-                margin-left: calc(50% - 50px / 2);
+                margin-left: calc(50% - 188px / 2);
+            }
+
+            .mediaDiv {
+                display: none;
             }
 
             .menu_in_nav {

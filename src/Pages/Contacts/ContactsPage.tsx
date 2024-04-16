@@ -1,12 +1,18 @@
 import AboutUs from './AboutUs/AboutUs'
 import Contacts from './Contacts/Contacts'
-
+import { Container } from '@mui/material'
+import WhyShop from './WhyShop/WhyShop'
 type Props = {}
 const ContactsPage = (props: Props) => {
     return (
         <div>
-            <Contacts />
-            <AboutUs />
+            <Container sx={{ padding: '20px 0' }}>
+                <Contacts />
+                <WhyShop />
+            </Container>
+            <Container sx={{ padding: '20px 0' }}>
+                <AboutUs />
+            </Container>
         </div>
     )
 }

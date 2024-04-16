@@ -3,10 +3,11 @@ import './QuantityHeader.scss'
 const QuantityHeader = () => {
     const productsInCart = useAppSelector((state) => state.productsInCart)
 
-    const cartItemsCount = Object.values(productsInCart).reduce(
-        (a, b) => a + b,
-        0
-    )
+    let cartItemsCount = 0
+
+    for (let key in productsInCart) {
+        cartItemsCount = cartItemsCount + productsInCart[key]
+    }
 
     return cartItemsCount === 0 ? (
         <p className="isEmptyPatagraph"></p>

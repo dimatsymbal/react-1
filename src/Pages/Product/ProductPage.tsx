@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom'
-import productsArrey, { getProductsObject, Products } from 'Utils/ProductsArrey'
+import { getProductsObject, Products } from 'Utils/ProductsArrey'
 import './ProductPage.scss'
 import Quantity from 'Components/Quantity/Quantity'
 import FavoriteIcon from '@mui/icons-material/Favorite'
@@ -11,14 +11,15 @@ import { Button } from '@mui/material'
 import { useState } from 'react'
 import AddShoppingCartSharpIcon from '@mui/icons-material/AddShoppingCartSharp'
 
-type Props = {
-    productsObject?: {
-        [id: number]: Products
-    }
+type ProductsObject = {
+    [id: number]: Products
 }
-const ProductPage = ({
-    productsObject = getProductsObject(productsArrey),
-}: Props) => {
+
+type Props = {}
+const ProductPage = (props: Props) => {
+    const productsArrey = useAppSelector((state) => state.products) // приймаэмо масив з сховища
+    const productsObject: ProductsObject = getProductsObject(productsArrey)
+
     const { id } = useParams()
 
     const [count, setCount] = useState<number>(1)
@@ -50,7 +51,6 @@ const ProductPage = ({
                     <div className="col-6">
                         <Button
                             className="likeBtn"
-                            variant="outlined"
                             onClick={() =>
                                 isLiked
                                     ? dispatch(removeLike(id))
@@ -58,9 +58,17 @@ const ProductPage = ({
                             }
                         >
                             {isLiked ? (
-                                <FavoriteIcon />
+                                <FavoriteIcon
+                                    style={{
+                                        color: 'rgb(221, 84, 84)',
+                                    }}
+                                />
                             ) : (
-                                <FavoriteBorderIcon />
+                                <FavoriteBorderIcon
+                                    style={{
+                                        color: 'rgb(221, 84, 84)',
+                                    }}
+                                />
                             )}
                         </Button>
 

@@ -1,0 +1,143 @@
+.FeelTheSound {
+    min-height: 600px;
+    background-color: rgb(233, 223, 223);
+    background-image: url('https://themes.muffingroup.com/betheme-store2/wp-content/uploads/2022/08/bethemestore2-section-bg1.webp');
+    // background-image: url('https://themes.muffingroup.com/betheme-store2/wp-content/uploads/2022/08/bethemestore2-wrap-bg2.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .FeelTheSoundTitle {
+        font-size: 42px;
+        line-height: 50px;
+        font-weight: 700;
+        letter-spacing: -1px;
+        margin-top: 190px;
+        width: 180px;
+    }
+
+    .FeelTheSoundParagraph {
+        margin-top: 10px;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+        color: #4c4d52;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        letter-spacing: 0px;
+        margin-bottom: 30px;
+    }
+
+    .rightContainer {
+        margin-top: 80px;
+
+        .FeelTheSoundCard {
+            padding: 10px;
+            border: 0;
+            height: 320px;
+            border-radius: 10px;
+            position: relative;
+
+            .feelCardImg {
+                position: absolute;
+                width: 150px;
+                left: calc(50% - 150px / 2);
+            }
+
+            .feelCardTitle {
+                position: absolute;
+                top: 170px;
+                color: #4c4d52;
+                text-decoration: none;
+                text-align: center;
+                transition: transform 0.4s ease-in-out;
+
+                &:hover {
+                    color: black;
+                }
+            }
+
+            .product_price {
+                position: absolute;
+                top: 250px;
+                font-size: 21px;
+                width: 70px;
+                left: calc(50% - 70px / 2);
+                text-align: center;
+            }
+
+            .product_old_price {
+                position: absolute;
+                top: 280px;
+                font-size: 14px;
+                opacity: 0.3;
+                text-decoration: line-through;
+                width: 70px;
+                left: 80px;
+                text-align: center;
+            }
+
+            .product_discount_price {
+                position: absolute;
+                top: 250px;
+                font-size: 21px;
+                width: 70px;
+                left: calc(50% - 70px / 2);
+                text-align: center;
+                color: rgb(221, 84, 84);
+                text-align: center;
+            }
+        }
+
+        .FeelTheSoundCard:hover {
+            box-shadow: 0 5px 7px rgba(0, 0, 0, 0.4);
+        }
+
+        .FeelTheSoundCard:hover .product_discount_price {
+            transition: 0.4s;
+            transform: scale(1.1);
+        }
+    }
+}
+
+// background-image: url('https://themes.muffingroup.com/betheme-store2/wp-content/uploads/2022/08/bethemestore2-wrap-bg2.webp');
+// background-repeat: no-repeat;
+
+// _____________________________adaptive___________________________________
+
+@media screen and (max-width: 900px) {
+    .FeelTheSound {
+        width: 390px;
+        margin-left: calc(50% - 390px / 2);
+        background-image: none;
+
+        .FeelTheSoundTitle {
+            font-size: 42px;
+            line-height: 50px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-top: 30px;
+            width: 290px;
+            margin-left: calc(50% - 290px / 2);
+        }
+
+        .FeelTheSoundParagraph {
+            margin-top: 20px;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            text-align: center;
+            font: inherit;
+            vertical-align: baseline;
+            color: #4c4d52;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            margin-bottom: 0px;
+        }
+    }
+}

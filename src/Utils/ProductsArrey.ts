@@ -11,7 +11,6 @@ export type Products = {
     extraDesc2?: string
     extraPhoto?: string
     extraPhoto2?: string
-
     category?: string
 }
 
@@ -205,7 +204,6 @@ const productsArrey: Products[] = [
         type: 'Навушники',
         copacity: ' (2-го покоління)',
         price: 750,
-
         images: 'https://estore.ua/ua/media/catalog/product/cache/9/image/600x600/9df78eab33525d08d6e5fb8d27136e95/m/v/mv7n2_1-newpic.jpg',
         quantity: 0,
         extraDesc:
@@ -279,7 +277,7 @@ const productsArrey: Products[] = [
         copacity:
             'RAM 8 ГБ / SSD 256 ГБ / Apple M2 Graphics (8 ядер) / Wi-Fi / Bluetooth / macOS Monterey / 1.24 кг / золотой',
         price: 1150,
-        images: 'https://content.rozetka.com.ua/goods/images/big/269257669.jpg',
+        images: 'https://content.rozetka.com.ua/goods/images/big/275056540.jpg',
         quantity: 14,
         extraDesc:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
@@ -518,7 +516,7 @@ const productsArrey: Products[] = [
             'Процесор 8-ядерний процесор Custom Zen 2 з тактовою частотою @ 3.6 ГГц (3.4 ГГЦ із SMT)',
         price: 650,
         images: 'https://content.rozetka.com.ua/goods/images/big/276694901.jpg',
-        quantity: 0,
+        quantity: 3,
         extraDesc:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
         extraDesc2:
@@ -529,7 +527,7 @@ const productsArrey: Products[] = [
     },
     {
         id: 45,
-        title: 'Бандл Ігрова приставка PlayStation 5 God of War Ragnarok',
+        title: 'Ігрова приставка PlayStation 5 God of War Ragnarok',
         description:
             'Процесор 8-ядерний x86-64 AMD Ryzen Zen 2 (Частота: до 3.5 ГГц)',
         type: 'Ігровa консоль',
@@ -635,44 +633,101 @@ const productsArrey: Products[] = [
         extraPhoto2:
             'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
     },
-
-    // ____________________________________________________________________________________________
-    // ____________________________________________________________________________________________
     {
-        id: 10,
-        title: 'iPhone 140 pro',
-        description: 'bebebebeb',
-        type: 'phone',
-        copacity: '256 GB',
-        price: 600,
-        images: '/images/iphone11.jpg',
-        category: 'task2',
-        quantity: 14,
+        id: 601,
+        title: 'Смарт-годинник Apple Watch Ultra GPS',
+        description: 'Cellular 49mm Titanium Case with Blue/Gray Trail Loop',
+        type: 'Годинник',
+        copacity:
+            '49-міліметровий корпусіз титану, який використовується в аерокосмічній галузі, цілодобова робота',
+        price: 850,
+        images: 'https://content.rozetka.com.ua/goods/images/big/325618213.jpg',
+        quantity: 6,
+        extraDesc:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraDesc2:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraPhoto:
+            'https://content.rozetka.com.ua/files/images/original/308935906.png',
+        extraPhoto2:
+            'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
     },
     {
-        id: 11,
-        title: 'iPhone 100',
-        description: 'bebebebeb',
-        type: 'phone',
-        copacity: '128 GB',
-        price: 750,
-        images: '/images/iphone11-y.jpg',
-        category: 'task2',
-        quantity: 14,
+        id: 602,
+        title: 'Смарт-годинник Amazfit T-Rex 2 Wild Green',
+        description: 'Перед вами модель, що орієнтована на найжорсткіші умови.',
+        type: 'Годинник',
+        copacity:
+            'Amazfit T-Rex 2 — відчуйте справжню силу. "Виживальщики" зможуть сміливо використовувати девайс.',
+        price: 1300,
+        images: 'https://content1.rozetka.com.ua/goods/images/big/302569547.jpg',
+        quantity: 1,
+        extraDesc:
+            'Dolby Vision IQ and Dolby Atmos combine to deliver exceptional imaging and audio quality',
+        extraDesc2:
+            'This LG smart TV features webOS, allowing you to stream your favorite entertainment apps with ease Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraPhoto: 'https://mediaonecentre.com/images/default/post.png',
+        extraPhoto2:
+            'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
     },
     {
-        id: 12,
-        title: 'iPhone 110 pro',
-        description: 'bebebebeb',
-        type: 'phone',
-        copacity: '64 GB',
-        price: 950,
-        images: '/images/iphone11-y.jpg',
-        category: 'task2',
-        quantity: 14,
+        id: 603,
+        title: 'Смарт-годинник Apple Watch Ultra GPS',
+        description: 'Cellular 49mm Titanium Case with White Ocean Band',
+        type: 'Годинник',
+        copacity:
+            '49-міліметровий корпусіз титану, який використовується в аерокосмічній галузі, цілодобова робота',
+        price: 850,
+        images: 'https://content2.rozetka.com.ua/goods/images/big/325621259.jpg',
+        quantity: 2,
+        extraDesc:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraDesc2:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraPhoto:
+            'https://content.rozetka.com.ua/files/images/original/308935906.png',
+        extraPhoto2:
+            'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
     },
-    // ____________________________________________________________________________________________
-    // ____________________________________________________________________________________________
+    {
+        id: 604,
+        title: 'Смарт-годинник Apple Watch SE (2022) GPS',
+        description: '40mm Midnight Aluminium Case with Midnight Sport Band',
+        type: 'Годинник',
+        copacity:
+            '49-міліметровий корпусіз титану, який використовується в аерокосмічній галузі, цілодобова робота',
+        price: 550,
+        images: 'https://content1.rozetka.com.ua/goods/images/big/325584586.jpg',
+        quantity: 12,
+        extraDesc:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraDesc2:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraPhoto:
+            'https://content.rozetka.com.ua/files/images/original/308935906.png',
+        extraPhoto2:
+            'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
+    },
+    {
+        id: 605,
+        title: 'Смарт-годинник Amazfit GTS 4',
+        description:
+            'Спортивно орієнтований годинник Amazfit GTS 4: отримайте 150+ силових',
+        type: 'Годинник',
+        copacity:
+            'Крім цього, контролюйте дзвінки та відповідайте на них за допомогою зєднання Bluetooth.',
+        price: 650,
+        images: 'https://content1.rozetka.com.ua/goods/images/big/302566567.jpg',
+        quantity: 1,
+        extraDesc:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraDesc2:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda iste iusto distinctio at. Cupiditate dolore fugiat excepturi, vero animi, pariatur laborum adipisci temporibus quae magnam ratione consequuntur harum delectus? Vel!',
+        extraPhoto:
+            'https://content.rozetka.com.ua/files/images/original/308935906.png',
+        extraPhoto2:
+            'https://www.signfix.com.au/wp-content/uploads/2017/09/placeholder-600x400.png',
+    },
 ]
 
 export const getProductsObject = (array: Products[]) =>
@@ -686,5 +741,5 @@ export const getProductsObject = (array: Products[]) =>
 
 export default productsArrey
 
-// const productsJson = JSON.stringify(productsArrey)
-// console.log(productsJson)
+const productsJson = JSON.stringify(productsArrey)
+console.log(productsJson)

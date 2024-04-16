@@ -13,6 +13,7 @@ import {
     removeProductFromCart,
     removeProductQuantity,
 } from 'redux/cartReducer'
+import { useState } from 'react'
 
 type Props = {
     product: Products
@@ -20,14 +21,12 @@ type Props = {
     quantity: number
 }
 
-const CartProductListItemExtended = ({
-    product,
-    productCount,
-    quantity,
-}: Props) => {
+const CartProductListItemExtended = ({ product, productCount }: Props) => {
     const isLiked = useAppSelector(
         (state) => state.productsLikeState[product.id]
     )
+
+    const [count] = useState<number>(1)
 
     const dispatch = useAppDispatch()
 
@@ -36,28 +35,45 @@ const CartProductListItemExtended = ({
             <Card className="cartProductsListItem" variant="outlined">
                 <CardContent>
                     <Button
-                        variant="outlined"
                         onClick={() =>
                             isLiked
                                 ? dispatch(removeLike(product.id))
                                 : dispatch(addLike(product.id))
                         }
                     >
-                        {isLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+                        {isLiked ? (
+                            <FavoriteIcon
+                                style={{
+                                    color: 'rgb(221, 84, 84)',
+                                }}
+                            />
+                        ) : (
+                            <FavoriteBorderIcon
+                                style={{
+                                    color: 'rgb(221, 84, 84)',
+                                }}
+                            />
+                        )}
                     </Button>
-                    <div className="product_image">
+                    <div
+                        className="product_image"
+                        onDoubleClick={() =>
+                            isLiked
+                                ? dispatch(removeLike(product.id))
+                                : dispatch(addLike(product.id))
+                        }
+                    >
                         <img
                             className="product_image_content"
                             src={product.images}
                             alt="product_image_content card"
                         />
                     </div>
-                    <h6 className="product_title">
-                        {' '}
-                        <Link to={`/products/${product.id}`}>
-                            {product.title}
-                        </Link>{' '}
-                    </h6>
+
+                    <Link to={`/products/${product.id}`}>
+                        <h6 className="product_title">{product.title}</h6>
+                    </Link>
+
                     <div className="product_desc">{product.description}</div>
                     <div className="product_type">{product.type}</div>
                     <div className="product_features">
@@ -80,6 +96,23 @@ const CartProductListItemExtended = ({
                         minCount={0}
                         quantity={product.quantity}
                     />
+
+                    {product.quantity === 0 ? (
+                        <p>Товара нема</p>
+                    ) : product.quantity <= 3 ? (
+                        <>
+                            <h4 className="product_old_price">
+                                {product.price * count}$
+                            </h4>
+                            <h4 className="product_discount_price">
+                                {product.price * count * 0.8}$
+                            </h4>
+                        </>
+                    ) : (
+                        <h4 className="product_price">
+                            {product.price * count}$
+                        </h4>
+                    )}
                 </CardContent>
 
                 <CardActions className="card_actions">

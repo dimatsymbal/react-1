@@ -43,7 +43,6 @@ const Reviews = (props: Props) => {
     //ЗМЕРДЖИМ ПОПЕРЕДНІЙ СТЕЙТ
     //КИКЛИКАЄМО НЕЙМ І ЗВЕРТАЄМОСЯ ДО ОБ'ЄКТУ ПОДІЇ ДАЛІ ДО event.target І value
     //ТАКИМ ЧИНОМ МИ ДІЗНАЄМОСЯ ЗНАЧЕННЯ ОДНІЄЇ ЛІТЕРИ
-
     //ТАКИМ ЧИНОМ МИ ЗІБРАЛИ ДАННІ ЯКІ ВВОДИТЬ КОРИСТУВАЧ
 
     const handleName = (e: React.ChangeEvent<HTMLInputElement>) => {

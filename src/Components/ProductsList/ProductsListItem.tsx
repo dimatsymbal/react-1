@@ -20,7 +20,6 @@ type Props = {
     price: number
     images: string
     quantity: number
-    addProductToFav: (quantity: number, price: number) => void
 }
 
 const ProductsListItem = ({
@@ -32,7 +31,6 @@ const ProductsListItem = ({
     price,
     images,
     quantity,
-    addProductToFav,
 }: Props) => {
     const [count, setCount] = useState<number>(1)
 
@@ -52,60 +50,58 @@ const ProductsListItem = ({
         setClickCount(clickCount + 1)
     }
 
-    const handleLikeButtonClick = () => {
-        if (isLiked) {
-            dispatch(removeLike(id))
-            addProductToFav(count, price * 0.8)
-        } else {
-            dispatch(addLike(id))
-            addProductToFav(count, price * 0.8)
-        }
-    }
-
     return (
         <Card
             className={quantity === 0 ? 'outOfStock' : 'ProductsListItem'}
             variant="outlined"
         >
             <CardContent>
-                {/* {quantity <= 3 ? (
-                    <button onClick={() => addProductToFav(count, price * 0.8)}>
-                        add
-                    </button>
-                ) : (
-                    <button
-                        onClick={() => addProductToFav(count, price * count)}
-                    >
-                        add
-                    </button>
-                )} */}
-
-                <Button variant="outlined" onClick={handleLikeButtonClick}>
-                    {isLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+                <Button
+                    onClick={() =>
+                        isLiked
+                            ? dispatch(removeLike(id))
+                            : dispatch(addLike(id))
+                    }
+                >
+                    {isLiked ? (
+                        <FavoriteIcon
+                            style={{
+                                color: 'rgb(221, 84, 84)',
+                            }}
+                        />
+                    ) : (
+                        <FavoriteBorderIcon
+                            style={{
+                                color: 'rgb(221, 84, 84)',
+                            }}
+                        />
+                    )}
                 </Button>
-
                 {quantity <= 3 && (
                     <div className="saleCircle">
-                        {' '}
                         <PercentIcon /> Only {quantity} left
                     </div>
                 )}
-
-                <div className="product_image">
+                <div
+                    className="product_image"
+                    onDoubleClick={() =>
+                        isLiked
+                            ? dispatch(removeLike(id))
+                            : dispatch(addLike(id))
+                    }
+                >
                     <img
                         className="product_image_content"
                         src={images}
                         alt="product_image_content card"
                     />
                 </div>
-                <h6 className="product_title">
-                    {' '}
-                    <Link to={`/products/${id}`}>{title}</Link>{' '}
-                </h6>
+                <Link to={`/products/${id}`}>
+                    <h6 className="product_title">{title}</h6>
+                </Link>
                 <div className="product_desc">{description}</div>
                 <div className="product_type">{type}</div>
                 <div className="product_features">{copacity} GB</div>
-
                 {quantity === 0 ? (
                     <Quantity
                         onDecrement={onDecrement}

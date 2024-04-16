@@ -1,12 +1,15 @@
-import productsArray, { getProductsObject, Products } from 'Utils/ProductsArrey'
+import { getProductsObject, Products } from 'Utils/ProductsArrey'
 import CardProductListItem from './CardProductListItem'
 import './CartProductList.scss'
+import { useAppSelector } from 'redux/hooks'
+
+type ProductsObject = {
+    [id: number]: Products
+}
+
 type Props = {
     productsInCart: {
         [id: number]: number
-    }
-    productsObject?: {
-        [id: number]: Products
     }
 
     CartItem?: any
@@ -14,9 +17,11 @@ type Props = {
 
 const CartProductList = ({
     productsInCart,
-    productsObject = getProductsObject(productsArray),
     CartItem = CardProductListItem,
 }: Props) => {
+    const productsArrey = useAppSelector((state) => state.products) // приймаэмо масив з сховища
+    const productsObject: ProductsObject = getProductsObject(productsArrey)
+
     return (
         <>
             {Object.keys(productsInCart).length === 0 ? (
